@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Apr 2015 12:11:30 +0100</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2015 12:11:30 +0100</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 12:59:56 +0100</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 12:59:56 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -75,15 +75,11 @@
 &lt;p&gt;I’m a software developer. I’m an artist. &lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/software/design,/business/2015/04/01/the-art-of-coding.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/software/design,/business/2015/04/01/the-art-of-coding.html</guid>
+        <link>http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</link>
+        <guid isPermaLink="true">http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</guid>
         
         
-        <category>software</category>
-        
-        <category>design,</category>
-        
-        <category>business</category>
+        <category>coding</category>
         
       </item>
     
