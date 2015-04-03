@@ -2,7 +2,7 @@
 layout: post
 title:  "The art of coding"
 date:   2015-04-01 00:00:42
-categories: software design, business
+categories: coding
 ---
 When someone outside the field asks me what I do for a living, I know that what I'm about to say to that person and  nothing is pretty much the same. If you are a software engineer, you may have experienced the same thing in the past. It doesn't have to do with the person, but I couldn't find an expression to transform software development in a sexy activity. Let's be honest, you have plenty of cool TV shows about doctors (House, Grey Anatomy, etc), about lawyers (Suits, How to get away with murderer, etc), about detectives, policemen, etc. But about software engineering we don't have much and the ones that exist, I think only software related staff watches them.
 
