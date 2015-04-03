@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>throw new exception();</title>
+    <title>Not every if--then-else statement, needs the	 else</title>
     <meta name="description" content="Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/">
+    <link rel="canonical" href="http://thrownewexception.com/code/clean/2015/03/23/2015-03-23-stop-doing-if-return-else.html">
 
 </head>
 
@@ -65,33 +65,55 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Not every if--then-else statement, needs the	 else</h1>
+    <p class="post-meta">Mar 23, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 23, 2015</span>
-    
-        <h2>
-          <a class="post-link" href="/code/clean/2015/03/23/2015-03-23-stop-doing-if-return-else.html">Not every if--then-else statement, needs the	 else</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 8, 2015</span>
-    
-        <h2>
-          <a class="post-link" href="/software/design,/business/2015/02/08/2015-02-05-the-art-of-coding.html">The art of coding</a>
-        </h2>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+    <p>As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement. </p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>One thing that amuses me is the quantity of people doing the following piece of code.</p>
+
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">double</span> <span class="nf">Divide</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">divisor</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentOutOfRangeException</span><span class="p">(</span><span class="s">&quot;divisor&quot;</span>
+		<span class="p">,</span> <span class="s">&quot;Divide by zero is not allowed&quot;</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="n">number</span> <span class="p">/</span> <span class="n">divisor</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.</p>
+
+<p><b>But, do we really need the else here? </b></p>
+
+<p>The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true. </p>
+
+<p>Resuming, no, we don’t need the else there.</p>
+
+<p><b>But, its just a detail…</b></p>
+
+<p>At first, this seems to be just a little thing that doesn’t really matter, but what if we add more and more logic into the code without refactoring it? Have you thought about the maintainability problem that we might have in the future?</p>
+
+<p><b>Where is this coming from?</b></p>
+
+<p>I have a theory about why developers are still doing this. When learning how to program, we normally are taught the if-then-else statement before any learning on defensive code. As we practice our skills, we are doing more and more if-then-else statements until it becomes intrinsic in our brain and we do it without thinking. The problem is that we need to think to write a clean code.</p>
+
+<p><b>How can we stop doing it?</b></p>
+
+<p>Everytime you have a code review, or change some code from another engineer, please check for code like this and alert your colleague for this. He will be grateful.</p>
+
+  </article>
 
 </div>
+
       </div>
     </div>
 
