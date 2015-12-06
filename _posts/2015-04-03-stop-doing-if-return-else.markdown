@@ -4,7 +4,7 @@ title:  "Not every if--then-else statement, needs the	 else"
 date:   2015-04-03 00:00:42
 categories: code clean
 ---
-As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement. 
+As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.
 
 One thing that amuses me is the quantity of people doing the following piece of code.
 
@@ -24,14 +24,29 @@ public double Divide(int number, int divisor)
 }
 
 {% endhighlight %}
-	
+
 First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.
 
 <b>But, do we really need the else here? </b>
 
-The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the "then" are executed, otherwise it will continue to the "else" block and after this brach we'll have an "interception" point on the flow. However, one of our branches is an exit point, we don't want an interception happening after the "if-then-else" statement, we want the code to exit the method if the first condition is true. 
+The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the "then" are executed, otherwise it will continue to the "else" block and after this brach we'll have an "interception" point on the flow. However, one of our branches is an exit point, we don't want an interception happening after the "if-then-else" statement, we want the code to exit the method if the first condition is true.
 
-Resuming, no, we don't need the else there.
+Resuming, no, we don't need the else there. Changing our code to remove the unnecessary else the code will looks like this.
+
+{% highlight csharp %}
+
+public double Divide(int number, int divisor)
+{
+	if(divisor == 0)
+	{
+		throw new ArgumentOutOfRangeException("divisor"
+		, "Divide by zero is not allowed");
+	}
+
+	return number / divisor;
+}
+
+{% endhighlight %}
 
 <b>But, its just a detail...</b>
 

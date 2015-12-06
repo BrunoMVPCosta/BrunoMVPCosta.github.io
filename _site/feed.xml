@@ -6,36 +6,47 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 03 Apr 2015 12:59:56 +0100</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2015 12:59:56 +0100</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Sun, 06 Dec 2015 02:23:39 +0000</pubDate>
+    <lastBuildDate>Sun, 06 Dec 2015 02:23:39 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Not every if--then-else statement, needs the	 else</title>
-        <description>&lt;p&gt;As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement. &lt;/p&gt;
+        <description>&lt;p&gt;As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.&lt;/p&gt;
 
 &lt;p&gt;One thing that amuses me is the quantity of people doing the following piece of code.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentOutOfRangeException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;divisor&amp;quot;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Divide by zero is not allowed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentOutOfRangeException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;divisor&quot;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Divide by zero is not allowed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;But, do we really need the else here? &lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true. &lt;/p&gt;
+&lt;p&gt;The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true.&lt;/p&gt;
 
-&lt;p&gt;Resuming, no, we don’t need the else there.&lt;/p&gt;
+&lt;p&gt;Resuming, no, we don’t need the else there. Changing our code to remove the unnecessary else the code will looks like this.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ArgumentOutOfRangeException&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;divisor&quot;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Divide by zero is not allowed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;b&gt;But, its just a detail…&lt;/b&gt;&lt;/p&gt;
 
@@ -62,17 +73,24 @@
     
       <item>
         <title>The art of coding</title>
-        <description>&lt;p&gt;When someone outside the field asks me what I do for a living, I know that what I’m about to say to that person and  nothing is pretty much the same. If you are a software engineer, you may have experienced the same thing in the past. It doesn’t have to do with the person, but I couldn’t find an expression to transform software development in a sexy activity. Let’s be honest, you have plenty of cool TV shows about doctors (House, Grey Anatomy, etc), about lawyers (Suits, How to get away with murderer, etc), about detectives, policemen, etc. But about software engineering we don’t have much and the ones that exist, I think only software related staff watches them.&lt;/p&gt;
+        <description>&lt;p&gt;Have you even felt it’s really hard to explain what a software engineer does for living? Have you even felt boring someone explaining what a software engineer does? If you have answer yes for any of the questions, welcome to the club.&lt;/p&gt;
+
+&lt;p&gt;When I started studying computer engineering, here in Portugal, not everyone had a personal computer and a lot of people not much older than me, had real issues working with computers. For example, they didn’t know how to turn on the computer. Yeah! That much.&lt;/p&gt;
+
+&lt;p&gt;Back on those days, trying to explain to a friend, what I was studying was really hard, not only because I had to idea what software engineering exactly was, but also, because &lt;a href=&quot;https://www.reddit.com/r/AskMen/comments/1wxzkx/why_does_programming_have_so_many_negative/&quot;&gt;programming have so many negative stereotype&lt;/a&gt; and for a bunch of reasons, a lot of people just don’t enjoy to be around a software engineer or a someone with a nerd personality. I felt that people that didn’t know me that well, looked at me differently after I told what I was studying and I sincerely believe it was because of the stereotypes around software engineers. Those stereotypes create a barrier on the communication between people and you need more time to get the “normal” look from those people again.&lt;/p&gt;
+
+&lt;p&gt;I feel sad because of it, but I think it doesn’t have to do with the other person, but we cannot find an expression to transform software development in a non-boring activity. Let’s be honest, you have plenty of cool TV shows about doctors (House, Grey Anatomy, etc), about lawyers (Suits, How to get away with murderer, etc), about detectives, policemen, etc. But about software engineering we don’t have much and the ones that exist, I think only software related staff watches them. It’s boring.&lt;/p&gt;
 
 &lt;p&gt;If it’s hard for someone as creative as a TV shows writer, how to answer the question with some glamour and creativity?&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;What do I do for living?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;What do we do for living?&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;I’m a software developer, you may not know what is it, but I do love software development, I think it’s amazing in every way. Writing code is like an art, it’s like creating a new piece of melody, painting the picture of what you want to build in your mind or writing a book. Every single line of code is something unique when it comes from someone that loves programming. Years of practice, trying a new technology or with a better design. Thinking about scalability, performance and code maintenance… always trying to do a better melody than the one before.&lt;/p&gt;
+&lt;p&gt;We are software engineers. Some of us create apps, others backend services to support those apps or websites. Think about Facebook, Skype, Twitter, Linkedin, etc… million of people using their technology day after day. Isn’t it amazing? Does it look boring? Changing people life. Changing the world. Changing the way people communicate. Changing the way people buy. Writing code is an art. It might not be one-person show as it is creating a new piece of melody or writing a book, but it is art. Art created by one or million of software engineers.&lt;/p&gt;
 
-&lt;p&gt;Think about Facebook, Skype, Twitter, Linkedin, etc… Millions of unknown artists giving you art, everyday.&lt;/p&gt;
+&lt;p&gt;Again, think about Facebook, Skype, Twitter, Linkedin, etc… Millions of unknown artists… giving you art, everyday.&lt;/p&gt;
 
-&lt;p&gt;I’m a software developer. I’m an artist. &lt;/p&gt;
+&lt;p&gt;Does it sounds boring? I don’t think so.&lt;/p&gt;
+
 </description>
         <pubDate>Wed, 01 Apr 2015 01:00:42 +0100</pubDate>
         <link>http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</link>
