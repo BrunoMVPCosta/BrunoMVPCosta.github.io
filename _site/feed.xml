@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Feb 2016 23:22:16 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2016 23:22:16 +0000</lastBuildDate>
+    <pubDate>Wed, 10 Feb 2016 23:53:43 +0000</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2016 23:53:43 +0000</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -96,6 +96,35 @@ So, the third step is to validate that the contracts between the consumer and th
         <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
         <link>http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</link>
         <guid isPermaLink="true">http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The difference between a tightly coupled and loosely coupled systems</title>
+        <description>
+</description>
+        <pubDate>Mon, 06 Jul 2015 00:00:00 +0100</pubDate>
+        <link>http://thrownewexception.com/2015/07/06/the-difference-between-a-tightly-coupled-and-loosely-coupled-systems.html</link>
+        <guid isPermaLink="true">http://thrownewexception.com/2015/07/06/the-difference-between-a-tightly-coupled-and-loosely-coupled-systems.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Event driven architecture</title>
+        <description>&lt;p&gt;When I first hear about event driven architecture (EDA) was while I starting to apply SOA to my current company was read Udi Dahan’s blog and investigating NServiceBus. I was fascinated about how does it simplify the scalability of the system. I do know that it adds some complexity but the things we win with it are much more important than the things we lose.&lt;/p&gt;
+
+&lt;p&gt;This pattern promotes the production, detection and consumption of events as the way the system interacts with the world to notify or react to any change.&lt;/p&gt;
+
+&lt;p&gt;As an example, I will start with an ecommerce application. The application uses a relational database to save the products and to show it to the users. With the success of the application people are starting complaining about the search… We know a relational database is not the best fit for the search funcionality. The first thing we think is… lets save it to Solr/Elasticsearch and to our relational database with two phase commit. And it will eventually work. But can we make it simple? Yes.&lt;/p&gt;
+
+&lt;p&gt;Goods
+ - loose coupling system (time and physical)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 Jul 2015 00:00:00 +0100</pubDate>
+        <link>http://thrownewexception.com/2015/07/06/event-driven-architecture.html</link>
+        <guid isPermaLink="true">http://thrownewexception.com/2015/07/06/event-driven-architecture.html</guid>
         
         
       </item>
