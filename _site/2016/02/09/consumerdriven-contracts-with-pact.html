@@ -11,7 +11,7 @@
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://127.0.0.1:4000/2016/02/09/consumerdriven-contracts-with-pact.html">
+    <link rel="canonical" href="http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html">
 
 </head>
 
@@ -73,49 +73,41 @@
   </header>
 
   <article class="post-content">
-    <p>Quando usamos microservices, obtemos uma maior flexibilidade de deployment, contudo a nossa capacidade de lançar serviços individualmente é limitada pelas dependências entre os serviços. Para microservices funcionar com o mínimo atrito para a organização, precisamos de fazer continuous delivery, podendo assim lançar as aplicações de forma independente. Isto é importante por vários motivos, entre os quais:</p>
+    <p>Microservices, here they are and they are to stay. When using a microservice architecture, theory says, we get a more flexible system. It’s easier to deploy, because instead of release the whole system, as in a monolithic application, we can release small pieces of the system independently. We get hardware flexibility, because we may need different hardware specification for different pieces of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another using Node.js. The flexibility is wonderful and it all sounds great; however, our ability to release the services independently is more often than not restricted by the dependencies between services.
+To evolve to microservices architecture smoothly, we need continuous delivery. This is very important for several reasons, for example:</p>
 
 <ul>
-  <li>Confiar mais nas releases, como estamos a reduzir o tamanho da release, o risco associado diminui. Como os scripts de deployment têm de ser testados várias vezes durante o processo antes do código entrar em produção, a maior parte dos erros no processo e no script são detectados antes do código entrar em produção.</li>
-  <li>Como confiamos mais nas releases, podemos lançar mais vezes e mais cedo, isto irá permitir um time to market mais rápido e obter o feedback do utilizador mais cedo para melhorar o produto o mais cedo possível</li>
-  <li>Ao melhorar o nosso produto mais cedo, com base no feedback do utilizador, atingimos uma melhor satisfação do cliente.</li>
+  <li><b>Reliable releases</b>, considering that we are reducing the size of what we are releasing, the risk associated with the release is lower than in a monolithic application. Since, the deployment’ scripts need to run and be tested several times before the code goes to production, most of the issues with the process of deployment are detected in this phase. In the end, we will get a automated process that we can trust.</li>
+  <li>With reliable releases, we can <b>release often</b>. The sooner we go to the market the sooner we get customer feedback to improve our product.</li>
+  <li><b>Improving our product sooner</b>, based on customer’s feedback, we will increase customer satisfaction.</li>
 </ul>
 
-<p>Por exemplo, vamos imaginar que temos um Catalog Service e um Inventory Service. Neste exemplo, o Inventory Service funciona como provider e envia ao Catalog Service o nível de stock de um determinado produto.
-<img src="http://127.0.0.1:4000/images/cdc1.jpg" alt="My helpful screenshot" /></p>
+<p>And… all of that will give us more money. We hope…</p>
 
-<p>Mais tarde, surge um novo requisito no serviço de encomendas para obter qual a localização do stock. A alteração exige mudar a API do Inventory Service para adicionar a localização do warehouse.</p>
+<p>But, lets talk about microservice and dependencies again, as example, imagine we’re creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.</p>
 
-<p><img src="http://127.0.0.1:4000/images/cdc2.jpg" alt="My helpful screenshot" /></p>
+<p><img src="http://thrownewexception.com/images/cdc1.jpg" alt="My helpful screenshot" /></p>
 
-<p><i>
-TODO: Rever isto
-Without the necessary precautions, there are a lot of ways these interactions can be broken by changes made in the different services. The most common one would be that the Provider would change its interface in such a way that the Consumer can no longer interact with it.</i></p>
+<p>Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.</p>
 
-<p>Examples:</p>
+<p><img src="http://thrownewexception.com/images/cdc2.jpg" alt="My helpful screenshot" /></p>
 
-<p>Change of the endpoint URL (e.g. GET /stockLevels renamed to GET /stockLevel)
-Change in the expected parameters (e.g. GET /stockLevels expecting a new mandatory “category” field)
-Change in the response payload (returns an array, instead of having an array wrapped in an object)&lt;/i&gt;</p>
+<p>Now, we have two consumers depending on the Inventory Service. If we are not wise, there are a lot of ways to the Catalog Service or OMS be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return a object instead of string.</p>
 
-<p>Esta alteração, dependendo da forma como estamos a expor e a consumir os dados, não deverá quebrar o Catalog Service. Mas como em qualquer alteração, precisamos de garantir que o nosso sistema não é quebrado por essa alteração e, na realidade, depois de atualizar o Catalog Service passamos a conhecer o nosso sistema da seguinte forma.</p>
-
-<p><img src="http://127.0.0.1:4000/images/cdc3.jpg" alt="My helpful screenshot" /></p>
-
-<p>As técnicas normalmente utilizadas para garantir que não estamos a partir o sistema são,</p>
+<p>There are techniques to prevent us from breaking up things</p>
 
 <ul>
-  <li>Coupled releases, ou seja, lançar para produção OMS, Catalog Service e Inventory Service em simultâneo, sempre que existe alteração da API de Inventory, por causa das suas dependências, assim evitamos que existam breaking changes não identificadas.</li>
-  <li>End-to-end testing. Provavelmente a segunda técnica a aplicar pela maior parte das organizações e uma das técnicas que QA prefere, porque lhes dá uma maior garantia que irá funcionar no futuro. Apesar de parecer uma solução bastante sensata, transforma-se rapidamente num pesadelo. Os custos de desenvolvimento e de manutençaõ destes testes são enormes. Os testes podem falhar por vários motivos, o que faz com que as equipas começem a duvidar dos testes e, quando a equipa começa a duvidar dos testes, normalmente os testes deixam de ser mantidos e deixamos rapidamente de ter testes.</li>
+  <li><b>Coupled releases</b>: We can release OMS, Catalog Service and Inventory Service simultaneously. This way we are sure we will not break the interactions between those services, because they’ll all be updated at the same time. But with the system growing and with the number of dependencies not going down, it is easy to understand it will be very hard to maintain.</li>
+  <li><b>End-to-end testing</b>: I believe this is one of most used solutions to this problem and mainly because is such a QA-friendly solution. Even if it sounds as a decent idea, it quickly becomes a nightmare. The development and maintainability costs associated with these tests are huge. To make the things worse, with all of the dependencies, a test can fail for a lot of different reasons, which leads to mistrust of the team in the tests. When the team distrusts the tests, normally, doesn’t take long for the team to stop maintain and doing tests.</li>
 </ul>
 
-<p>Visto que ambas as soluções nos dificultam as releases independentes e aumentam o custo de alterações, precisamos de uma forma mais flexível para evoluir a API do Inventory e garantir que uma nova versão da API inventory não é prejudicial para uma versão não alterada do OMS ou Catalog Service. E aqui entra o padrão Consumer-Driven Contracts</p>
+<p>Considering the pros and cons of the techniques above, we need a better, more flexible solution to evolve the Inventory Service API and be sure that a change on the API is not harmful to a unmodified version of the OMS or Catalog Service. And here comes the Customer-Driven Contracts pattern.</p>
 
-<h3>Consumer-Driven contracts</h3>
+<h3>Consumer-Driven Contracts</h3>
 
-<p>Consumer-Driven contracts is a pattern that allows the consumer to define an expected behavior from a service (provider). Then, both the consumer and the provider agrees on the contract. Finally, the provider can get that specification and validate that it does indeed meet the expectations of his consumers.</p>
+<p>Consumer-Driven Contracts is a pattern that allows the consumer to define an expected behavior from a service (provider). Then, both the consumer and the provider agrees on the contract. Finally, the provider can get that specification and validate that it does indeed meet the expectations of his consumers.</p>
 
-<p>That said, it’s easy to see the advantages of such approach in a microservices architecture, but how should we do the validation and how does the consumer defines an expected behavior… this is where Pact come in!</p>
+<p>That said, it’s easy to see the advantages of such approach in a microservices architecture, but how should we do the validation and how does the consumer defines an expected behavior… this is where Pact comes in!</p>
 
 <h3>What is pact? </h3>
 
@@ -127,16 +119,16 @@ Change in the response payload (returns an array, instead of having an array wra
 
 <p>Using the same example as before, we can remove the need of the Inventory Service and replace it using Pact.</p>
 
-<p>So, the first step should be communication between you and someone of the provider service so you can both agree on a contract based on your needs and what the provider is already exposing or not.</p>
+<p>So, the first step should be communication between us and someone responsable for the provider service so we can both agree on a contract based on our needs and what the provider is already exposing or not.</p>
 
-<p>The second step is to define consumer expectations on the Catalog Service. It may feel weird for you to create the code you are expecting from the provider and not use the provider instead, but doing so has some advantages that will talk in a bit.</p>
+<p>The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will talk in a bit.</p>
 
-<p><img src="http://127.0.0.1:4000/images/cdc4.jpg" alt="Step 2 - Define consumer expectations" /></p>
+<p><img src="http://thrownewexception.com/images/cdc4.jpg" alt="Step 2 - Define consumer expectations" /></p>
 
-<p>After that, you’re done and now it’s responsibility of the provider to ensure that these contracts are met and never broken.
-So, the third step is validate if the contracts between the consumer and the provider is valid.</p>
+<p>After that, we did all we had to do. It’s responsibility of the provider to ensure that these contracts are met and never broken.
+So, the third step is to validate that the contracts between the consumer and the provider are valid.</p>
 
-<p><img src="http://127.0.0.1:4000/images/cdc5.jpg" alt="Step 3 - Verify expectations on provider" /></p>
+<p><img src="http://thrownewexception.com/images/cdc5.jpg" alt="Step 3 - Verify expectations on provider" /></p>
 
 <h3>Isn't it the same as end-to-end testing?</h3>
 
@@ -144,23 +136,23 @@ So, the third step is validate if the contracts between the consumer and the pro
 
 <p><b>We don’t need all the system to be running</b></p>
 
-<p>With this we are validating that there is no API breaking changes and the dependencies between the services are working as it should, without needing multiple services running at the same time. Starting multiple services and managing dependencies while deployment is a non-trivial thing to do and takes time. We can verify the same thing without all of this overhead.</p>
+<p>With this solution, we are validating that there is no API breaking changes and the dependencies between the services are working as it should, without the need of multiple services running at the same time. Starting multiple services and managing dependencies on the deployment is a non-trivial thing to do and takes time. We can verify the same thing without all of this overhead.</p>
 
-<p><b>Change is inevitable.</b></p>
+<p><b>Change is inevitable</b></p>
 
-<p>Our experience tell us that change is inevitable and all the APIs will change. If we don’t know who is using our service and how is it using, we don’t feel good about change, because we will be afraid of break something. With pact, the provider will know how others services are using his API and he will be more comfortable to change things, because the interactions between consumers and providers will always be validated.</p>
+<p>Our experience tell us that change is inevitable and all the APIs will change. If we don’t know who is using our service and how is it using, we don’t feel good about change, because we will be afraid of breaking something. With pact, the provider will know how the others services are using his API and he will be more comfortable to change things, because the interactions between consumers and providers will always be validated.</p>
 
 <p><i>Change is inevitable. Change is constant.</i> - Benjamin Disraeli</p>
 
 <p><b>Fast feedback is everything</b></p>
 
-<p>The execution of the tests is faster. And we all know our lifes are a loop of edit-compile-test… <a href="http://www.joelonsoftware.com/articles/fog0000000023.html">as Joel Spolsky said</a>: <i>…the faster the Edit-Compile-Test loop, the more productive you will be…</i></p>
+<p>The execution of the tests is faster than in a traditional end-to-end testing. And we all know our lifes are a loop of edit-compile-test… <a href="http://www.joelonsoftware.com/articles/fog0000000023.html">as Joel Spolsky said</a>: <i>…the faster the Edit-Compile-Test loop, the more productive you will be…</i></p>
 
 <h3>In Conclusion</h3>
 
-<p>Consumer-driven contract is amazing to improve your organization productivity. Being able to verify contracts at build time without the need of start up a bunch of services and their dependencies, saves you money, time and helps you to stay sane. With the confidence it gives you on the deployment process, your organization will release more often, sooner and improve your users experience sooner.</p>
+<p>Consumer-Driven Contract pattern is amazing to improve our organization productivity. Being able to verify contracts at build time without the need of start up a bunch of services and their dependencies, saves us money, time and helps us to stay sane. With the confidence it gives us on the deployment process, our organization will release more often, sooner and improve our users experience sooner.</p>
 
-<p>Remember… fast feedback is everything. You are just enabling it. For you, for your organization and your business.</p>
+<p>Remember… fast feedback is everything. We are just enabling it. For us, for our organization and our business.</p>
 
   </article>
 
