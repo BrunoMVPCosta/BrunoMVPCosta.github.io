@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>The art of coding</title>
+    <title>Not every if--then-else statement, needs the	 else</title>
     <meta name="description" content="Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html">
+    <link rel="canonical" href="http://127.0.0.1:4000/code/clean/2015/04/03/stop-doing-if-return-else.html">
 
 </head>
 
@@ -68,29 +68,58 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">The art of coding</h1>
-    <p class="post-meta">Apr 1, 2015</p>
+    <h1 class="post-title">Not every if--then-else statement, needs the	 else</h1>
+    <p class="post-meta">Apr 3, 2015</p>
   </header>
 
   <article class="post-content">
-    <p>Have you ever felt it’s really hard to explain what a software engineer does for a living? Have you ever felt you were boring someone explaining what a software engineer does? If you have answered yes to any of the questions, join the club.</p>
+    <p>As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.</p>
 
-<p>When I started studying computer engineering, here in Portugal, not everyone had a personal computer and a lot of people not much older than me, had real issues working with computers. For example, they didn’t know how to turn on the computer. Yeah! That much.</p>
+<p>One thing that amuses me is the quantity of people doing the following piece of code.</p>
 
-<p>Back on those days, trying to explain to a friend, what I was studying was hard, not only because I had no idea what software engineering really was, but also, because <a href="https://www.reddit.com/r/AskMen/comments/1wxzkx/why_does_programming_have_so_many_negative/">programming has so many negative stereotype</a> and for a bunch of reasons, a lot of people just don’t enjoy to be around a software engineer or someone with a nerdy personality. I felt that people that didn’t know me that well, looked at me differently after I told them what I was studying and I sincerely believe it was because of the stereotypes around software engineers. Those stereotypes create a barrier on the communication between people and you need more time to get the “normal” look from those people again.</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">double</span> <span class="nf">Divide</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">divisor</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentOutOfRangeException</span><span class="p">(</span><span class="s">"divisor"</span>
+		<span class="p">,</span> <span class="s">"Divide by zero is not allowed"</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="n">number</span> <span class="p">/</span> <span class="n">divisor</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>I feel sad about it, but I think it doesn’t have to do with the other person, but we cannot find an expression to transform software development in a non-boring activity. Let’s be honest, you have plenty of cool TV shows about doctors (House, Grey Anatomy, etc), about lawyers (Suits, How to get away with murderer, etc), about detectives, policemen, etc. But about software engineering we don’t have much and the ones that exist, I think only software related staff watches them. It’s boring.</p>
+<p>First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.</p>
 
-<p>If it’s hard for someone as creative as a TV shows writer, how to answer the question with some glamour and creativity?</p>
+<p><b>But, do we really need the else here? </b></p>
 
-<p><b>What do we do for living?</b></p>
+<p>The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true.</p>
 
-<p>We are software engineers. Some of us create apps, others backend services to support those apps or websites. Think about Facebook, Skype, Twitter, Linkedin, etc… millions of people using their technology day after day. Isn’t it amazing? Does it look boring? Changing people’s life. Changing the world. Changing the way people communicate. Changing the way people buy. Writing code is an art. It might not be a one-man show as it is creating a new piece of melody or writing a book, but it is art. Art created by one or millions of software engineers.</p>
+<p>Resuming, no, we don’t need the else there. Changing our code to remove the unnecessary else the code will looks like this.</p>
 
-<p>Again, think about Facebook, Skype, Twitter, Linkedin, etc… Millions of unknown artists… giving you art, everyday.</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">double</span> <span class="nf">Divide</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">divisor</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">throw</span> <span class="k">new</span> <span class="nf">ArgumentOutOfRangeException</span><span class="p">(</span><span class="s">"divisor"</span>
+		<span class="p">,</span> <span class="s">"Divide by zero is not allowed"</span><span class="p">);</span>
+	<span class="p">}</span>
 
-<p>Does it sound boring? I don’t think so.</p>
+	<span class="k">return</span> <span class="n">number</span> <span class="p">/</span> <span class="n">divisor</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
+<p><b>But, its just a detail…</b></p>
+
+<p>At first, this seems to be just a little thing that doesn’t really matter, but what if we add more and more logic into the code without refactoring it? Have you thought about the maintainability problem that we might have in the future?</p>
+
+<p><b>Where is this coming from?</b></p>
+
+<p>I have a theory about why developers are still doing this. When learning how to program, we normally are taught the if-then-else statement before any learning on defensive code. As we practice our skills, we are doing more and more if-then-else statements until it becomes intrinsic in our brain and we do it without thinking. The problem is that we need to think to write a clean code.</p>
+
+<p><b>How can we stop doing it?</b></p>
+
+<p>Everytime you have a code review, or change some code from another engineer, please check for code like this and alert your colleague for this. He will be grateful.</p>
 
   </article>
 
