@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Feb 2016 18:08:22 +0000</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 18:08:22 +0000</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 18:40:32 +0000</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 18:40:32 +0000</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -52,11 +52,11 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;Pact is a library that enables Consumer-Driven Contract testing.&lt;/p&gt;
 
-&lt;p&gt;Pact will be present both on the consumer and on the provider, because we are replacing a synchronous communication with an mediator named Pact. The mediator will receive from the consumer the HTTP request it will make to the provider and the HTTP response it is expecting from it. As a good mediator that pact are, it will use these expectations and create a mock service to simulate the provider service. It will record all the interactions between the consumer and the mock service to a json file that, will be used by the provider. So, the consumer sends the information to the mediator that he will need from the provider. Later, the mediator will give the json file to the provider showing him the expectations from the consumer. To validate that the provider does actually provide the response the consumer is expecting, the mediator will replay the interactions with the consumer he recorded.&lt;/p&gt;
+&lt;p&gt;Pact will be present both on the consumer and on the provider, because we are replacing a synchronous communication with a mediator named Pact. The mediator will receive from the consumer the HTTP request it will make to the provider and the HTTP response it is expecting from it. As a good mediator that pact are, it will use these expectations and create a mock service to simulate the provider service. It will record all the interactions between the consumer and the mock service to a json file that, will be used by the provider. So, the consumer sends the information to the mediator that he will need from the provider. Later, the mediator will give the json file to the provider showing him the expectations from the consumer. To validate that the provider does actually provide the response the consumer is expecting, the mediator will replay the interactions with the consumer he recorded.&lt;/p&gt;
 
 &lt;h3&gt;Overview&lt;/h3&gt;
 
-&lt;p&gt;Using the same example as before, we can remove the need of the Inventory Service and replace it using Pact.&lt;/p&gt;
+&lt;p&gt;Using the previous example, we can remove the need of the Inventory Service and replace it using Pact.&lt;/p&gt;
 
 &lt;p&gt;So, the first step should be communication between us and someone responsable for the provider service so we can both agree on a contract based on our needs and what the provider is already exposing or not.&lt;/p&gt;
 
