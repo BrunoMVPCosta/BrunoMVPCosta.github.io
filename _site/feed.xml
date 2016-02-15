@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Feb 2016 14:03:19 +0000</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 14:03:19 +0000</lastBuildDate>
+    <pubDate>Mon, 15 Feb 2016 17:35:03 +0000</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 17:35:03 +0000</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -97,6 +97,12 @@ So, the third step is to validate that the contracts between the consumer and th
         <link>http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</link>
         <guid isPermaLink="true">http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
         
+        <category>consumer-driven-design</category>
+        
+        <category>pact</category>
+        
+        <category>continuous delivery</category>
+        
         
       </item>
     
@@ -151,13 +157,13 @@ So, the third step is to validate that the contracts between the consumer and th
 &lt;p&gt;Everytime you have a code review, or change some code from another engineer, please check for code like this and alert your colleague for this. He will be grateful.&lt;/p&gt;
 </description>
         <pubDate>Fri, 03 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
+        <link>http://thrownewexception.com/coding/2015/04/03/stop-doing-if-return-else.html</link>
+        <guid isPermaLink="true">http://thrownewexception.com/coding/2015/04/03/stop-doing-if-return-else.html</guid>
+        
+        <category>clean-code</category>
         
         
-        <category>code</category>
-        
-        <category>clean</category>
+        <category>coding</category>
         
       </item>
     

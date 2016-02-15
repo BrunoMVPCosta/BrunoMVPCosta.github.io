@@ -86,7 +86,25 @@
     }
 }
 
+/**
+ * tags
+ */
+.tags{
+    font-family: FontAwesome;
+    margin-right: 5px;
+    background-color: #4183c4;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
 
+    &:visited{
+      color: #ffffff;
+    }
+}
 
 /**
  * Site footer
@@ -233,4 +251,9 @@
             font-size: 18px;
         }
     }
+}
+
+.post-footer {
+    margin-bottom: $spacing-unit;
+    font-size: 16px;
 }

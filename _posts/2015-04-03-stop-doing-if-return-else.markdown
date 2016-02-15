@@ -2,7 +2,8 @@
 layout: post
 title:  "Not every if--then-else statement, needs the	 else"
 date:   2015-04-03 00:00:42
-categories: code clean
+categories: coding
+tags: [clean-code]
 ---
 As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.
 

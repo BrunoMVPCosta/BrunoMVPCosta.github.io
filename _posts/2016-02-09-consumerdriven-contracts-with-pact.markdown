@@ -2,7 +2,7 @@
 layout: post
 title: "Consumer-driven contracts with Pact"
 date: "2016-02-09"
-draft: true
+tags: [consumer-driven-design, pact, continuous delivery]
 ---
 
 Microservices, here they are and they are to stay. When using a microservice architecture, theory says, we get a more flexible system. It's easier to deploy, because instead of release the whole system, as in a monolithic application, we can release small pieces of the system independently. We get hardware flexibility, because we may need different hardware specification for different pieces of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another using Node.js. The flexibility is wonderful and it all sounds great; however, our ability to release the services independently is more often than not restricted by the dependencies between services.
