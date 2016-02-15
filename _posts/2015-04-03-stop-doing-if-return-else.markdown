@@ -27,11 +27,12 @@ public double Divide(int number, int divisor)
 
 First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.
 
-<b>But, do we really need the else here? </b>
+<b>But, do we really need the else statement here? </b>
+
 
 The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the "then" are executed, otherwise it will continue to the "else" block and after this brach we'll have an "interception" point on the flow. However, one of our branches is an exit point, we don't want an interception happening after the "if-then-else" statement, we want the code to exit the method if the first condition is true.
 
-Resuming, no, we don't need the else there. Changing our code to remove the unnecessary else the code will looks like this.
+Resuming, no, we don't need the else there. <b>Not every if-then-else statement, needs the else,</b> changing our code to remove the unnecessary else the code will looks like this.
 
 {% highlight csharp %}
 

@@ -92,11 +92,11 @@
 
 <p>First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.</p>
 
-<p><b>But, do we really need the else here? </b></p>
+<p><b>But, do we really need the else statement here? </b></p>
 
 <p>The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true.</p>
 
-<p>Resuming, no, we don’t need the else there. Changing our code to remove the unnecessary else the code will looks like this.</p>
+<p>Resuming, no, we don’t need the else there. <b>Not every if-then-else statement, needs the else,</b> changing our code to remove the unnecessary else the code will looks like this.</p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="kt">double</span> <span class="nf">Divide</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">,</span> <span class="kt">int</span> <span class="n">divisor</span><span class="p">)</span>
 <span class="p">{</span>

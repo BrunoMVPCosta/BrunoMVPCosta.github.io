@@ -6,9 +6,9 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Feb 2016 23:53:43 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2016 23:53:43 +0000</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Mon, 15 Feb 2016 14:03:19 +0000</pubDate>
+    <lastBuildDate>Mon, 15 Feb 2016 14:03:19 +0000</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
     
       <item>
         <title>Consumer-driven contracts with Pact</title>
@@ -101,35 +101,6 @@ So, the third step is to validate that the contracts between the consumer and th
       </item>
     
       <item>
-        <title>The difference between a tightly coupled and loosely coupled systems</title>
-        <description>
-</description>
-        <pubDate>Mon, 06 Jul 2015 00:00:00 +0100</pubDate>
-        <link>http://thrownewexception.com/2015/07/06/the-difference-between-a-tightly-coupled-and-loosely-coupled-systems.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2015/07/06/the-difference-between-a-tightly-coupled-and-loosely-coupled-systems.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Event driven architecture</title>
-        <description>&lt;p&gt;When I first hear about event driven architecture (EDA) was while I starting to apply SOA to my current company was read Udi Dahan’s blog and investigating NServiceBus. I was fascinated about how does it simplify the scalability of the system. I do know that it adds some complexity but the things we win with it are much more important than the things we lose.&lt;/p&gt;
-
-&lt;p&gt;This pattern promotes the production, detection and consumption of events as the way the system interacts with the world to notify or react to any change.&lt;/p&gt;
-
-&lt;p&gt;As an example, I will start with an ecommerce application. The application uses a relational database to save the products and to show it to the users. With the success of the application people are starting complaining about the search… We know a relational database is not the best fit for the search funcionality. The first thing we think is… lets save it to Solr/Elasticsearch and to our relational database with two phase commit. And it will eventually work. But can we make it simple? Yes.&lt;/p&gt;
-
-&lt;p&gt;Goods
- - loose coupling system (time and physical)&lt;/p&gt;
-</description>
-        <pubDate>Mon, 06 Jul 2015 00:00:00 +0100</pubDate>
-        <link>http://thrownewexception.com/2015/07/06/event-driven-architecture.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2015/07/06/event-driven-architecture.html</guid>
-        
-        
-      </item>
-    
-      <item>
         <title>Not every if--then-else statement, needs the	 else</title>
         <description>&lt;p&gt;As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.&lt;/p&gt;
 
@@ -150,11 +121,11 @@ So, the third step is to validate that the contracts between the consumer and th
 
 &lt;p&gt;First the good things. The developer is doing a defensive code, validating the input arguments and throwing an informative exception.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;But, do we really need the else here? &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;But, do we really need the else statement here? &lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;The if-then-else statement exists to perform some action based on a condition. If the condition is true, the statements following the “then” are executed, otherwise it will continue to the “else” block and after this brach we’ll have an “interception” point on the flow. However, one of our branches is an exit point, we don’t want an interception happening after the “if-then-else” statement, we want the code to exit the method if the first condition is true.&lt;/p&gt;
 
-&lt;p&gt;Resuming, no, we don’t need the else there. Changing our code to remove the unnecessary else the code will looks like this.&lt;/p&gt;
+&lt;p&gt;Resuming, no, we don’t need the else there. &lt;b&gt;Not every if-then-else statement, needs the else,&lt;/b&gt; changing our code to remove the unnecessary else the code will looks like this.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Divide&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;divisor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
