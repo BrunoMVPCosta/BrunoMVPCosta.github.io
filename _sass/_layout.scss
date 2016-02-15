@@ -5,7 +5,7 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
-
+    background-color: $background-color-header;
     // Positioning context for the mobile navigation icon
     position: relative;
 }
@@ -92,7 +92,7 @@
 .tags{
     font-family: FontAwesome;
     margin-right: 5px;
-    background-color: #4183c4;
+    background-color: #B6BFC2;
     color: #ffffff;
     text-align: center;
     padding-right: 5px;
