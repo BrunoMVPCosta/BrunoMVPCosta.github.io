@@ -8,7 +8,7 @@
     background-color: $background-color-header;
     // Positioning context for the mobile navigation icon
     position: relative;
-    background: url("../images/backgroudheader.png") no-repeat center;
+    background: url("../images/backgroudheader.jpg") no-repeat center;
     height: 100px;
 }
 
@@ -19,7 +19,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-    
+
     &,
     &:visited {
         color: #ffffff;
