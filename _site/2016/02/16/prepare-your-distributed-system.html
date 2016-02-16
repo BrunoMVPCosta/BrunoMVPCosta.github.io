@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Event driven architecture</title>
+    <title>Prepare your distributed system, so you don't lose money, when it fails</title>
 
     
-      <meta name="description" content="Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
-">
+      <meta name="description" content="If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you're still making money." />
     
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/2015/07/06/event-driven-architecture.html">
+    <link rel="canonical" href="http://thrownewexception.com/2016/02/16/prepare-your-distributed-system.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
@@ -81,10 +80,12 @@
   
 
   <header class="post-header">
-    <h1 class="post-title">Event driven architecture</h1>
+    <h1 class="post-title">Prepare your distributed system, so you don't lose money, when it fails</h1>
     <div>
-    <span class="post-meta">Jul 6, 2015</span>
+    <span class="post-meta">Feb 16, 2016</span>
     <span class="post-meta">
+      
+        <i class="fa fa-tag"></i>
       
 
      
@@ -94,14 +95,27 @@
   </header>
 
   <article class="post-content">
-    <p>When I first hear about event driven architecture (EDA) was while I starting to apply SOA to my current company was read Udi Dahan’s blog and investigating NServiceBus. I was fascinated about how does it simplify the scalability of the system. I do know that it adds some complexity but the things we win with it are much more important than the things we lose.</p>
+    <p>The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.</p>
 
-<p>This pattern promotes the production, detection and consumption of events as the way the system interacts with the world to notify or react to any change.</p>
+<p>We usually forget that we are trusting on the network, the number one reason for serious system failure, because we don’t know or we don’t remember <a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">the eight fallacies of distributed computing</a>:</p>
 
-<p>As an example, I will start with an ecommerce application. The application uses a relational database to save the products and to show it to the users. With the success of the application people are starting complaining about the search… We know a relational database is not the best fit for the search funcionality. The first thing we think is… lets save it to Solr/Elasticsearch and to our relational database with two phase commit. And it will eventually work. But can we make it simple? Yes.</p>
+<ul>
+  <li>The network is reliable</li>
+  <li>Latency is zero</li>
+  <li>Bandwidth is infinite</li>
+  <li>The network is secure</li>
+  <li>Topology doesn’t change</li>
+  <li>There is one administrator</li>
+  <li>Transport cost is zero</li>
+  <li>The network is homogeneous</li>
+</ul>
 
-<p>Goods
- - loose coupling system (time and physical)</p>
+<p>Lets say that you are running an e-commerce business, it’s the most important Friday of the year. Yep, that’s it, Black Friday. You have 20.000 users on your website. Your system allows the user to add to cart the items and it will validate the stock later on the checkout process. You have 300 users on the checkout process and you know that a slow experience on the checkout process can have a huge impact on the conversion rate. Your Inventory Service is having 30.000 requests per minute and it is slowing down your checkout process. You have an average order value of $400, so you can lose up to $120.000 if you lose the users that are at the checkout process.</p>
+
+<p>How can you prevent from losing the users if the Inventory Service goes down? <b>Timeouts</b> and <b>Circuit break</b> are useful techniques in this situation. Just remember that is not just a technical decision and you should ask the business what should happens in this situation. Should we prevent users from ordering an item without validating the item’s availability or should we allow them and check the availability later in the process?</p>
+
+<p>Repeat with me, <b>it-will-fail</b>. And Murphy will make sure it happens in the most inappropriate moment. The best thing is to prepare yourself for when it fails.</p>
+
 
   </article>
 </div>

@@ -1,5 +1,5 @@
 ---
 layout: post
 title: "The difference between a tightly coupled and loosely coupled systems"
-date: "2015-07-06"
+date: "2017-07-06"
 ---
