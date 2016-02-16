@@ -5,6 +5,7 @@ date:   2015-04-03 00:00:42
 categories: coding
 tags: [clean-code]
 permalink: /code/clean/2015/04/03/stop-doing-if-return-else.html
+description: Stop doing if return else statements. It's bad for maintainability and it is error prone.
 ---
 As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.
 

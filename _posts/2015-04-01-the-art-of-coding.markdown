@@ -4,6 +4,7 @@ title:  "The art of coding"
 date:   2015-04-01 00:00:42
 categories: coding
 permalink: /coding/2015/04/01/the-art-of-coding.html
+description: Have you ever felt it's really hard to explain what a software engineer does for a living? I think I might be able to help you.
 ---
 Have you ever felt it's really hard to explain what a software engineer does for a living? Have you ever felt you were boring someone explaining what a software engineer does? If you have answered yes to any of the questions, join the club.
 
