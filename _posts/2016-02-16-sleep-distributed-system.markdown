@@ -5,6 +5,7 @@ date: "2016-02-16"
 tags: [design-patterns]
 permalink: /2016/02/16/prepare-your-distributed-system.html
 description: If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you're still making money.
+comments: true
 ---
 
 The first thing you need to learn when you release a distributed system into production is this: it'll eventually fail! You don't believe me, huh? Well, I don't blame you.

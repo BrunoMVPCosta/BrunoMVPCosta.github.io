@@ -5,6 +5,7 @@ date: "2016-02-09"
 tags: [consumer-driven-design, pact, continuous delivery]
 permalink: /2016/02/09/consumerdriven-contracts-with-pact.html
 description: Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture.
+comments: true
 ---
 
 Microservices are here to stay. When using a microservices architecture, theory says, we get a more flexible system. It's easier to deploy, because instead of releasing the entire system, as in a monolithic application, we can release small parts of the system independently. We get hardware flexibility, because we may need different hardware specifications for different parts of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another one using Node.js. The flexibility is wonderful and it all sounds great however, our ability to release the services independently is more often than not restricted by the dependencies between services.
