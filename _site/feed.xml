@@ -6,9 +6,35 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 17 Feb 2016 15:26:29 +0000</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 15:26:29 +0000</lastBuildDate>
+    <pubDate>Thu, 18 Feb 2016 17:03:04 +0000</pubDate>
+    <lastBuildDate>Thu, 18 Feb 2016 17:03:04 +0000</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>The term ‘Invoke-WebRequest’ is not recognized</title>
+        <description>&lt;p&gt;I’ve decided to check out the code from &lt;a href=&quot;https://github.com/OrchardCMS/Orchard2&quot;&gt;Orchard2&lt;/a&gt; to learn more about it and the new ASP.NET Core 1.0. Following the &lt;i&gt;Getting Started&lt;/i&gt; points from their github’s page the third bullet point is to run the &lt;i&gt;build.cmd&lt;/i&gt;. I did and the output was the follow&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, I did what every engineer does when he has a problem that doesn’t know how to solve… I google it. It didn’t help much, so I went to the &lt;a href=&quot;http://technet.microsoft.com/en-us/library/hh849901.aspx&quot;&gt;technet website&lt;/a&gt; to see that the cmdlet has been introduced in Windows PowerShell 3.0.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, I wondered what powershell version I had on the computer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ops, problem found. Now, to solve it, I went to &lt;a href=&quot;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&quot;&gt;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&lt;/a&gt; and installed the PowerShell 4.0.&lt;/p&gt;
+
+&lt;p&gt;Finally, it’s working.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+        <link>http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
+        <guid isPermaLink="true">http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Prepare your distributed system, so you don&#39;t lose money, when it fails</title>

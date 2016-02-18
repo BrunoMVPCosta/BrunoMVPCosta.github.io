@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>throw new exception();</title>
+    <title>The term ‘Invoke-WebRequest’ is not recognized</title>
 
     
-      <meta name="description" content="Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
-">
+      <meta name="description" content="Fixing "The term ‘Invoke-WebRequest’ is not recognized" error" />
     
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/">
+    <link rel="canonical" href="http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
@@ -75,74 +74,71 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 18, 2016</span>
+  
+  
 
-        <h2>
-          <a class="post-link" href="/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html">The term ‘Invoke-WebRequest’ is not recognized</a>
-        </h2>
-        <p class="excerpt">I’ve decided to check out the code from <a href="https://github.com/OrchardCMS/Orchard2">Orchard2</a> to learn more about it and the new ASP.NET Core 1.0. Following the <i>Getting Started</i> points from their github’s page the third bullet point is to run the <i>build.cmd</i>. I did and the output was the follow
+  <header class="post-header">
+    <h1 class="post-title">The term ‘Invoke-WebRequest’ is not recognized</h1>
+    <div>
+    <span class="post-meta">Feb 18, 2016</span>
+    <span class="post-meta">
+      
 
-<a href="/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html">&hellip;</a></p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 16, 2016</span>
+     
 
-        <h2>
-          <a class="post-link" href="/2016/02/16/prepare-your-distributed-system.html">Prepare your distributed system, so you don't lose money, when it fails</a>
-        </h2>
-        <p class="excerpt">The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.
+ </span>
+  </div>
+  </header>
 
-<a href="/2016/02/16/prepare-your-distributed-system.html">&hellip;</a></p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 9, 2016</span>
+  <article class="post-content">
+    <p>I’ve decided to check out the code from <a href="https://github.com/OrchardCMS/Orchard2">Orchard2</a> to learn more about it and the new ASP.NET Core 1.0. Following the <i>Getting Started</i> points from their github’s page the third bullet point is to run the <i>build.cmd</i>. I did and the output was the follow</p>
 
-        <h2>
-          <a class="post-link" href="/2016/02/09/consumerdriven-contracts-with-pact.html">Consumer-driven contracts with Pact</a>
-        </h2>
-        <p class="excerpt">Microservices are here to stay. When using a microservices architecture, theory says, we get a more flexible system. It’s easier to deploy, because instead of releasing the entire system, as in a monolithic application, we can release small parts of the system independently. We get hardware flexibility, because we may need different hardware specifications for different parts of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another one using Node.js. The flexibility is wonderful and it all sounds great however, our ability to release the services independently is more often than not restricted by the dependencies between services.
-To evolve to microservices architecture smoothly, we need continuous delivery. This is very important for several reasons, for example:
+<p><img src="http://thrownewexception.com/images/invokewebrequesterror.jpg" alt="The term ‘Invoke-WebRequest’ is not recognized" /></p>
 
-<a href="/2016/02/09/consumerdriven-contracts-with-pact.html">&hellip;</a></p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 3, 2015</span>
+<p>So, I did what every engineer does when he has a problem that doesn’t know how to solve… I google it. It didn’t help much, so I went to the <a href="http://technet.microsoft.com/en-us/library/hh849901.aspx">technet website</a> to see that the cmdlet has been introduced in Windows PowerShell 3.0.</p>
 
-        <h2>
-          <a class="post-link" href="/code/clean/2015/04/03/stop-doing-if-return-else.html">Not every if--then-else statement, needs the	 else</a>
-        </h2>
-        <p class="excerpt">As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.
+<p><img src="http://thrownewexception.com/images/invokewebrequestversion.jpg" alt="CmdLet other versions" /></p>
 
-<a href="/code/clean/2015/04/03/stop-doing-if-return-else.html">&hellip;</a></p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 1, 2015</span>
+<p>Next, I wondered what powershell version I had on the computer.</p>
 
-        <h2>
-          <a class="post-link" href="/coding/2015/04/01/the-art-of-coding.html">The art of coding</a>
-        </h2>
-        <p class="excerpt">Have you ever felt it’s really hard to explain what a software engineer does for a living? Have you ever felt you were boring someone explaining what a software engineer does? If you have answered yes to any of the questions, join the club.
+<p><img src="http://thrownewexception.com/images/psversion.jpg" alt="Powershell version" /></p>
 
-<a href="/coding/2015/04/01/the-art-of-coding.html">&hellip;</a></p>
-      </li>
-    
-  </ul>
+<p>Ops, problem found. Now, to solve it, I went to <a href="http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx">http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx</a> and installed the PowerShell 4.0.</p>
 
-  <hr class="post-list__divider ">
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Finally, it’s working.</p>
 
+
+  </article>
 </div>
 
   
+<!-- Add Disqus comments. -->
+<div id="disqus_thread">
+</div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//thrownewexceptioncom.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 
       </div>
 
