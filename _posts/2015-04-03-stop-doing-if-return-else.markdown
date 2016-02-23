@@ -64,3 +64,7 @@ I have a theory about why developers are still doing this. When learning how to 
 <b>How can we stop doing it?</b>
 
 Everytime you have a code review, or change some code from another engineer, please check for code like this and alert your colleague for this. He will be grateful.
+
+<b>UPDATE:</b> You can also write a Analyzer using Roslyn API to validate this, check out [here][1] how to do it.
+
+[1]:http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html

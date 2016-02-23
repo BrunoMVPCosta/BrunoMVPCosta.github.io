@@ -18,16 +18,7 @@
 
 </head>
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-6819542-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
+  
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
   <body>
 
@@ -93,21 +84,21 @@
   </header>
 
   <article class="post-content">
-    <p>I’ve decided to check out the code from <a href="https://github.com/OrchardCMS/Orchard2">Orchard2</a> to learn more about it and the new ASP.NET Core 1.0. Following the <i>Getting Started</i> points from their github’s page the third bullet point is to run the <i>build.cmd</i>. I did and the output was the follow</p>
+    <p>I’ve decided to check out the code from <a href="https://github.com/OrchardCMS/Orchard2">Orchard2</a> to learn more about it and the new ASP.NET Core 1.0. Following the <i>Getting Started</i> points from their github’s page the third bullet point is to run the <i>build.cmd</i>. I did and the output was the following</p>
 
-<p><img src="http://thrownewexception.com/images/invokewebrequesterror.jpg" alt="The term ‘Invoke-WebRequest’ is not recognized" /></p>
+<p><img src="http://thrownewexception.com/images/2016_02_18/invokewebrequesterror.jpg" alt="The term ‘Invoke-WebRequest’ is not recognized" /></p>
 
-<p>So, I did what every engineer does when he has a problem that doesn’t know how to solve… I google it. It didn’t help much, so I went to the <a href="http://technet.microsoft.com/en-us/library/hh849901.aspx">technet website</a> to see that the cmdlet has been introduced in Windows PowerShell 3.0.</p>
+<p>So, I did what every engineer does when he has a problem that doesn’t know how to solve… I googled it. It didn’t help much, so I went to the <a href="http://technet.microsoft.com/en-us/library/hh849901.aspx">technet website</a> to see that the cmdlet has been introduced in Windows PowerShell 3.0.</p>
 
-<p><img src="http://thrownewexception.com/images/invokewebrequestversion.jpg" alt="CmdLet other versions" /></p>
+<p><img src="http://thrownewexception.com/images/2016_02_18/invokewebrequestversion.jpg" alt="CmdLet other versions" /></p>
 
 <p>Next, I wondered what powershell version I had on the computer.</p>
 
-<p><img src="http://thrownewexception.com/images/psversion.jpg" alt="Powershell version" /></p>
+<p><img src="http://thrownewexception.com/images/2016_02_18/psversion.jpg" alt="Powershell version" /></p>
 
 <p>Ops, problem found. Now, to solve it, I went to <a href="http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx">http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx</a> and installed the PowerShell 4.0.</p>
 
-<p>Finally, it’s working.</p>
+<p><img src="http://thrownewexception.com/images/2016_02_18/itworkedsucesskid.jpg" alt="Finally, it worked." /></p>
 
 
   </article>
