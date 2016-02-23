@@ -7,6 +7,7 @@ tags: [clean-code]
 permalink: /code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html
 description: An example using Roslyn to stop doing if return else statements. It's bad for maintainability and it is error prone.
 comments: true
+share: true
 ---
 
 In one of my previous posts, I talked about [Not every if--then-else statement, needs the	 else][1]. Today, we'll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.

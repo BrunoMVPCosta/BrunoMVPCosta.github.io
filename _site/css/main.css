@@ -143,6 +143,15 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+/* SOCIAL */
+.dv-social ul li {
+  display: inline; }
+
+.dv-social ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 /**
  * Site header
  */

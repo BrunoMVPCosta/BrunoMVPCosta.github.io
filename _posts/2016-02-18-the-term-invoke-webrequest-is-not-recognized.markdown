@@ -5,6 +5,7 @@ date: "2016-02-18"
 permalink: /2016-02-18-the-term-invoke-webrequest-is-not-recognized.html
 description: Fixing "The term ‘Invoke-WebRequest’ is not recognized" error
 comments: true
+share: true
 ---
 
 I've decided to check out the code from [Orchard2][1] to learn more about it and the new ASP.NET Core 1.0. Following the <i>Getting Started</i> points from their github's page the third bullet point is to run the <i>build.cmd</i>. I did and the output was the following
