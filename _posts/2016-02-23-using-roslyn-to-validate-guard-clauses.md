@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-In one of my previous posts, I talked about [Not every if--then-else statement, needs the	 else][1]. Today, we'll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.
+In one of my previous posts, I talked about [Not every if--then-else statement, needs the	 else]({% post_url 2015-04-03-stop-doing-if-return-else %}).. Today, we'll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.
 
 <b>Prerequisites</b>
 
@@ -156,11 +156,10 @@ You should see something like this:
 
 <b>More</b>
 
-Stay tuned. The next blog post we will change the CodeFixProvider to give the developer a suggestion on how to solve this mistake.
+Stay tuned. The [next blog]({% post_url 2016-03-11-using-roslyn-codefixprovider-guard-clauses %}) post we will change the CodeFixProvider to give the developer a suggestion on how to solve this mistake.
 
 You can find my version of the Analyzer on [Github][4].
 
-[1]:http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html
 [2]:https://www.visualstudio.com/downloads
 [3]:https://visualstudiogallery.msdn.microsoft.com/2ddb7240-5249-4c8c-969e-5d05823bcb89
 [4]:https://github.com/BrunoMVPCosta/IfElseValidationAnalyzer
