@@ -77,7 +77,7 @@ namespace IfElseValidationAnalyzer
 
 {% endhighlight %}
 
-Today, we will explore how to create an CodeFixProvider to help us helping our colleagues. While it is amazing to find oportunities to improve in our code, it not less important to show to the user what can he do about it. CodeFixProvider is a way to give our users feedback how can he improve something. Although this example is focused on code style and maintainability, think in other possible usages of this. For instance, if you're using services and you are giving an SDK to others developers use your API, you can also give them the warnings and fixes what you may find important to share. Or if you are using a internal framework to build your software, you can also create the warnings and fixes of bad usage of it.
+Today, we will explore how to create a CodeFixProvider to help us helping our colleagues. While it is good to find opportunities to improve in our code, it not less important to show to the user what he can do about it. CodeFixProvider is a way to give our users feedback on how can he improve something. Although this example is focused on code style and maintainability, we can think in other possible usages of this. For instance, if you're using services and you are giving an SDK to others developers use your API, you can also give them the warnings and fixes what you may find important to share. Or if you are using an internal framework to build your software, you can also create the warnings and fixes of bad usage of it.
 
 <b>Writing the CodeFixProvider</b>
 
@@ -86,8 +86,8 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 To start, notice this class inherits from the abstract class CodeFixProvider, which give us good information on how does it works. For now, lets concentrate on two things:
 
- - FixableDiagnosticIds - A list of diagnostic IDs that this provider can provider fixes for.
- - RegisterCodeFixesAsync - Regist one or more actions for the specified context (the issues we are trying to give fixes)
+ - FixableDiagnosticIds - A list of diagnostic IDs that this provider can provide fixes for.
+ - RegisterCodeFixesAsync - Register one or more actions for the specified context (the issues we are trying to give fixes)
 
 <b>1 - FixableDiagnosticIds</b>
 
@@ -102,7 +102,7 @@ public sealed override ImmutableArray<string> FixableDiagnosticIds
 
 <b>2 - RegisterCodeFixesAsync</b>
 
-Here, we will register the actions with the possible solutions to present to our user. As you can see, creating the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn's team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by remove the method MakeUppercaseAsync.
+Here, we will register the actions with the possible solutions to present to our user. As you can see, when we create the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn's team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by remove the method MakeUppercaseAsync.
 
 After that, we need to change the token we are looking for. The generated code is looking for a type declaration and we need to get an instance of IfStatementSyntax.
 
@@ -111,7 +111,7 @@ After that, we need to change the token we are looking for. The generated code i
 var ifStatement = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<IfStatementSyntax>().First();
 {% endhighlight %}
 
-Now that we have the tokem we were looking for, we need to register an action to invoke a fix. We will also create a method named <i>RemoveElseInGuardValidation</i>.
+Now that we have the token we were looking for, we need to register an action to invoke a fix. We will also create a method named <i>RemoveElseInGuardValidation</i>.
 
 {% highlight csharp %}
 
