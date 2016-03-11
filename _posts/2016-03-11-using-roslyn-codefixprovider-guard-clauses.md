@@ -14,7 +14,7 @@ In my last post, I showed you [how to build an Analyzer to detect inadequates gu
 
 <b>What we have done so far?<b>
 
-First, be sure you've followed the steps in the previous post. In this article, I showed what are the prerequisites, the definition of a guard clause and some samples what bad use of it and, finally, how to write an Analyzer to detect some of those bad usages.
+First, be sure you've followed the steps in the previous post. In that article, I showed what are the prerequisites to build diagnostic and fixes, the definition of a guard clause, some examples of bad usage of it and, finally, how to write an Analyzer to detect some of those bad usages.
 
 The final result was the follow:
 
