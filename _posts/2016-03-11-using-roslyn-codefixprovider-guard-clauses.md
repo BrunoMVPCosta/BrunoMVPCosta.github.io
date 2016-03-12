@@ -10,13 +10,13 @@ comments: true
 share: true
 ---
 
-In my last post, I showed you [how to build an Analyzer to detect inadequates guard clauses]({% post_url 2016-02-23-using-roslyn-to-validate-guard-clauses %}). But we can do more with Roslyn API and I'll show you today how we can give a suggestion to our developers on how can they fix it propertly.
+In my last post, I showed you [how to build an Analyzer to detect inadequate guard clauses]({% post_url 2016-02-23-using-roslyn-to-validate-guard-clauses %}). But we can do more with Roslyn API and I'll show you today how we can give a suggestion to our developers on how can they fix it propertly.
 
-<b>What we have done so far?<b>
+<b>What have we done so far?<b>
 
-First, be sure you've followed the steps in the previous post. In that article, I showed what are the prerequisites to build diagnostic and fixes, the definition of a guard clause, some examples of bad usage of it and, finally, how to write an Analyzer to detect some of those bad usages.
+First, be sure you've followed the steps in the previous post. In that article, I showed what the prerequisites are to build diagnostic and fixes, the definition of a guard clause, some examples of bad usage of it and, finally, how to write an Analyzer to detect some of those bad usages.
 
-The final result was the follow:
+The final result was the following:
 
 {% highlight csharp %}
 
@@ -77,21 +77,21 @@ namespace IfElseValidationAnalyzer
 
 {% endhighlight %}
 
-Today, we will explore how to create a CodeFixProvider to help us helping our colleagues. While it is good to find opportunities to improve in our code, it not less important to show to the user what he can do about it. CodeFixProvider is a way to give our users feedback on how can he improve something. Although this example is focused on code style and maintainability, we can think in other possible usages of this. For instance, if you're using services and you are giving an SDK to others developers use your API, you can also give them the warnings and fixes what you may find important to share. Or if you are using an internal framework to build your software, you can also create the warnings and fixes of bad usage of it.
+Today, we will explore how to create a CodeFixProvider to help us help our colleagues. While it is good to find opportunities to improve our code, it is not less important to show to the user what he can do about it. CodeFixProvider is a way to give our users feedback on how they can improve something. Although this example is focused on code style and maintainability, we can think of other possible usages for it. For instance, if you're using services and you are giving an SDK to other developers to use your API, you can also give them the warnings and fixes of what you may find important to share. Or if you are using an internal framework to build your software, you can also create the warnings and fixes of bad usage of it.
 
 <b>Writing the CodeFixProvider</b>
 
-If you've follow the previous article, the Visual Studio template creates two classes, the <i>IfElseValidationAnalyzerAnalyzer</i> that you can find inside the file DiagnosticAnalyzer.cs, and the class <i>IfElseValidationAnalyzerCodeFixProvider</i> that it's inside the file CodeFixProvider.cs.
-Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable to provide an action to the issues detected by our analyzer.
+If you have followed the previous article, the Visual Studio template creates two classes, the <i>IfElseValidationAnalyzerAnalyzer</i> that you can find inside the file DiagnosticAnalyzer.cs, and the class <i>IfElseValidationAnalyzerCodeFixProvider</i> that it's inside the file CodeFixProvider.cs.
+Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable for provide an action to the issues detected by our analyzer.
 
-To start, notice this class inherits from the abstract class CodeFixProvider, which give us good information on how does it works. For now, lets concentrate on two things:
+To start, notice this class inherits from the abstract class CodeFixProvider, which gives us good information on how it works. For now, lets concentrate on two things:
 
  - FixableDiagnosticIds - A list of diagnostic IDs that this provider can provide fixes for.
- - RegisterCodeFixesAsync - Register one or more actions for the specified context (the issues we are trying to give fixes)
+ - RegisterCodeFixesAsync - Register one or more actions for the specified context (the issues we are trying to give fixes to)
 
 <b>1 - FixableDiagnosticIds</b>
 
-As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don't need to worry about it on our sample, but I thought it worth to mention, if you want to explore Roslyn more.
+As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don't need to worry about it on our sample, but I thought it worth mentioning, if you want to explore Roslyn more.
 
 {% highlight csharp %}
 public sealed override ImmutableArray<string> FixableDiagnosticIds
@@ -102,7 +102,7 @@ public sealed override ImmutableArray<string> FixableDiagnosticIds
 
 <b>2 - RegisterCodeFixesAsync</b>
 
-Here, we will register the actions with the possible solutions to present to our user. As you can see, when we create the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn's team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by remove the method MakeUppercaseAsync.
+Here, we will register the actions with the possible solutions to present to our user. As you can see, when we create the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn's team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by removing the method MakeUppercaseAsync.
 
 After that, we need to change the token we are looking for. The generated code is looking for a type declaration and we need to get an instance of IfStatementSyntax.
 
@@ -175,6 +175,6 @@ private async Task<Document> RemoveElseInGuardValidation(Document document, IfSt
 
 {% endhighlight %}
 
-If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the follow image.
+If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.
 
 ![Result CodeFixProvider]({{ site.url }}/images/2016_03_11/resultCodeFixProvider.png)
