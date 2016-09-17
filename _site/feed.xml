@@ -4,21 +4,21 @@
     <title>throw new exception();</title>
     <description>Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
 </description>
-    <link>http://thrownewexception.com/</link>
-    <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Mar 2016 21:50:11 +0000</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 21:50:11 +0000</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <link>http://127.0.0.1:4000/</link>
+    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 17 Sep 2016 21:08:59 +0100</pubDate>
+    <lastBuildDate>Sat, 17 Sep 2016 21:08:59 +0100</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Using Roslyn to validate guard clauses - CodeFixProvider</title>
-        <description>&lt;p&gt;In my last post, I showed you &lt;a href=&quot;/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;how to build an Analyzer to detect inadequates guard clauses&lt;/a&gt;. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.&lt;/p&gt;
+        <description>&lt;p&gt;In my last post, I showed you &lt;a href=&quot;/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;how to build an Analyzer to detect inadequate guard clauses&lt;/a&gt;. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;What we have done so far?&lt;b&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;What have we done so far?&lt;b&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;First, be sure you’ve followed the steps in the previous post. In this article, I showed what are the prerequisites, the definition of a guard clause and some samples what bad use of it and, finally, how to write an Analyzer to detect some of those bad usages.&lt;/p&gt;
+&lt;p&gt;First, be sure you’ve followed the steps in the previous post. In that article, I showed what the prerequisites are to build diagnostic and fixes, the definition of a guard clause, some examples of bad usage of it and, finally, how to write an Analyzer to detect some of those bad usages.&lt;/p&gt;
 
-&lt;p&gt;The final result was the follow:&lt;/p&gt;
+&lt;p&gt;The final result was the following:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Collections.Immutable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -56,18 +56,18 @@
 
         &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HandleIfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SyntaxNodeAnalysisContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ChildNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ChildNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-            &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ReturnStatementSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThrowStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
             &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
 
                 &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReportDiagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -75,23 +75,23 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Today, we will explore how to create an CodeFixProvider to help us helping our colleagues. While it is amazing to find oportunities to improve in our code, it not less important to show to the user what can he do about it. CodeFixProvider is a way to give our users feedback how can he improve something. Although this example is focused on code style and maintainability, think in other possible usages of this. For instance, if you’re using services and you are giving an SDK to others developers use your API, you can also give them the warnings and fixes what you may find important to share. Or if you are using a internal framework to build your software, you can also create the warnings and fixes of bad usage of it.&lt;/p&gt;
+&lt;p&gt;Today, we will explore how to create a CodeFixProvider to help us help our colleagues. While it is good to find opportunities to improve our code, it is not less important to show to the user what he can do about it. CodeFixProvider is a way to give our users feedback on how they can improve something. Although this example is focused on code style and maintainability, we can think of other possible usages for it. For instance, if you’re using services and you are giving an SDK to other developers to use your API, you can also give them the warnings and fixes of what you may find important to share. Or if you are using an internal framework to build your software, you can also create the warnings and fixes of bad usage of it.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;Writing the CodeFixProvider&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;If you’ve follow the previous article, the Visual Studio template creates two classes, the &lt;i&gt;IfElseValidationAnalyzerAnalyzer&lt;/i&gt; that you can find inside the file DiagnosticAnalyzer.cs, and the class &lt;i&gt;IfElseValidationAnalyzerCodeFixProvider&lt;/i&gt; that it’s inside the file CodeFixProvider.cs.
-Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable to provide an action to the issues detected by our analyzer.&lt;/p&gt;
+&lt;p&gt;If you have followed the previous article, the Visual Studio template creates two classes, the &lt;i&gt;IfElseValidationAnalyzerAnalyzer&lt;/i&gt; that you can find inside the file DiagnosticAnalyzer.cs, and the class &lt;i&gt;IfElseValidationAnalyzerCodeFixProvider&lt;/i&gt; that it’s inside the file CodeFixProvider.cs.
+Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable for provide an action to the issues detected by our analyzer.&lt;/p&gt;
 
-&lt;p&gt;To start, notice this class inherits from the abstract class CodeFixProvider, which give us good information on how does it works. For now, lets concentrate on two things:&lt;/p&gt;
+&lt;p&gt;To start, notice this class inherits from the abstract class CodeFixProvider, which gives us good information on how it works. For now, lets concentrate on two things:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;FixableDiagnosticIds - A list of diagnostic IDs that this provider can provider fixes for.&lt;/li&gt;
-  &lt;li&gt;RegisterCodeFixesAsync - Regist one or more actions for the specified context (the issues we are trying to give fixes)&lt;/li&gt;
+  &lt;li&gt;FixableDiagnosticIds - A list of diagnostic IDs that this provider can provide fixes for.&lt;/li&gt;
+  &lt;li&gt;RegisterCodeFixesAsync - Register one or more actions for the specified context (the issues we are trying to give fixes to)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;b&gt;1 - FixableDiagnosticIds&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don’t need to worry about it on our sample, but I thought it worth to mention, if you want to explore Roslyn more.&lt;/p&gt;
+&lt;p&gt;As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don’t need to worry about it on our sample, but I thought it worth mentioning, if you want to explore Roslyn more.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sealed&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FixableDiagnosticIds&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -100,14 +100,14 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 &lt;p&gt;&lt;b&gt;2 - RegisterCodeFixesAsync&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;Here, we will register the actions with the possible solutions to present to our user. As you can see, creating the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn’s team, named &lt;i&gt;MakeUppercaseAsync&lt;/i&gt;. However, this is not what we want, so we can start by remove the method MakeUppercaseAsync.&lt;/p&gt;
+&lt;p&gt;Here, we will register the actions with the possible solutions to present to our user. As you can see, when we create the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn’s team, named &lt;i&gt;MakeUppercaseAsync&lt;/i&gt;. However, this is not what we want, so we can start by removing the method MakeUppercaseAsync.&lt;/p&gt;
 
 &lt;p&gt;After that, we need to change the token we are looking for. The generated code is looking for a type declaration and we need to get an instance of IfStatementSyntax.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Find the if statement identified by the diagnostic.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;FindToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diagnosticSpan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AncestorsAndSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OfType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;FindToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diagnosticSpan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AncestorsAndSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OfType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;().&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now that we have the tokem we were looking for, we need to register an action to invoke a fix. We will also create a method named &lt;i&gt;RemoveElseInGuardValidation&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Now that we have the token we were looking for, we need to register an action to invoke a fix. We will also create a method named &lt;i&gt;RemoveElseInGuardValidation&lt;/i&gt;.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Register a code action that will invoke the fix.
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RegisterCodeFix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
@@ -136,42 +136,42 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 &lt;p&gt;Remember that syntax trees are immutable in Roslyn.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RemoveElseInGuardValidation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CancellationToken&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cancellationToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;RemoveElseInGuardValidation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CancellationToken&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cancellationToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;//We need to get the parent because we need to replace the entire block
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockElseStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockElseStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;//Build the new if statement without the else condition
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newIfStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newIfStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Condition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;//Create an aux block
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auxBlock&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RemoveNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxRemoveOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeepNoTrivia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auxBlock&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RemoveNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxRemoveOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KeepNoTrivia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;//Create the new block with the if and the statements that were inside of the else block
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newBlockSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newBlockSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SyntaxFactory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AddStatements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newIfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AddStatements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blockElseStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;AddStatements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auxBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;//Replace it in the document
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetSyntaxRootAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cancellationToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ConfigureAwait&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetSyntaxRootAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cancellationToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ConfigureAwait&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReplaceNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newBlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReplaceNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newBlockSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WithAdditionalAnnotations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Formatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Annotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WithSyntaxRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the follow image.&lt;/p&gt;
+&lt;p&gt;If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_03_11/resultCodeFixProvider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_03_11/resultCodeFixProvider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Mar 2016 00:53:00 +0000</pubDate>
-        <link>http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</guid>
+        <link>http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</guid>
         
         <category>clean-code</category>
         
@@ -230,13 +230,13 @@ As example of bad use of Guard Clause we have the If-Throw-Else:&lt;/p&gt;
 &lt;p&gt;In Visual Studio, choose File -&amp;gt; New -&amp;gt; Project -&amp;gt; Visual C# -&amp;gt; Extensibility
 There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name your project “IfElseValidationAnalyzer” and click OK.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/NewProject.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_23/NewProject.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2 - Rename title, message format and description&lt;/p&gt;
 
 &lt;p&gt;In Solution Explorer look up for Resources.resx and double-click it to open. You will find three resources there, AnalyzerDescription, AnalyzerMessageFormat and AnalyzerTitle. To keep things simple, we will change the value of all the three to &lt;i&gt;Guard clause don’t need the else statement&lt;/i&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Change the current Analyzer to do what we want&lt;/p&gt;
 
@@ -248,7 +248,7 @@ There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name yo
 
 &lt;p&gt;3.2 - Find the Initialize method and remove all the code from there and remove the private method AnalyzeSymbol as well.&lt;/p&gt;
 
-&lt;p&gt;3.3 - Create a Action&lt;syntaxnodeanalysiscontext&gt; named IfStatementAction and assign the method named HandleIfStatement to it. You will need to generate the method, because it doesn&#39;t exist yet.&lt;/syntaxnodeanalysiscontext&gt;&lt;/p&gt;
+&lt;p&gt;3.3 - Create a Action&lt;SyntaxNodeAnalysisContext&gt; named IfStatementAction and assign the method named HandleIfStatement to it. You will need to generate the method, because it doesn't exist yet.&lt;/SyntaxNodeAnalysisContext&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;readonly&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SyntaxNodeAnalysisContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementAction&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HandleIfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -268,18 +268,18 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;HandleIfStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SyntaxNodeAnalysisContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IfStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ChildNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Statement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ChildNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;childNodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ReturnStatementSyntax&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ThrowStatementSyntax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ifStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
 
         &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ReportDiagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -302,7 +302,7 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 &lt;p&gt;You should see something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/result1.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_23/result1.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;More&lt;/b&gt;&lt;/p&gt;
 
@@ -312,8 +312,8 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 </description>
         <pubDate>Tue, 23 Feb 2016 15:03:00 +0000</pubDate>
-        <link>http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</guid>
+        <link>http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</guid>
         
         <category>clean-code</category>
         
@@ -326,30 +326,30 @@ So, the final step is to change the HandleIfStatement method to do what we need.
         <title>The term ‘Invoke-WebRequest’ is not recognized</title>
         <description>&lt;p&gt;I’ve decided to check out the code from &lt;a href=&quot;https://github.com/OrchardCMS/Orchard2&quot;&gt;Orchard2&lt;/a&gt; to learn more about it and the new ASP.NET Core 1.0. Following the &lt;i&gt;Getting Started&lt;/i&gt; points from their github’s page the third bullet point is to run the &lt;i&gt;build.cmd&lt;/i&gt;. I did and the output was the following&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_18/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, I did what every engineer does when he has a problem that doesn’t know how to solve… I googled it. It didn’t help much, so I went to the &lt;a href=&quot;http://technet.microsoft.com/en-us/library/hh849901.aspx&quot;&gt;technet website&lt;/a&gt; to see that the cmdlet has been introduced in Windows PowerShell 3.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_18/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, I wondered what powershell version I had on the computer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_18/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ops, problem found. Now, to solve it, I went to &lt;a href=&quot;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&quot;&gt;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&lt;/a&gt; and installed the PowerShell 4.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/itworkedsucesskid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/2016_02_18/itworkedsucesskid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
+        <link>http://127.0.0.1:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
         
         
       </item>
     
       <item>
-        <title>Prepare your distributed system, so you don&#39;t lose money, when it fails</title>
+        <title>Prepare your distributed system, so you don't lose money, when it fails</title>
         <description>&lt;p&gt;The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.&lt;/p&gt;
 
 &lt;p&gt;We usually forget that we are trusting on the network, the number one reason for serious system failure, because we don’t know or we don’t remember &lt;a href=&quot;https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing&quot;&gt;the eight fallacies of distributed computing&lt;/a&gt;:&lt;/p&gt;
@@ -373,8 +373,8 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 </description>
         <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016/02/16/prepare-your-distributed-system.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016/02/16/prepare-your-distributed-system.html</guid>
+        <link>http://127.0.0.1:4000/2016/02/16/prepare-your-distributed-system.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/2016/02/16/prepare-your-distributed-system.html</guid>
         
         <category>design-patterns</category>
         
@@ -396,11 +396,11 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;But, lets talk about microservices and dependencies again. As example, imagine we’re creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we have two consumers depending on the Inventory Service. If we are not wise, there are lots of ways for the Catalog Service or Order Management System (OMS) to be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return an object instead of string.&lt;/p&gt;
 
@@ -433,14 +433,14 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will check later in this article.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After that, we did all we had to do. It’s the responsibility of the provider to ensure that these contracts are met and never broken.
 So, the third step is to validate that the contracts between the consumer and the provider are valid.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/images/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
 
-&lt;h3&gt;Isn&#39;t it the same as end-to-end testing?&lt;/h3&gt;
+&lt;h3&gt;Isn't it the same as end-to-end testing?&lt;/h3&gt;
 
 &lt;p&gt;Short answer, no.&lt;/p&gt;
 
@@ -465,8 +465,8 @@ So, the third step is to validate that the contracts between the consumer and th
 &lt;p&gt;Remember… fast feedback is everything. We are just enabling it. For us, for our organization and our business.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
+        <link>http://127.0.0.1:4000/2016/02/09/consumerdriven-contracts-with-pact.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
         
         <category>consumer-driven-design</category>
         
@@ -531,8 +531,8 @@ So, the third step is to validate that the contracts between the consumer and th
 
 </description>
         <pubDate>Fri, 03 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
+        <link>http://127.0.0.1:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
         
         <category>clean-code</category>
         
@@ -563,8 +563,8 @@ So, the third step is to validate that the contracts between the consumer and th
 
 </description>
         <pubDate>Wed, 01 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</guid>
+        <link>http://127.0.0.1:4000/coding/2015/04/01/the-art-of-coding.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/coding/2015/04/01/the-art-of-coding.html</guid>
         
         
         <category>coding</category>

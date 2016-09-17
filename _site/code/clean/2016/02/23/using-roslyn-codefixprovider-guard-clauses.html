@@ -13,8 +13,25 @@
     
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html">
+    <link rel="canonical" href="http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -86,13 +103,13 @@
   </header>
 
   <article class="post-content">
-    <p>In my last post, I showed you <a href="/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html">how to build an Analyzer to detect inadequates guard clauses</a>. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.</p>
+    <p>In my last post, I showed you <a href="/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html">how to build an Analyzer to detect inadequate guard clauses</a>. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.</p>
 
-<p><b>What we have done so far?<b></b></b></p>
+<p><b>What have we done so far?<b></b></b></p>
 
-<p>First, be sure you’ve followed the steps in the previous post. In this article, I showed what are the prerequisites, the definition of a guard clause and some samples what bad use of it and, finally, how to write an Analyzer to detect some of those bad usages.</p>
+<p>First, be sure you’ve followed the steps in the previous post. In that article, I showed what the prerequisites are to build diagnostic and fixes, the definition of a guard clause, some examples of bad usage of it and, finally, how to write an Analyzer to detect some of those bad usages.</p>
 
-<p>The final result was the follow:</p>
+<p>The final result was the following:</p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Immutable</span><span class="p">;</span>
@@ -130,18 +147,18 @@
 
         <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">HandleIfStatement</span><span class="p">(</span><span class="n">SyntaxNodeAnalysisContext</span> <span class="n">context</span><span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Node</span> <span class="k">as</span> <span class="n">IfStatementSyntax</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Node</span> <span class="k">as</span> <span class="n">IfStatementSyntax</span><span class="p">;</span>
 
             <span class="k">if</span> <span class="p">(</span><span class="n">ifStatement</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">ifStatement</span><span class="p">.</span><span class="n">Else</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-            <span class="n">var</span> <span class="n">childNodes</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">.</span><span class="nf">ChildNodes</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">childNodes</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">.</span><span class="nf">ChildNodes</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">childNodes</span><span class="p">.</span><span class="nf">Count</span><span class="p">()</span> <span class="p">!=</span> <span class="m">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-            <span class="n">var</span> <span class="n">node</span> <span class="p">=</span> <span class="n">childNodes</span><span class="p">.</span><span class="nf">First</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">node</span> <span class="p">=</span> <span class="n">childNodes</span><span class="p">.</span><span class="nf">First</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">node</span> <span class="k">is</span> <span class="n">ReturnStatementSyntax</span> <span class="p">||</span> <span class="n">node</span> <span class="k">is</span> <span class="n">ThrowStatementSyntax</span><span class="p">)</span>
             <span class="p">{</span>
-                <span class="n">var</span> <span class="n">diagnostic</span> <span class="p">=</span> <span class="n">Diagnostic</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">Rule</span><span class="p">,</span> <span class="n">ifStatement</span><span class="p">.</span><span class="nf">GetLocation</span><span class="p">());</span>
+                <span class="kt">var</span> <span class="n">diagnostic</span> <span class="p">=</span> <span class="n">Diagnostic</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">Rule</span><span class="p">,</span> <span class="n">ifStatement</span><span class="p">.</span><span class="nf">GetLocation</span><span class="p">());</span>
 
                 <span class="n">context</span><span class="p">.</span><span class="nf">ReportDiagnostic</span><span class="p">(</span><span class="n">diagnostic</span><span class="p">);</span>
             <span class="p">}</span>
@@ -149,23 +166,23 @@
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Today, we will explore how to create an CodeFixProvider to help us helping our colleagues. While it is amazing to find oportunities to improve in our code, it not less important to show to the user what can he do about it. CodeFixProvider is a way to give our users feedback how can he improve something. Although this example is focused on code style and maintainability, think in other possible usages of this. For instance, if you’re using services and you are giving an SDK to others developers use your API, you can also give them the warnings and fixes what you may find important to share. Or if you are using a internal framework to build your software, you can also create the warnings and fixes of bad usage of it.</p>
+<p>Today, we will explore how to create a CodeFixProvider to help us help our colleagues. While it is good to find opportunities to improve our code, it is not less important to show to the user what he can do about it. CodeFixProvider is a way to give our users feedback on how they can improve something. Although this example is focused on code style and maintainability, we can think of other possible usages for it. For instance, if you’re using services and you are giving an SDK to other developers to use your API, you can also give them the warnings and fixes of what you may find important to share. Or if you are using an internal framework to build your software, you can also create the warnings and fixes of bad usage of it.</p>
 
 <p><b>Writing the CodeFixProvider</b></p>
 
-<p>If you’ve follow the previous article, the Visual Studio template creates two classes, the <i>IfElseValidationAnalyzerAnalyzer</i> that you can find inside the file DiagnosticAnalyzer.cs, and the class <i>IfElseValidationAnalyzerCodeFixProvider</i> that it’s inside the file CodeFixProvider.cs.
-Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable to provide an action to the issues detected by our analyzer.</p>
+<p>If you have followed the previous article, the Visual Studio template creates two classes, the <i>IfElseValidationAnalyzerAnalyzer</i> that you can find inside the file DiagnosticAnalyzer.cs, and the class <i>IfElseValidationAnalyzerCodeFixProvider</i> that it’s inside the file CodeFixProvider.cs.
+Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class is responsable for provide an action to the issues detected by our analyzer.</p>
 
-<p>To start, notice this class inherits from the abstract class CodeFixProvider, which give us good information on how does it works. For now, lets concentrate on two things:</p>
+<p>To start, notice this class inherits from the abstract class CodeFixProvider, which gives us good information on how it works. For now, lets concentrate on two things:</p>
 
 <ul>
-  <li>FixableDiagnosticIds - A list of diagnostic IDs that this provider can provider fixes for.</li>
-  <li>RegisterCodeFixesAsync - Regist one or more actions for the specified context (the issues we are trying to give fixes)</li>
+  <li>FixableDiagnosticIds - A list of diagnostic IDs that this provider can provide fixes for.</li>
+  <li>RegisterCodeFixesAsync - Register one or more actions for the specified context (the issues we are trying to give fixes to)</li>
 </ul>
 
 <p><b>1 - FixableDiagnosticIds</b></p>
 
-<p>As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don’t need to worry about it on our sample, but I thought it worth to mention, if you want to explore Roslyn more.</p>
+<p>As I said, this is the property we use to tell Roslyn in which diagnostics this code fix will be able to help. Visual Studio already made its magic and we don’t need to worry about it on our sample, but I thought it worth mentioning, if you want to explore Roslyn more.</p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">sealed</span> <span class="k">override</span> <span class="n">ImmutableArray</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">FixableDiagnosticIds</span>
 <span class="p">{</span>
@@ -174,14 +191,14 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 <p><b>2 - RegisterCodeFixesAsync</b></p>
 
-<p>Here, we will register the actions with the possible solutions to present to our user. As you can see, creating the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn’s team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by remove the method MakeUppercaseAsync.</p>
+<p>Here, we will register the actions with the possible solutions to present to our user. As you can see, when we create the solution based on the Visual Studio template, we already have some code to fix a default problem presented by the Roslyn’s team, named <i>MakeUppercaseAsync</i>. However, this is not what we want, so we can start by removing the method MakeUppercaseAsync.</p>
 
 <p>After that, we need to change the token we are looking for. The generated code is looking for a type declaration and we need to get an instance of IfStatementSyntax.</p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Find the if statement identified by the diagnostic.
-</span><span class="n">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">FindToken</span><span class="p">(</span><span class="n">diagnosticSpan</span><span class="p">.</span><span class="n">Start</span><span class="p">).</span><span class="n">Parent</span><span class="p">.</span><span class="nf">AncestorsAndSelf</span><span class="p">().</span><span class="n">OfType</span><span class="p">&lt;</span><span class="n">IfStatementSyntax</span><span class="p">&gt;().</span><span class="nf">First</span><span class="p">();</span></code></pre></figure>
+</span><span class="kt">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">FindToken</span><span class="p">(</span><span class="n">diagnosticSpan</span><span class="p">.</span><span class="n">Start</span><span class="p">).</span><span class="n">Parent</span><span class="p">.</span><span class="nf">AncestorsAndSelf</span><span class="p">().</span><span class="n">OfType</span><span class="p">&lt;</span><span class="n">IfStatementSyntax</span><span class="p">&gt;().</span><span class="nf">First</span><span class="p">();</span></code></pre></figure>
 
-<p>Now that we have the tokem we were looking for, we need to register an action to invoke a fix. We will also create a method named <i>RemoveElseInGuardValidation</i>.</p>
+<p>Now that we have the token we were looking for, we need to register an action to invoke a fix. We will also create a method named <i>RemoveElseInGuardValidation</i>.</p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Register a code action that will invoke the fix.
 </span><span class="n">context</span><span class="p">.</span><span class="nf">RegisterCodeFix</span><span class="p">(</span>
@@ -210,38 +227,38 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 <p>Remember that syntax trees are immutable in Roslyn.</p>
 
-<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="n">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Document</span><span class="p">&gt;</span> <span class="nf">RemoveElseInGuardValidation</span><span class="p">(</span><span class="n">Document</span> <span class="n">document</span><span class="p">,</span> <span class="n">IfStatementSyntax</span> <span class="n">ifStatement</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Document</span><span class="p">&gt;</span> <span class="nf">RemoveElseInGuardValidation</span><span class="p">(</span><span class="n">Document</span> <span class="n">document</span><span class="p">,</span> <span class="n">IfStatementSyntax</span> <span class="n">ifStatement</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">//We need to get the parent because we need to replace the entire block
-</span>    <span class="n">var</span> <span class="n">blockSyntax</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Parent</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
-    <span class="n">var</span> <span class="n">blockElseStatement</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Else</span><span class="p">.</span><span class="n">Statement</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
+</span>    <span class="kt">var</span> <span class="n">blockSyntax</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Parent</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">blockElseStatement</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Else</span><span class="p">.</span><span class="n">Statement</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
 
     <span class="c1">//Build the new if statement without the else condition
-</span>    <span class="n">var</span> <span class="n">newIfStatement</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">IfStatement</span><span class="p">(</span>
+</span>    <span class="kt">var</span> <span class="n">newIfStatement</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">IfStatement</span><span class="p">(</span>
         <span class="n">condition</span><span class="p">:</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Condition</span><span class="p">,</span>
         <span class="n">statement</span><span class="p">:</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">);</span>
 
     <span class="c1">//Create an aux block
-</span>    <span class="n">var</span> <span class="n">auxBlock</span> <span class="p">=</span> <span class="n">blockSyntax</span><span class="p">.</span><span class="nf">RemoveNode</span><span class="p">(</span><span class="n">ifStatement</span><span class="p">,</span> <span class="n">SyntaxRemoveOptions</span><span class="p">.</span><span class="n">KeepNoTrivia</span><span class="p">);</span>
+</span>    <span class="kt">var</span> <span class="n">auxBlock</span> <span class="p">=</span> <span class="n">blockSyntax</span><span class="p">.</span><span class="nf">RemoveNode</span><span class="p">(</span><span class="n">ifStatement</span><span class="p">,</span> <span class="n">SyntaxRemoveOptions</span><span class="p">.</span><span class="n">KeepNoTrivia</span><span class="p">);</span>
 
     <span class="c1">//Create the new block with the if and the statements that were inside of the else block
-</span>    <span class="n">var</span> <span class="n">newBlockSyntax</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">Block</span><span class="p">()</span>
+</span>    <span class="kt">var</span> <span class="n">newBlockSyntax</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">Block</span><span class="p">()</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">newIfStatement</span><span class="p">)</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">blockElseStatement</span><span class="p">.</span><span class="n">Statements</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">())</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">auxBlock</span><span class="p">.</span><span class="n">Statements</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">());</span>
 
     <span class="c1">//Replace it in the document
-</span>    <span class="n">var</span> <span class="n">root</span> <span class="p">=</span> <span class="n">await</span> <span class="n">document</span><span class="p">.</span><span class="nf">GetSyntaxRootAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">).</span><span class="nf">ConfigureAwait</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+</span>    <span class="kt">var</span> <span class="n">root</span> <span class="p">=</span> <span class="k">await</span> <span class="n">document</span><span class="p">.</span><span class="nf">GetSyntaxRootAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">).</span><span class="nf">ConfigureAwait</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
-    <span class="n">var</span> <span class="n">newRoot</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">ReplaceNode</span><span class="p">(</span><span class="n">blockSyntax</span><span class="p">,</span> <span class="n">newBlockSyntax</span><span class="p">)</span>
+    <span class="kt">var</span> <span class="n">newRoot</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">ReplaceNode</span><span class="p">(</span><span class="n">blockSyntax</span><span class="p">,</span> <span class="n">newBlockSyntax</span><span class="p">)</span>
         <span class="p">.</span><span class="nf">WithAdditionalAnnotations</span><span class="p">(</span><span class="n">Formatter</span><span class="p">.</span><span class="n">Annotation</span><span class="p">);</span>
 
     <span class="k">return</span> <span class="n">document</span><span class="p">.</span><span class="nf">WithSyntaxRoot</span><span class="p">(</span><span class="n">newRoot</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the follow image.</p>
+<p>If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.</p>
 
-<p><img src="http://thrownewexception.com/images/2016_03_11/resultCodeFixProvider.png" alt="Result CodeFixProvider" /></p>
+<p><img src="http://127.0.0.1:4000/images/2016_03_11/resultCodeFixProvider.png" alt="Result CodeFixProvider" /></p>
 
   </article>
 </div>
@@ -251,10 +268,10 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 <b>Share</b>
 <div class="dv-social">
   <ul class="share">
-    <li><a href="https://twitter.com/intent/tweet?text=Using Roslyn to validate guard clauses - CodeFixProvider&url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-    <li><a href="https://facebook.com/sharer.php?u=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
-    <li><a href="https://plus.google.com/share?url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
+    <li><a href="https://twitter.com/intent/tweet?text=Using Roslyn to validate guard clauses - CodeFixProvider&url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
+    <li><a href="https://facebook.com/sharer.php?u=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
+    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
+    <li><a href="https://plus.google.com/share?url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
   </ul>
 </div>
 

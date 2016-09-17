@@ -13,8 +13,25 @@
     
     
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html">
+    <link rel="canonical" href="http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -134,13 +151,13 @@ As example of bad use of Guard Clause we have the If-Throw-Else:</p>
 <p>In Visual Studio, choose File -&gt; New -&gt; Project -&gt; Visual C# -&gt; Extensibility
 There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name your project “IfElseValidationAnalyzer” and click OK.</p>
 
-<p><img src="http://thrownewexception.com/images/2016_02_23/NewProject.png" alt="New Project Windows" /></p>
+<p><img src="http://127.0.0.1:4000/images/2016_02_23/NewProject.png" alt="New Project Windows" /></p>
 
 <p>2 - Rename title, message format and description</p>
 
 <p>In Solution Explorer look up for Resources.resx and double-click it to open. You will find three resources there, AnalyzerDescription, AnalyzerMessageFormat and AnalyzerTitle. To keep things simple, we will change the value of all the three to <i>Guard clause don’t need the else statement</i>.</p>
 
-<p><img src="http://thrownewexception.com/images/2016_02_23/resources.png" alt="Resources" /></p>
+<p><img src="http://127.0.0.1:4000/images/2016_02_23/resources.png" alt="Resources" /></p>
 
 <p>3 - Change the current Analyzer to do what we want</p>
 
@@ -152,7 +169,7 @@ There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name yo
 
 <p>3.2 - Find the Initialize method and remove all the code from there and remove the private method AnalyzeSymbol as well.</p>
 
-<p>3.3 - Create a Action<syntaxnodeanalysiscontext> named IfStatementAction and assign the method named HandleIfStatement to it. You will need to generate the method, because it doesn't exist yet.</syntaxnodeanalysiscontext></p>
+<p>3.3 - Create a Action<SyntaxNodeAnalysisContext> named IfStatementAction and assign the method named HandleIfStatement to it. You will need to generate the method, because it doesn't exist yet.</SyntaxNodeAnalysisContext></p>
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Action</span><span class="p">&lt;</span><span class="n">SyntaxNodeAnalysisContext</span><span class="p">&gt;</span> <span class="n">IfStatementAction</span> <span class="p">=</span> <span class="n">HandleIfStatement</span><span class="p">;</span>
 
@@ -172,18 +189,18 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">HandleIfStatement</span><span class="p">(</span><span class="n">SyntaxNodeAnalysisContext</span> <span class="n">context</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Node</span> <span class="k">as</span> <span class="n">IfStatementSyntax</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Node</span> <span class="k">as</span> <span class="n">IfStatementSyntax</span><span class="p">;</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="n">ifStatement</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">ifStatement</span><span class="p">.</span><span class="n">Else</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-    <span class="n">var</span> <span class="n">childNodes</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">.</span><span class="nf">ChildNodes</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">childNodes</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">.</span><span class="nf">ChildNodes</span><span class="p">();</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">childNodes</span><span class="p">.</span><span class="nf">Count</span><span class="p">()</span> <span class="p">!=</span> <span class="m">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-    <span class="n">var</span> <span class="n">node</span> <span class="p">=</span> <span class="n">childNodes</span><span class="p">.</span><span class="nf">First</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">node</span> <span class="p">=</span> <span class="n">childNodes</span><span class="p">.</span><span class="nf">First</span><span class="p">();</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">node</span> <span class="k">is</span> <span class="n">ReturnStatementSyntax</span> <span class="p">||</span> <span class="n">node</span> <span class="k">is</span> <span class="n">ThrowStatementSyntax</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">var</span> <span class="n">diagnostic</span> <span class="p">=</span> <span class="n">Diagnostic</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">Rule</span><span class="p">,</span> <span class="n">ifStatement</span><span class="p">.</span><span class="nf">GetLocation</span><span class="p">());</span>
+        <span class="kt">var</span> <span class="n">diagnostic</span> <span class="p">=</span> <span class="n">Diagnostic</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="n">Rule</span><span class="p">,</span> <span class="n">ifStatement</span><span class="p">.</span><span class="nf">GetLocation</span><span class="p">());</span>
 
         <span class="n">context</span><span class="p">.</span><span class="nf">ReportDiagnostic</span><span class="p">(</span><span class="n">diagnostic</span><span class="p">);</span>
     <span class="p">}</span>
@@ -206,7 +223,7 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 <p>You should see something like this:</p>
 
-<p><img src="http://thrownewexception.com/images/2016_02_23/result1.png" alt="Output" /></p>
+<p><img src="http://127.0.0.1:4000/images/2016_02_23/result1.png" alt="Output" /></p>
 
 <p><b>More</b></p>
 
@@ -223,10 +240,10 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 <b>Share</b>
 <div class="dv-social">
   <ul class="share">
-    <li><a href="https://twitter.com/intent/tweet?text=Using Roslyn to validate guard clauses&url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-    <li><a href="https://facebook.com/sharer.php?u=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
-    <li><a href="https://plus.google.com/share?url=http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
+    <li><a href="https://twitter.com/intent/tweet?text=Using Roslyn to validate guard clauses&url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
+    <li><a href="https://facebook.com/sharer.php?u=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
+    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
+    <li><a href="https://plus.google.com/share?url=http://127.0.0.1:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
   </ul>
 </div>
 
