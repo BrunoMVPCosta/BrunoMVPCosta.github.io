@@ -12,4 +12,6 @@ services.Configure<MvcOptions>(option =>
     Also don't forget to include reference it in your Startup.cs
 
     using Microsoft.AspNet.Mvc.Formatters;  
-    
+
+read also about
+https://github.com/aspnet/Mvc/commit/ec18b3512307f7cac66c26c0668b9bca05b52101
