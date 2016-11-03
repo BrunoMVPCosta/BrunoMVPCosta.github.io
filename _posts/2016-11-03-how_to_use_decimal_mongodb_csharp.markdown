@@ -2,9 +2,12 @@
 layout: post
 title:  "How to use decimal with mongodb and .NET C#"
 date:   2016-11-03 00:00:00
+tags: [clean-code]
 categories: coding
 permalink: /coding/2016/11/03/how_to_use_decimal_mongodb_csharp.html
 description: Using decimal with MongoDB and .net csharp
+comments: true
+share: true
 ---
 
 When working with money we need to be concerned with the accuracy of the data as well as the calculations we do.
