@@ -1,5 +1,5 @@
 # Site settings
-title: throw new exception();
+title: thrownewexception();
 email: kele_bru@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.

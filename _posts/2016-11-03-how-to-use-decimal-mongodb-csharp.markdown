@@ -4,7 +4,7 @@ title:  "How to use decimal with mongodb and .NET C#"
 date:   2016-11-03 00:00:00
 tags: [clean-code]
 categories: coding
-permalink: /coding/2016/11/03/how_to_use_decimal_mongodb_csharp.html
+permalink: /coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html
 description: Using decimal with MongoDB and .net csharp
 comments: true
 share: true
