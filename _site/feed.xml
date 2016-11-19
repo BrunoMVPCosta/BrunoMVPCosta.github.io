@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Nov 2016 19:00:38 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 19:00:38 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 19:51:26 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 19:51:26 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -81,11 +81,11 @@ Imagine that you have an ecommerce website with a feature that allows  users to 
 
 &lt;p&gt;Surprised? I hope not.&lt;/p&gt;
 
-&lt;p&gt;So, to deal with money in .NET we should use decimal or apply the &lt;a href=&quot;http://martinfowler.com/eaaCatalog/money.html&quot;&gt;money pattern&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, to deal with money in &lt;a href=&quot;https://www.microsoft.com/net&quot;&gt;.NET&lt;/a&gt; we should use decimal or apply the &lt;a href=&quot;http://martinfowler.com/eaaCatalog/money.html&quot;&gt;money pattern&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;So far so good.&lt;/p&gt;
 
-&lt;p&gt;I have recently started a personal project and I chose to give MongoDB a try. In this project I will work with money and naturally I started using &lt;code class=&quot;highlighter-rouge&quot;&gt;decimal&lt;/code&gt; for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support &lt;code class=&quot;highlighter-rouge&quot;&gt;decimal&lt;/code&gt;. It does support &lt;code class=&quot;highlighter-rouge&quot;&gt;double&lt;/code&gt;, however it will not have the expected behaviour as we saw previous in this post.&lt;/p&gt;
+&lt;p&gt;I have recently started a personal project and I chose to give &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt; a try. In this project I will work with money and naturally I started using &lt;code class=&quot;highlighter-rouge&quot;&gt;decimal&lt;/code&gt; for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support &lt;code class=&quot;highlighter-rouge&quot;&gt;decimal&lt;/code&gt;. MongoDB does support &lt;code class=&quot;highlighter-rouge&quot;&gt;double&lt;/code&gt;, however it will not have the expected behaviour as we saw previous in this post.&lt;/p&gt;
 
 &lt;p&gt;To solve this, first, I changed all my code to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Int64&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;decimal&lt;/code&gt;. I thought it would work just fine and it did work, but the quality of the code wasn’t the best… and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.&lt;/p&gt;
 
@@ -117,7 +117,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&amp;lt;decimal&amp;g
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need.&lt;/p&gt;
+&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</link>

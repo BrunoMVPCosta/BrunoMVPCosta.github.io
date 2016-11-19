@@ -41,11 +41,11 @@ The output of this code will be:
 
 Surprised? I hope not.
 
-So, to deal with money in .NET we should use decimal or apply the [money pattern](http://martinfowler.com/eaaCatalog/money.html). 
+So, to deal with money in [.NET](https://www.microsoft.com/net) we should use decimal or apply the [money pattern](http://martinfowler.com/eaaCatalog/money.html). 
 
 So far so good. 
 
-I have recently started a personal project and I chose to give MongoDB a try. In this project I will work with money and naturally I started using `decimal` for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn't support `decimal`. It does support `double`, however it will not have the expected behaviour as we saw previous in this post.
+I have recently started a personal project and I chose to give [MongoDB](https://www.mongodb.com/) a try. In this project I will work with money and naturally I started using `decimal` for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn't support `decimal`. MongoDB does support `double`, however it will not have the expected behaviour as we saw previous in this post.
 
 To solve this, first, I changed all my code to use `Int64` instead of `decimal`. I thought it would work just fine and it did work, but the quality of the code wasn't the best... and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.
 
@@ -77,4 +77,4 @@ To register it I have just done:
 BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
 ```
 
-And with this, I have a good code, easy to maintain and the accuracy I need.
+And with this, I have a good code, easy to maintain and the accuracy I need using [MongoDB](https://www.mongodb.com/).

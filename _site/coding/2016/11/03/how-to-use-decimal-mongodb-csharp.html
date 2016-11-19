@@ -134,11 +134,11 @@ Imagine that you have an ecommerce website with a feature that allows  users to 
 
 <p>Surprised? I hope not.</p>
 
-<p>So, to deal with money in .NET we should use decimal or apply the <a href="http://martinfowler.com/eaaCatalog/money.html">money pattern</a>.</p>
+<p>So, to deal with money in <a href="https://www.microsoft.com/net">.NET</a> we should use decimal or apply the <a href="http://martinfowler.com/eaaCatalog/money.html">money pattern</a>.</p>
 
 <p>So far so good.</p>
 
-<p>I have recently started a personal project and I chose to give MongoDB a try. In this project I will work with money and naturally I started using <code class="highlighter-rouge">decimal</code> for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support <code class="highlighter-rouge">decimal</code>. It does support <code class="highlighter-rouge">double</code>, however it will not have the expected behaviour as we saw previous in this post.</p>
+<p>I have recently started a personal project and I chose to give <a href="https://www.mongodb.com/">MongoDB</a> a try. In this project I will work with money and naturally I started using <code class="highlighter-rouge">decimal</code> for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support <code class="highlighter-rouge">decimal</code>. MongoDB does support <code class="highlighter-rouge">double</code>, however it will not have the expected behaviour as we saw previous in this post.</p>
 
 <p>To solve this, first, I changed all my code to use <code class="highlighter-rouge">Int64</code> instead of <code class="highlighter-rouge">decimal</code>. I thought it would work just fine and it did work, but the quality of the code wasn’t the best… and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.</p>
 
@@ -170,7 +170,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
 </code></pre>
 </div>
 
-<p>And with this, I have a good code, easy to maintain and the accuracy I need.</p>
+<p>And with this, I have a good code, easy to maintain and the accuracy I need using <a href="https://www.mongodb.com/">MongoDB</a>.</p>
 
   </article>
 </div>
