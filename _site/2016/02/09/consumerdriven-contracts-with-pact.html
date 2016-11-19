@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Consumer-driven contracts with Pact</title>
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Consumer-driven contracts with Pact - thrownewexception();</title>
+<meta property="og:title" content="Consumer-driven contracts with Pact" />
+<meta name="description" content="Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture." />
+<meta property="og:description" content="Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture." />
+<link rel="canonical" href="http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" />
+<meta property="og:url" content="http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" />
+<meta property="og:site_name" content="thrownewexception();" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-02-09T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Consumer-driven contracts with Pact",
+"datePublished": "2016-02-09T00:00:00+00:00",
+"description": "Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture.",
+"url": "http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html"}</script>
+<!-- End Jekyll SEO tag -->
 
-    
-      <meta name="description" content="Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture." />
-    
-    
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -116,11 +128,11 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 <p>But, lets talk about microservices and dependencies again. As example, imagine we’re creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.</p>
 
-<p><img src="http://thrownewexception.com/images/cdc1.jpg" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/images/cdc1.jpg" alt="My helpful screenshot" /></p>
 
 <p>Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.</p>
 
-<p><img src="http://thrownewexception.com/images/cdc2.jpg" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/images/cdc2.jpg" alt="My helpful screenshot" /></p>
 
 <p>Now, we have two consumers depending on the Inventory Service. If we are not wise, there are lots of ways for the Catalog Service or Order Management System (OMS) to be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return an object instead of string.</p>
 
@@ -153,12 +165,12 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 <p>The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will check later in this article.</p>
 
-<p><img src="http://thrownewexception.com/images/cdc4.jpg" alt="Step 2 - Define consumer expectations" /></p>
+<p><img src="http://localhost:4000/images/cdc4.jpg" alt="Step 2 - Define consumer expectations" /></p>
 
 <p>After that, we did all we had to do. It’s the responsibility of the provider to ensure that these contracts are met and never broken.
 So, the third step is to validate that the contracts between the consumer and the provider are valid.</p>
 
-<p><img src="http://thrownewexception.com/images/cdc5.jpg" alt="Step 3 - Verify expectations on provider" /></p>
+<p><img src="http://localhost:4000/images/cdc5.jpg" alt="Step 3 - Verify expectations on provider" /></p>
 
 <h3>Isn't it the same as end-to-end testing?</h3>
 
@@ -192,10 +204,10 @@ So, the third step is to validate that the contracts between the consumer and th
 <b>Share</b>
 <div class="dv-social">
   <ul class="share">
-    <li><a href="https://twitter.com/intent/tweet?text=Consumer-driven contracts with Pact&url=http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-    <li><a href="https://facebook.com/sharer.php?u=http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
-    <li><a href="https://plus.google.com/share?url=http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
+    <li><a href="https://twitter.com/intent/tweet?text=Consumer-driven contracts with Pact&url=http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
+    <li><a href="https://facebook.com/sharer.php?u=http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
+    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
+    <li><a href="https://plus.google.com/share?url=http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
   </ul>
 </div>
 

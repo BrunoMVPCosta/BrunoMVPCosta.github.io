@@ -10,3 +10,6 @@ github_username:  BrunoMVPCosta
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-seo-tag

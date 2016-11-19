@@ -4,11 +4,11 @@
     <title>thrownewexception();</title>
     <description>Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
 </description>
-    <link>http://thrownewexception.com/</link>
-    <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Nov 2016 20:00:37 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 20:00:37 +0000</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 19 Nov 2016 20:10:01 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 20:10:01 +0000</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Removing formatters in ASP.NET Core</title>
@@ -38,8 +38,8 @@
 &lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 07 Nov 2016 18:30:00 +0000</pubDate>
-        <link>http://thrownewexception.com/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</guid>
+        <link>http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</link>
+        <guid isPermaLink="true">http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</guid>
         
         <category>aspnetcore</category>
         
@@ -120,8 +120,8 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&amp;lt;decimal&amp;g
 &lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</guid>
+        <link>http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</guid>
         
         <category>clean-code</category>
         
@@ -287,11 +287,11 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 &lt;p&gt;If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_03_11/resultCodeFixProvider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_03_11/resultCodeFixProvider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Mar 2016 00:53:00 +0000</pubDate>
-        <link>http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</guid>
+        <link>http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</link>
+        <guid isPermaLink="true">http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</guid>
         
         <category>clean-code</category>
         
@@ -352,13 +352,13 @@ As example of bad use of Guard Clause we have the If-Throw-Else:&lt;/p&gt;
 &lt;p&gt;In Visual Studio, choose File -&amp;gt; New -&amp;gt; Project -&amp;gt; Visual C# -&amp;gt; Extensibility
 There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name your project “IfElseValidationAnalyzer” and click OK.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/NewProject.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/NewProject.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2 - Rename title, message format and description&lt;/p&gt;
 
 &lt;p&gt;In Solution Explorer look up for Resources.resx and double-click it to open. You will find three resources there, AnalyzerDescription, AnalyzerMessageFormat and AnalyzerTitle. To keep things simple, we will change the value of all the three to &lt;i&gt;Guard clause don’t need the else statement&lt;/i&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Change the current Analyzer to do what we want&lt;/p&gt;
 
@@ -424,7 +424,7 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 &lt;p&gt;You should see something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_23/result1.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/result1.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;More&lt;/b&gt;&lt;/p&gt;
 
@@ -434,8 +434,8 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 </description>
         <pubDate>Tue, 23 Feb 2016 15:03:00 +0000</pubDate>
-        <link>http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</guid>
+        <link>http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</link>
+        <guid isPermaLink="true">http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</guid>
         
         <category>clean-code</category>
         
@@ -448,24 +448,24 @@ So, the final step is to change the HandleIfStatement method to do what we need.
         <title>The term ‘Invoke-WebRequest’ is not recognized</title>
         <description>&lt;p&gt;I’ve decided to check out the code from &lt;a href=&quot;https://github.com/OrchardCMS/Orchard2&quot;&gt;Orchard2&lt;/a&gt; to learn more about it and the new ASP.NET Core 1.0. Following the &lt;i&gt;Getting Started&lt;/i&gt; points from their github’s page the third bullet point is to run the &lt;i&gt;build.cmd&lt;/i&gt;. I did and the output was the following&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, I did what every engineer does when he has a problem that doesn’t know how to solve… I googled it. It didn’t help much, so I went to the &lt;a href=&quot;http://technet.microsoft.com/en-us/library/hh849901.aspx&quot;&gt;technet website&lt;/a&gt; to see that the cmdlet has been introduced in Windows PowerShell 3.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, I wondered what powershell version I had on the computer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ops, problem found. Now, to solve it, I went to &lt;a href=&quot;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&quot;&gt;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&lt;/a&gt; and installed the PowerShell 4.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/2016_02_18/itworkedsucesskid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/itworkedsucesskid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
+        <link>http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
         
         
       </item>
@@ -495,8 +495,8 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 </description>
         <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016/02/16/prepare-your-distributed-system.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016/02/16/prepare-your-distributed-system.html</guid>
+        <link>http://localhost:4000/2016/02/16/prepare-your-distributed-system.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/16/prepare-your-distributed-system.html</guid>
         
         <category>design-patterns</category>
         
@@ -518,11 +518,11 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;But, lets talk about microservices and dependencies again. As example, imagine we’re creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we have two consumers depending on the Inventory Service. If we are not wise, there are lots of ways for the Catalog Service or Order Management System (OMS) to be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return an object instead of string.&lt;/p&gt;
 
@@ -555,12 +555,12 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will check later in this article.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After that, we did all we had to do. It’s the responsibility of the provider to ensure that these contracts are met and never broken.
 So, the third step is to validate that the contracts between the consumer and the provider are valid.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://thrownewexception.com/images/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;Isn't it the same as end-to-end testing?&lt;/h3&gt;
 
@@ -587,8 +587,8 @@ So, the third step is to validate that the contracts between the consumer and th
 &lt;p&gt;Remember… fast feedback is everything. We are just enabling it. For us, for our organization and our business.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
+        <link>http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
         
         <category>consumer-driven-design</category>
         
@@ -653,8 +653,8 @@ So, the third step is to validate that the contracts between the consumer and th
 
 </description>
         <pubDate>Fri, 03 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
+        <link>http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
+        <guid isPermaLink="true">http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
         
         <category>clean-code</category>
         
@@ -685,8 +685,8 @@ So, the third step is to validate that the contracts between the consumer and th
 
 </description>
         <pubDate>Wed, 01 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</link>
-        <guid isPermaLink="true">http://thrownewexception.com/coding/2015/04/01/the-art-of-coding.html</guid>
+        <link>http://localhost:4000/coding/2015/04/01/the-art-of-coding.html</link>
+        <guid isPermaLink="true">http://localhost:4000/coding/2015/04/01/the-art-of-coding.html</guid>
         
         
         <category>coding</category>
