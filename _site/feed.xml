@@ -6,8 +6,8 @@
 </description>
     <link>http://thrownewexception.com/</link>
     <atom:link href="http://thrownewexception.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Nov 2016 19:51:26 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2016 19:51:26 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2016 20:00:37 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2016 20:00:37 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -117,7 +117,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&amp;lt;decimal&amp;g
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</link>

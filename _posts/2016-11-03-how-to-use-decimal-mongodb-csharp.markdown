@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "How to use decimal with mongodb and .NET C#"
+title:  How to use decimal with mongodb and .NET C#
 date:   2016-11-03 00:00:00
 tags: [clean-code]
 categories: coding
 permalink: /coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html
-description: Using decimal with MongoDB and .net csharp
+description: MongoDB doesn't support decimal. How can we use it to represent money? This article will explain it to you.
 comments: true
 share: true
 ---
@@ -77,4 +77,4 @@ To register it I have just done:
 BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
 ```
 
-And with this, I have a good code, easy to maintain and the accuracy I need using [MongoDB](https://www.mongodb.com/).
+And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.
