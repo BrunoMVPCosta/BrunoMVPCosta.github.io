@@ -77,4 +77,4 @@ To register it I have just done:
 BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
 ```
 
-And with this, I have a good code, easy to maintain and the accurancy I need.
+And with this, I have a good code, easy to maintain and the accuracy I need.
