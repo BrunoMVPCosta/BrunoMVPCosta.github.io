@@ -6,9 +6,39 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Mar 2017 20:08:04 +0000</pubDate>
-    <lastBuildDate>Thu, 09 Mar 2017 20:08:04 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Mar 2017 21:14:48 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Mar 2017 21:14:48 +0000</lastBuildDate>
     <generator>Jekyll v3.4.1</generator>
+    
+      <item>
+        <title>Book recomendation</title>
+        <description>&lt;p&gt;I have just read the book &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=31e7504416c3ad44bfa92cd966a1ea4b&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;MarketPlace=US&amp;amp;ASIN=1680501453&amp;amp;ServiceVersion=20070822&amp;amp;ID=AsinImage&amp;amp;WS=1&amp;amp;Format=_SL250_&amp;amp;tag=throwexcept0f-20&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;&lt;b&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/b&gt;&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The book is a joy to read.&lt;/p&gt;
+
+&lt;p&gt;It’s split in two parts with a good introduction on why Phoenix is different. Basically, &lt;em&gt;Phoenix is about fast, concurrent, beautiful, interactive, and reliable applications&lt;/em&gt;. Which I agree, but you must know that this is a book written by Phoenix’s creator and Elixir’s creator, so please understand their “sometimes” excessive self praise.&lt;/p&gt;
+
+&lt;p&gt;The first part of the book will explain the basic layers of phoenix framework, but also Ecto and testing MVC. For those of you who don’t know, Ecto is the database wrapper and LINQ for Elixir. One of the phrases I most enjoy about &lt;strong&gt;Testing&lt;/strong&gt; is on this book: &lt;em&gt;If your code is worth writing, it’s worth testing.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.&lt;/p&gt;
+
+&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 09 Mar 2017 20:35:42 +0000</pubDate>
+        <link>http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html</guid>
+        
+        <category>ruby</category>
+        
+        
+        <category>ruby</category>
+        
+      </item>
     
       <item>
         <title>Learning Ruby playing a game</title>
@@ -679,36 +709,6 @@ So, the third step is to validate that the contracts between the consumer and th
         <guid isPermaLink="true">http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
         
         <category>clean-code</category>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>The art of coding</title>
-        <description>&lt;p&gt;Have you ever felt it’s really hard to explain what a software engineer does for a living? Have you ever felt you were boring someone explaining what a software engineer does? If you have answered yes to any of the questions, join the club.&lt;/p&gt;
-
-&lt;p&gt;When I started studying computer engineering, here in Portugal, not everyone had a personal computer and a lot of people not much older than me, had real issues working with computers. For example, they didn’t know how to turn on the computer. Yeah! That much.&lt;/p&gt;
-
-&lt;p&gt;Back on those days, trying to explain to a friend, what I was studying was hard, not only because I had no idea what software engineering really was, but also, because &lt;a href=&quot;https://www.reddit.com/r/AskMen/comments/1wxzkx/why_does_programming_have_so_many_negative/&quot;&gt;programming has so many negative stereotype&lt;/a&gt; and for a bunch of reasons, a lot of people just don’t enjoy to be around a software engineer or someone with a nerdy personality. I felt that people that didn’t know me that well, looked at me differently after I told them what I was studying and I sincerely believe it was because of the stereotypes around software engineers. Those stereotypes create a barrier on the communication between people and you need more time to get the “normal” look from those people again.&lt;/p&gt;
-
-&lt;p&gt;I feel sad about it, but I think it doesn’t have to do with the other person, but we cannot find an expression to transform software development in a non-boring activity. Let’s be honest, you have plenty of cool TV shows about doctors (House, Grey Anatomy, etc), about lawyers (Suits, How to get away with murderer, etc), about detectives, policemen, etc. But about software engineering we don’t have much and the ones that exist, I think only software related staff watches them. It’s boring.&lt;/p&gt;
-
-&lt;p&gt;If it’s hard for someone as creative as a TV shows writer, how to answer the question with some glamour and creativity?&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;What do we do for living?&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;We are software engineers. Some of us create apps, others backend services to support those apps or websites. Think about Facebook, Skype, Twitter, Linkedin, etc… millions of people using their technology day after day. Isn’t it amazing? Does it look boring? Changing people’s life. Changing the world. Changing the way people communicate. Changing the way people buy. Writing code is an art. It might not be a one-man show as it is creating a new piece of melody or writing a book, but it is art. Art created by one or millions of software engineers.&lt;/p&gt;
-
-&lt;p&gt;Again, think about Facebook, Skype, Twitter, Linkedin, etc… Millions of unknown artists… giving you art, everyday.&lt;/p&gt;
-
-&lt;p&gt;Does it sound boring? I don’t think so.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 01 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://localhost:4000/coding/2015/04/01/the-art-of-coding.html</link>
-        <guid isPermaLink="true">http://localhost:4000/coding/2015/04/01/the-art-of-coding.html</guid>
         
         
         <category>coding</category>
