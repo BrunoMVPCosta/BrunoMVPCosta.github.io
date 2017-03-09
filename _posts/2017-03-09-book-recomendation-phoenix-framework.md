@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Book recomendation"
+title:  "Book recomendation - phoenix framework"
 date:   2017-03-09 20:35:42
-tags: [ruby]
-categories: ruby
-permalink: /ruby/2017/'3/09/learning-ruby-playing.html
-description:  A game I found that will help you learning ruby
+tags: [elixir, phoenix]
+categories: elixir, phoenix
+permalink: /elixir/2017/'3/09/phoenix-framework-book-recomendation.html
+description:  A great book to start with phoenix
 comments: true
 share: true
 ---
