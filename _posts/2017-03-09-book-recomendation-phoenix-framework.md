@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Book recomendation - phoenix framework"
+title:  "Book recomendation - Programming Phoenix"
 date:   2017-03-09 20:35:42
 tags: [elixir, phoenix]
 categories: elixir, phoenix
