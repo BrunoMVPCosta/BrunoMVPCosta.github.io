@@ -22,7 +22,7 @@ But, lets talk about microservices and dependencies again. As example, imagine w
 
 ![My helpful screenshot]({{ site.url }}/images/cdc1.jpg)
 
-Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.
+Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follows.
 
 ![My helpful screenshot]({{ site.url }}/images/cdc2.jpg)
 
@@ -33,7 +33,7 @@ There are techniques to prevent all these situations:
 - <b>Coupled releases</b>: We can release OMS, Catalog Service and Inventory Service simultaneously. This way we are sure we will not break the interactions between those services, because they'll all be updated at the same time. But with the system growth and the number of dependencies growing too, it is easy to understand it will be very hard to maintain.
 - <b>End-to-end testing</b>: I believe this is one of most used solutions for this problem and mainly because it is such a QA-friendly solution. Even if it sounds as a decent idea, it quickly becomes a nightmare. The development and maintainability costs associated with these tests are huge. To make things worse, with all of the dependencies, a test can fail for a lot of different reasons, which leads to mistrust of the team in the tests. When the team distrusts the tests, usually, it doesn't take long for the team to stop maintaining and doing tests.
 
-Considering the pros and cons of the techniques above, we need a better, more flexible solution to evolve the Inventory Service API and make sure that a change on the API is not harmful to a unmodified version of the OMS or Catalog Service. And here comes the Customer-Driven Contracts pattern.
+Considering the pros and cons of the techniques above, we need a better, more flexible solution to evolve the Inventory Service API and make sure that a change on the API is not harmful to an unmodified version of the OMS or Catalog Service. And here comes the Customer-Driven Contracts pattern.
 
 <h3>Consumer-Driven Contracts</h3>
 
