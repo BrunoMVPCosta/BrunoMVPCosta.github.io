@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Begin Jekyll SEO tag v2.1.0 -->
-<title>Consumer-driven contracts with Pact - thrownewexception();</title>
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Consumer-driven contracts with Pact | thrownewexception();</title>
 <meta property="og:title" content="Consumer-driven contracts with Pact" />
+<meta property="og:locale" content="en_US" />
 <meta name="description" content="Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture." />
 <meta property="og:description" content="Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture." />
 <link rel="canonical" href="http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" />
@@ -17,12 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-02-09T00:00:00+00:00" />
 <script type="application/ld+json">
-{"@context": "http://schema.org",
-"@type": "BlogPosting",
-"headline": "Consumer-driven contracts with Pact",
-"datePublished": "2016-02-09T00:00:00+00:00",
-"description": "Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture.",
-"url": "http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Consumer-driven contracts with Pact","datePublished":"2016-02-09T00:00:00+00:00","dateModified":"2016-02-09T00:00:00+00:00","description":"Learn how Consumer-driven contracts with Pact can help you with dependencies between services when using microservices architecture.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html"},"url":"http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/css/main.css">
@@ -130,7 +126,7 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 <p><img src="http://localhost:4000/images/cdc1.jpg" alt="My helpful screenshot" /></p>
 
-<p>Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follow.</p>
+<p>Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follows.</p>
 
 <p><img src="http://localhost:4000/images/cdc2.jpg" alt="My helpful screenshot" /></p>
 
@@ -143,7 +139,7 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
   <li><b>End-to-end testing</b>: I believe this is one of most used solutions for this problem and mainly because it is such a QA-friendly solution. Even if it sounds as a decent idea, it quickly becomes a nightmare. The development and maintainability costs associated with these tests are huge. To make things worse, with all of the dependencies, a test can fail for a lot of different reasons, which leads to mistrust of the team in the tests. When the team distrusts the tests, usually, it doesn’t take long for the team to stop maintaining and doing tests.</li>
 </ul>
 
-<p>Considering the pros and cons of the techniques above, we need a better, more flexible solution to evolve the Inventory Service API and make sure that a change on the API is not harmful to a unmodified version of the OMS or Catalog Service. And here comes the Customer-Driven Contracts pattern.</p>
+<p>Considering the pros and cons of the techniques above, we need a better, more flexible solution to evolve the Inventory Service API and make sure that a change on the API is not harmful to an unmodified version of the OMS or Catalog Service. And here comes the Customer-Driven Contracts pattern.</p>
 
 <h3>Consumer-Driven Contracts</h3>
 

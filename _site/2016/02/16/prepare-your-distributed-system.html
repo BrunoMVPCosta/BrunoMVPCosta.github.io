@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Begin Jekyll SEO tag v2.1.0 -->
-<title>Prepare your distributed system, so you don’t lose money, when it fails - thrownewexception();</title>
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Prepare your distributed system, so you don’t lose money, when it fails | thrownewexception();</title>
 <meta property="og:title" content="Prepare your distributed system, so you don’t lose money, when it fails" />
+<meta property="og:locale" content="en_US" />
 <meta name="description" content="If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you’re still making money." />
 <meta property="og:description" content="If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you’re still making money." />
 <link rel="canonical" href="http://localhost:4000/2016/02/16/prepare-your-distributed-system.html" />
@@ -17,12 +18,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-02-16T00:00:00+00:00" />
 <script type="application/ld+json">
-{"@context": "http://schema.org",
-"@type": "BlogPosting",
-"headline": "Prepare your distributed system, so you don’t lose money, when it fails",
-"datePublished": "2016-02-16T00:00:00+00:00",
-"description": "If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you’re still making money.",
-"url": "http://localhost:4000/2016/02/16/prepare-your-distributed-system.html"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Prepare your distributed system, so you don’t lose money, when it fails","datePublished":"2016-02-16T00:00:00+00:00","dateModified":"2016-02-16T00:00:00+00:00","description":"If you are running a larger software system, sooner or later, it will fail. So prepare your system for failure, while you’re still making money.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2016/02/16/prepare-your-distributed-system.html"},"url":"http://localhost:4000/2016/02/16/prepare-your-distributed-system.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/css/main.css">
@@ -132,9 +128,9 @@
 
 <p>Lets say that you are running an e-commerce business, it’s the most important Friday of the year. Yep, that’s it, Black Friday. You have 20.000 users on your website. Your system allows the user to add to cart the items and it will validate the stock later on the checkout process. You have 300 users on the checkout process and you know that a slow experience on the checkout process can have a huge impact on the conversion rate. Your Inventory Service is having 30.000 requests per minute and it is slowing down your checkout process. You have an average order value of $400, so you can lose up to $120.000 if you lose the users that are at the checkout process.</p>
 
-<p>How can you prevent from losing the users if the Inventory Service goes down? <b>Timeouts</b> and <b>Circuit break</b> are useful techniques in this situation. Just remember that is not just a technical decision and you should ask the business what should happens in this situation. Should we prevent users from ordering an item without validating the item’s availability or should we allow them and check the availability later in the process?</p>
+<p>How can you prevent from losing the users if the Inventory Service goes down? <b>Timeouts</b> and <b>Circuit break</b> are useful techniques in this situation. Just remember that it’s not just a technical decision and you should ask the business what should happen in this situation. Should we prevent users from ordering an item without validating the item’s availability or should we allow them and check the availability later in the process?</p>
 
-<p>Repeat with me, <b>it-will-fail</b>. And Murphy will make sure it happens in the most inappropriate moment. The best thing is to prepare yourself for when it fails.</p>
+<p>Repeat after me, <b>it-will-fail</b>. And Murphy will make sure it happens in the most inappropriate moment. The best thing is to prepare yourself for when it fails.</p>
 
 
   </article>
