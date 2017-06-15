@@ -1,39 +1,9 @@
 ---
-layout: default
+layout: base
 ---
-<div class="post">
 
-  {% assign post = page %}
-  {% if post.tags.size > 0 %}
+{% include post.html post=page link_title=false %}
 
-      {% for post_tag in post.tags %}
-          {% assign tag = site.data.tags[post_tag] %}
+{% include about.html %}
 
-          {% if tag %}
-              {% capture tags_content_temp %}{{ tags_content }}<a class="tags" href="/tag/{{ tag.tag }}/"> {{ tag.name }}</a> {% endcapture %}
-              {% assign tags_content = tags_content_temp %}
-          {% endif %}
-      {% endfor %}
-  {% else %}
-      {% assign tags_content = '' %}
-  {% endif %}
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div>
-    <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
-    <span class="post-meta">
-      {% if post.tags.size >= 1 %}
-        <i class="fa fa-tag"></i>
-      {% endif %}
-
-     {{tags_content}}
-
- </span>
-  </div>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-</div>
+{% include related.html post=page %}

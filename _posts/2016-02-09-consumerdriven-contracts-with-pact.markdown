@@ -20,11 +20,11 @@ And... all of that will give us more money. We hope...
 
 But, lets talk about microservices and dependencies again. As example, imagine we're creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.
 
-![My helpful screenshot]({{ site.url }}/images/cdc1.jpg)
+![My helpful screenshot]({{ site.url }}/assets/img/posts/2016.02.09/cdc1.jpg)
 
 Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follows.
 
-![My helpful screenshot]({{ site.url }}/images/cdc2.jpg)
+![My helpful screenshot]({{ site.url }}/assets/img/posts/2016.02.09/cdc2.jpg)
 
 Now, we have two consumers depending on the Inventory Service. If we are not wise, there are lots of ways for the Catalog Service or Order Management System (OMS) to be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return an object instead of string.
 
@@ -55,12 +55,12 @@ So, the first step should be communication between us and someone responsible fo
 
 The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will check later in this article.
 
-![Step 2 - Define consumer expectations]({{ site.url }}/images/cdc4.jpg)
+![Step 2 - Define consumer expectations]({{ site.url }}/assets/img/posts/2016.02.09/cdc4.jpg)
 
 After that, we did all we had to do. It's the responsibility of the provider to ensure that these contracts are met and never broken.
 So, the third step is to validate that the contracts between the consumer and the provider are valid.
 
-![Step 3 - Verify expectations on provider]({{ site.url }}/images/cdc5.jpg)
+![Step 3 - Verify expectations on provider]({{ site.url }}/assets/img/posts/2016.02.09/cdc5.jpg)
 
 <h3>Isn't it the same as end-to-end testing?</h3>
 

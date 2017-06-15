@@ -1,18 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>thrownewexception();</title>
-    <description>Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
-</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 15 Jun 2017 00:09:07 +0100</pubDate>
-    <lastBuildDate>Thu, 15 Jun 2017 00:09:07 +0100</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
-    
-      <item>
-        <title>Book recomendation - Programming Phoenix</title>
-        <description>&lt;p&gt;I have just read the book &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-15T18:47:39+01:00</updated><id>http://localhost:4000/</id><title type="html">thrownewexception();</title><subtitle>[`@BrunoElo`{:rel=&quot;me&quot;}](https://twitter.com/brunoelo)'s internet little corner  to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">Book recomendation - Programming Phoenix</title><link href="http://localhost:4000/elixir/2017/03/09/phoenix-framework-book-recomendation.html" rel="alternate" type="text/html" title="Book recomendation - Programming Phoenix" /><published>2017-03-09T20:35:42+00:00</published><updated>2017-03-09T20:35:42+00:00</updated><id>http://localhost:4000/elixir/2017/03/09/book-recomendation-phoenix-framework</id><content type="html" xml:base="http://localhost:4000/elixir/2017/03/09/phoenix-framework-book-recomendation.html">&lt;p&gt;I have just read the book &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).&lt;/p&gt;
 
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=31e7504416c3ad44bfa92cd966a1ea4b&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;MarketPlace=US&amp;amp;ASIN=1680501453&amp;amp;ServiceVersion=20070822&amp;amp;ID=AsinImage&amp;amp;WS=1&amp;amp;Format=_SL250_&amp;amp;tag=throwexcept0f-20&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
 
@@ -26,49 +13,14 @@
 
 &lt;p&gt;The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.&lt;/p&gt;
 
-&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 09 Mar 2017 20:35:42 +0000</pubDate>
-        <link>http://localhost:4000/elixir/2017/03/09/phoenix-framework-book-recomendation.html</link>
-        <guid isPermaLink="true">http://localhost:4000/elixir/2017/03/09/phoenix-framework-book-recomendation.html</guid>
-        
-        <category>elixir</category>
-        
-        <category>phoenix</category>
-        
-        
-        <category>elixir,</category>
-        
-        <category>phoenix</category>
-        
-      </item>
-    
-      <item>
-        <title>Learning Ruby playing a game</title>
-        <description>&lt;p&gt;So, I was thinking it would be cool if there was a game to learn Ruby.
+&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html">I have just read the book Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</summary></entry><entry><title type="html">Learning Ruby playing a game</title><link href="http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" rel="alternate" type="text/html" title="Learning Ruby playing a game" /><published>2017-03-09T00:00:42+00:00</published><updated>2017-03-09T00:00:42+00:00</updated><id>http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing</id><content type="html" xml:base="http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html">&lt;p&gt;So, I was thinking it would be cool if there was a game to learn Ruby.
 Games are good for learning, because the more interesting the material is, the more likely it will be retained.&lt;/p&gt;
 
 &lt;p&gt;I found the &lt;em&gt;Ruby Warrior&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2017-03-09/ruby_warrior.png&quot; alt=&quot;Ruby warrior&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2017.03.09/ruby_warrior.png&quot; alt=&quot;Ruby warrior&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It’s a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 09 Mar 2017 00:00:42 +0000</pubDate>
-        <link>http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html</link>
-        <guid isPermaLink="true">http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html</guid>
-        
-        <category>ruby</category>
-        
-        
-        <category>ruby</category>
-        
-      </item>
-    
-      <item>
-        <title>Removing formatters in ASP.NET Core</title>
-        <description>&lt;p&gt;Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:&lt;/p&gt;
+&lt;p&gt;It’s a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="ruby" /><summary type="html">So, I was thinking it would be cool if there was a game to learn Ruby. Games are good for learning, because the more interesting the material is, the more likely it will be retained.</summary></entry><entry><title type="html">Removing formatters in ASP.NET Core</title><link href="http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html" rel="alternate" type="text/html" title="Removing formatters in ASP.NET Core" /><published>2016-11-07T18:30:00+00:00</published><updated>2016-11-07T18:30:00+00:00</updated><id>http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core</id><content type="html" xml:base="http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html">&lt;p&gt;Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;services.Configure&amp;lt;MvcOptions&amp;gt;(options =&amp;gt;
         options.OutputFormatters.RemoveAll(formatter =&amp;gt;
@@ -91,22 +43,7 @@ Games are good for learning, because the more interesting the material is, the m
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 07 Nov 2016 18:30:00 +0000</pubDate>
-        <link>http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</link>
-        <guid isPermaLink="true">http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html</guid>
-        
-        <category>aspnetcore</category>
-        
-        
-        <category>aspnetcore</category>
-        
-      </item>
-    
-      <item>
-        <title>How to use decimal with mongodb and .NET C#</title>
-        <description>&lt;p&gt;When working with money we need to be concerned with the accuracy of the data as well as the calculations we do.
+&lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="aspnetcore" /><summary type="html">Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</summary></entry><entry><title type="html">How to use decimal with mongodb and .NET C#</title><link href="http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html" rel="alternate" type="text/html" title="How to use decimal with mongodb and .NET C#" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp</id><content type="html" xml:base="http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html">&lt;p&gt;When working with money we need to be concerned with the accuracy of the data as well as the calculations we do.
 Imagine that you have an ecommerce website with a feature that allows  users to have a credit balance on their accounts. One user has 86.25€ and had just spend 86.24€. We expect him to be left with 0.01. But is he?&lt;/p&gt;
 
 &lt;p&gt;It will depend on the data type we are using to store the money. To give you an example, I have prepared a small piece of code.&lt;/p&gt;
@@ -173,22 +110,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&amp;lt;decimal&amp;g
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</link>
-        <guid isPermaLink="true">http://localhost:4000/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html</guid>
-        
-        <category>clean-code</category>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Roslyn to validate guard clauses - CodeFixProvider</title>
-        <description>&lt;p&gt;In my last post, I showed you &lt;a href=&quot;/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;how to build an Analyzer to detect inadequate guard clauses&lt;/a&gt;. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.&lt;/p&gt;
+&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="clean-code" /><summary type="html">When working with money we need to be concerned with the accuracy of the data as well as the calculations we do. Imagine that you have an ecommerce website with a feature that allows users to have a credit balance on their accounts. One user has 86.25€ and had just spend 86.24€. We expect him to be left with 0.01. But is he?</summary></entry><entry><title type="html">Using Roslyn to validate guard clauses - CodeFixProvider</title><link href="http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html" rel="alternate" type="text/html" title="Using Roslyn to validate guard clauses - CodeFixProvider" /><published>2016-03-11T00:53:00+00:00</published><updated>2016-03-11T00:53:00+00:00</updated><id>http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses</id><content type="html" xml:base="http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html">&lt;p&gt;In my last post, I showed you &lt;a href=&quot;/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;how to build an Analyzer to detect inadequate guard clauses&lt;/a&gt;. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;What have we done so far?&lt;b&gt;&lt;/b&gt;&lt;/b&gt;&lt;/p&gt;
 
@@ -343,24 +265,7 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 &lt;p&gt;If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_03_11/resultCodeFixProvider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 11 Mar 2016 00:53:00 +0000</pubDate>
-        <link>http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</link>
-        <guid isPermaLink="true">http://localhost:4000/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html</guid>
-        
-        <category>clean-code</category>
-        
-        <category>mongodb</category>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Using Roslyn to validate guard clauses</title>
-        <description>&lt;p&gt;In one of my previous posts, I talked about &lt;a href=&quot;/code/clean/2015/04/03/stop-doing-if-return-else.html&quot;&gt;Not every if–then-else statement, needs the	 else&lt;/a&gt;.. Today, we’ll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.03.11/result_code_fix_provider.png&quot; alt=&quot;Result CodeFixProvider&quot; /&gt;&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="clean-code" /><category term="mongodb" /><summary type="html">In my last post, I showed you how to build an Analyzer to detect inadequate guard clauses. But we can do more with Roslyn API and I’ll show you today how we can give a suggestion to our developers on how can they fix it propertly.</summary></entry><entry><title type="html">Using Roslyn to validate guard clauses</title><link href="http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html" rel="alternate" type="text/html" title="Using Roslyn to validate guard clauses" /><published>2016-02-23T15:03:00+00:00</published><updated>2016-02-23T15:03:00+00:00</updated><id>http://localhost:4000/code/clean/2016/02/23/using-roslyn-to-validate-guard-clauses</id><content type="html" xml:base="http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html">&lt;p&gt;In one of my previous posts, I talked about &lt;a href=&quot;/code/clean/2015/04/03/stop-doing-if-return-else.html&quot;&gt;Not every if–then-else statement, needs the	 else&lt;/a&gt;.. Today, we’ll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;Prerequisites&lt;/b&gt;&lt;/p&gt;
 
@@ -408,13 +313,13 @@ As example of bad use of Guard Clause we have the If-Throw-Else:&lt;/p&gt;
 &lt;p&gt;In Visual Studio, choose File -&amp;gt; New -&amp;gt; Project -&amp;gt; Visual C# -&amp;gt; Extensibility
 There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name your project “IfElseValidationAnalyzer” and click OK.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/NewProject.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.23/new_project.png&quot; alt=&quot;New Project Windows&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2 - Rename title, message format and description&lt;/p&gt;
 
 &lt;p&gt;In Solution Explorer look up for Resources.resx and double-click it to open. You will find three resources there, AnalyzerDescription, AnalyzerMessageFormat and AnalyzerTitle. To keep things simple, we will change the value of all the three to &lt;i&gt;Guard clause don’t need the else statement&lt;/i&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.23/resources.png&quot; alt=&quot;Resources&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Change the current Analyzer to do what we want&lt;/p&gt;
 
@@ -480,55 +385,27 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 &lt;p&gt;You should see something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_23/result1.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.23/result.png&quot; alt=&quot;Output&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;More&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;Stay tuned. The &lt;a href=&quot;/code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html&quot;&gt;next blog&lt;/a&gt; post we will change the CodeFixProvider to give the developer a suggestion on how to solve this mistake.&lt;/p&gt;
 
-&lt;p&gt;You can find my version of the Analyzer on &lt;a href=&quot;https://github.com/BrunoMVPCosta/IfElseValidationAnalyzer&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can find my version of the Analyzer on &lt;a href=&quot;https://github.com/BrunoMVPCosta/IfElseValidationAnalyzer&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="clean-code" /><summary type="html">In one of my previous posts, I talked about Not every if–then-else statement, needs the else.. Today, we’ll explore the creation of an Analyzer using Roslyn API, that will analyze the source code looking for any Guard clause with If-Return-Else or If-Throw-Else.</summary></entry><entry><title type="html">The term ‘Invoke-WebRequest’ is not recognized</title><link href="http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html" rel="alternate" type="text/html" title="The term ‘Invoke-WebRequest’ is not recognized" /><published>2016-02-18T00:00:00+00:00</published><updated>2016-02-18T00:00:00+00:00</updated><id>http://localhost:4000/the-term-invoke-webrequest-is-not-recognized</id><content type="html" xml:base="http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html">&lt;p&gt;I’ve decided to check out the code from &lt;a href=&quot;https://github.com/OrchardCMS/Orchard2&quot;&gt;Orchard2&lt;/a&gt; to learn more about it and the new ASP.NET Core 1.0. Following the &lt;i&gt;Getting Started&lt;/i&gt; points from their github’s page the third bullet point is to run the &lt;i&gt;build.cmd&lt;/i&gt;. I did and the output was the following&lt;/p&gt;
 
-</description>
-        <pubDate>Tue, 23 Feb 2016 15:03:00 +0000</pubDate>
-        <link>http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</link>
-        <guid isPermaLink="true">http://localhost:4000/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html</guid>
-        
-        <category>clean-code</category>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>The term ‘Invoke-WebRequest’ is not recognized</title>
-        <description>&lt;p&gt;I’ve decided to check out the code from &lt;a href=&quot;https://github.com/OrchardCMS/Orchard2&quot;&gt;Orchard2&lt;/a&gt; to learn more about it and the new ASP.NET Core 1.0. Following the &lt;i&gt;Getting Started&lt;/i&gt; points from their github’s page the third bullet point is to run the &lt;i&gt;build.cmd&lt;/i&gt;. I did and the output was the following&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/invokewebrequesterror.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.18/invoke_webrequest_error.jpg&quot; alt=&quot;The term ‘Invoke-WebRequest’ is not recognized&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, I did what every engineer does when he has a problem that doesn’t know how to solve… I googled it. It didn’t help much, so I went to the &lt;a href=&quot;http://technet.microsoft.com/en-us/library/hh849901.aspx&quot;&gt;technet website&lt;/a&gt; to see that the cmdlet has been introduced in Windows PowerShell 3.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/invokewebrequestversion.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.18/invoke_webrequest_version.jpg&quot; alt=&quot;CmdLet other versions&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, I wondered what powershell version I had on the computer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/psversion.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.18/ps_version.jpg&quot; alt=&quot;Powershell version&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ops, problem found. Now, to solve it, I went to &lt;a href=&quot;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&quot;&gt;http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx&lt;/a&gt; and installed the PowerShell 4.0.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2016_02_18/itworkedsucesskid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016-02-18-the-term-invoke-webrequest-is-not-recognized.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Prepare your distributed system, so you don't lose money, when it fails</title>
-        <description>&lt;p&gt;The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.18/it_worked_sucess_kid.jpg&quot; alt=&quot;Finally, it worked.&quot; /&gt;&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><summary type="html">I’ve decided to check out the code from Orchard2 to learn more about it and the new ASP.NET Core 1.0. Following the Getting Started points from their github’s page the third bullet point is to run the build.cmd. I did and the output was the following</summary></entry><entry><title type="html">Prepare your distributed system, so you don’t lose money, when it fails</title><link href="http://localhost:4000/2016/02/16/prepare-your-distributed-system.html" rel="alternate" type="text/html" title="Prepare your distributed system, so you don't lose money, when it fails" /><published>2016-02-16T00:00:00+00:00</published><updated>2016-02-16T00:00:00+00:00</updated><id>http://localhost:4000/2016/02/16/sleep-distributed-system</id><content type="html" xml:base="http://localhost:4000/2016/02/16/prepare-your-distributed-system.html">&lt;p&gt;The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.&lt;/p&gt;
 
 &lt;p&gt;We usually forget that we are trusting on the network, the number one reason for serious system failure, because we don’t know or we don’t remember &lt;a href=&quot;https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing&quot;&gt;the eight fallacies of distributed computing&lt;/a&gt;:&lt;/p&gt;
 
@@ -547,21 +424,7 @@ So, the final step is to change the HandleIfStatement method to do what we need.
 
 &lt;p&gt;How can you prevent from losing the users if the Inventory Service goes down? &lt;b&gt;Timeouts&lt;/b&gt; and &lt;b&gt;Circuit break&lt;/b&gt; are useful techniques in this situation. Just remember that it’s not just a technical decision and you should ask the business what should happen in this situation. Should we prevent users from ordering an item without validating the item’s availability or should we allow them and check the availability later in the process?&lt;/p&gt;
 
-&lt;p&gt;Repeat after me, &lt;b&gt;it-will-fail&lt;/b&gt;. And Murphy will make sure it happens in the most inappropriate moment. The best thing is to prepare yourself for when it fails.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2016/02/16/prepare-your-distributed-system.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/16/prepare-your-distributed-system.html</guid>
-        
-        <category>design-patterns</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Consumer-driven contracts with Pact</title>
-        <description>&lt;p&gt;Microservices are here to stay. When using a microservices architecture, theory says, we get a more flexible system. It’s easier to deploy, because instead of releasing the entire system, as in a monolithic application, we can release small parts of the system independently. We get hardware flexibility, because we may need different hardware specifications for different parts of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another one using Node.js. The flexibility is wonderful and it all sounds great however, our ability to release the services independently is more often than not restricted by the dependencies between services.
+&lt;p&gt;Repeat after me, &lt;b&gt;it-will-fail&lt;/b&gt;. And Murphy will make sure it happens in the most inappropriate moment. The best thing is to prepare yourself for when it fails.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="design-patterns" /><summary type="html">The first thing you need to learn when you release a distributed system into production is this: it’ll eventually fail! You don’t believe me, huh? Well, I don’t blame you.</summary></entry><entry><title type="html">Consumer-driven contracts with Pact</title><link href="http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html" rel="alternate" type="text/html" title="Consumer-driven contracts with Pact" /><published>2016-02-09T00:00:00+00:00</published><updated>2016-02-09T00:00:00+00:00</updated><id>http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact</id><content type="html" xml:base="http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html">&lt;p&gt;Microservices are here to stay. When using a microservices architecture, theory says, we get a more flexible system. It’s easier to deploy, because instead of releasing the entire system, as in a monolithic application, we can release small parts of the system independently. We get hardware flexibility, because we may need different hardware specifications for different parts of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another one using Node.js. The flexibility is wonderful and it all sounds great however, our ability to release the services independently is more often than not restricted by the dependencies between services.
 To evolve to microservices architecture smoothly, we need continuous delivery. This is very important for several reasons, for example:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -574,11 +437,11 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;But, lets talk about microservices and dependencies again. As example, imagine we’re creating an ecommerce using microservices architecture and we have the Catalog Service and the Inventory Service. They communicate using REST.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.09/cdc1.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Later, we got a new requirement from the order management system, saying that they need to have the warehouse location of the stock. We will need to change our API as follows.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.09/cdc2.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, we have two consumers depending on the Inventory Service. If we are not wise, there are lots of ways for the Catalog Service or Order Management System (OMS) to be broken by changes made on the Inventory Service. For example, we may need to replace the warehouse property and return an object instead of string.&lt;/p&gt;
 
@@ -611,12 +474,12 @@ To evolve to microservices architecture smoothly, we need continuous delivery. T
 
 &lt;p&gt;The second step is to define consumer expectations on the Catalog Service. It may feel weird to create the code we are expecting from the provider and not use the provider instead, but doing so has some advantages that we will check later in this article.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.09/cdc4.jpg&quot; alt=&quot;Step 2 - Define consumer expectations&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After that, we did all we had to do. It’s the responsibility of the provider to ensure that these contracts are met and never broken.
 So, the third step is to validate that the contracts between the consumer and the provider are valid.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/posts/2016.02.09/cdc5.jpg&quot; alt=&quot;Step 3 - Verify expectations on provider&quot; /&gt;&lt;/p&gt;
 
 &lt;h3&gt;Isn't it the same as end-to-end testing?&lt;/h3&gt;
 
@@ -640,24 +503,7 @@ So, the third step is to validate that the contracts between the consumer and th
 
 &lt;p&gt;Consumer-Driven Contract pattern is amazing to improve our organization productivity. Being able to verify contracts at build time without the need of starting up a bunch of services and their dependencies, saves us money, time and helps us to stay sane. With the confidence it gives us on the deployment process, our organization will release more often, sooner and improve our users’ experience sooner.&lt;/p&gt;
 
-&lt;p&gt;Remember… fast feedback is everything. We are just enabling it. For us, for our organization and our business.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/02/09/consumerdriven-contracts-with-pact.html</guid>
-        
-        <category>consumer-driven-design</category>
-        
-        <category>pact</category>
-        
-        <category>continuous delivery</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Not every if--then-else statement, needs the	 else</title>
-        <description>&lt;p&gt;As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.&lt;/p&gt;
+&lt;p&gt;Remember… fast feedback is everything. We are just enabling it. For us, for our organization and our business.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="consumer-driven-design" /><category term="pact" /><category term="continuous delivery" /><summary type="html">Microservices are here to stay. When using a microservices architecture, theory says, we get a more flexible system. It’s easier to deploy, because instead of releasing the entire system, as in a monolithic application, we can release small parts of the system independently. We get hardware flexibility, because we may need different hardware specifications for different parts of the system. We get programming flexibility, because we can have a service using C# with WebAPI and another one using Node.js. The flexibility is wonderful and it all sounds great however, our ability to release the services independently is more often than not restricted by the dependencies between services. To evolve to microservices architecture smoothly, we need continuous delivery. This is very important for several reasons, for example:</summary></entry><entry><title type="html">Not every if–then-else statement, needs the else</title><link href="http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html" rel="alternate" type="text/html" title="Not every if--then-else statement, needs the	 else" /><published>2015-04-03T01:00:42+01:00</published><updated>2015-04-03T01:00:42+01:00</updated><id>http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else</id><content type="html" xml:base="http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html">&lt;p&gt;As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.&lt;/p&gt;
 
 &lt;p&gt;One thing that amuses me is the quantity of people doing the following piece of code.&lt;/p&gt;
 
@@ -705,19 +551,4 @@ So, the third step is to validate that the contracts between the consumer and th
 
 &lt;p&gt;Everytime you have a code review, or change some code from another engineer, please check for code like this and alert your colleague for this. He will be grateful.&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;UPDATE:&lt;/b&gt; You can also write a Analyzer using Roslyn API to validate this, check out &lt;a href=&quot;http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;here&lt;/a&gt; how to do it.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 03 Apr 2015 01:00:42 +0100</pubDate>
-        <link>http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</link>
-        <guid isPermaLink="true">http://localhost:4000/code/clean/2015/04/03/stop-doing-if-return-else.html</guid>
-        
-        <category>clean-code</category>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;b&gt;UPDATE:&lt;/b&gt; You can also write a Analyzer using Roslyn API to validate this, check out &lt;a href=&quot;http://thrownewexception.com/code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html&quot;&gt;here&lt;/a&gt; how to do it.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="clean-code" /><summary type="html">As a software engineer, I have the opportunity to review a lot of code from other engineers. One thing that makes me happy is that the number of people doing a defensive code is growing, but there is still room for improvement.</summary></entry></feed>

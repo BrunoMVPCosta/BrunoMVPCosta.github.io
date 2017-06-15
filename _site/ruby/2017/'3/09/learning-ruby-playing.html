@@ -1,227 +1,544 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+Powered by Hydejack v6.3.0 (https://qwtel.com/hydejack/)
+-->
 
-    <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>Learning Ruby playing a game | thrownewexception();</title>
-<meta property="og:title" content="Learning Ruby playing a game" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="A game I found that will help you learning ruby" />
-<meta property="og:description" content="A game I found that will help you learning ruby" />
+
+
+
+
+
+
+
+
+<head>
+  <!-- =============== -->
+<!-- META            -->
+<!-- =============== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="x-rim-auto-match" content="none">
+
+
+
+
+  <title>Learning Ruby playing a game &middot; thrownewexception();</title>
+
+
+
+<meta name="description" content="A game I found that will help you learning ruby
+">
+
+
+
+<!-- =============== -->
+<!-- LINKS           -->
+<!-- =============== -->
 <link rel="canonical" href="http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" />
-<meta property="og:url" content="http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" />
-<meta property="og:site_name" content="thrownewexception();" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-03-09T00:00:42+00:00" />
-<script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Learning Ruby playing a game","datePublished":"2017-03-09T00:00:42+00:00","dateModified":"2017-03-09T00:00:42+00:00","description":"A game I found that will help you learning ruby","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html"},"url":"http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html"}</script>
-<!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+<link rel="alternate" type="application/atom+xml" title="thrownewexception(); Feed" href="http://localhost:4000/feed.xml">
+
+
+  <link rel="prev" href="http://localhost:4000/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html">
+
+
+
+  <link rel="next" href="http://localhost:4000/elixir/2017/03/09/phoenix-framework-book-recomendation.html">
+
+
+<!-- =============== -->
+<!-- SCRIPTS         -->
+<!-- =============== -->
+<script>
+  !function(n,e){function t(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function o(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}n._loaded=!1,n.loadJSDeferred=function(a,d){function r(){n._loaded=!0;var r=e.createElement("script");r.src=a,d&&(("onload"in r?t:o)(r,d),r.onload||t(r,d));var l=e.getElementsByTagName("script")[0];l.parentNode.insertBefore(r,l)}n._loaded?r():n.addEventListener?n.addEventListener("load",r,!1):n.attachEvent?n.attachEvent("onload",r):n.onload=r}}(window,document);
+
+  !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=f[f.length-1]}var s=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=s.length;t--;)if(s[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+
+  !function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(t){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),r=0;r<e.length;r++){var n=e[r];"preload"===n.rel&&"style"===n.getAttribute("as")&&(t.loadCSS(n.href,n,n.getAttribute("media")),n.rel=null)}},!e.support()){e.poly();var r=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){e.poly(),t.clearInterval(r)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(r)})}}}(this);
+
+  window.disablePushState = false;
+  window.disableDrawer = false;
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://unpkg.com/html5shiv/dist/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- =============== -->
+<!-- STYLES          -->
+<!-- =============== -->
+<!--[if gt IE 8]><!---->
+<style>
+  
+  article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#333;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-weight:bold;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{margin:3rem 0 1rem;line-height:1.6}h1,.h1{font-size:2rem;line-height:1.25}h2,.h2{font-size:1.5rem}h3,.h3{font-size:1.17em}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.25rem;font-weight:300;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee;border-bottom:1px solid #fff}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}footer{margin-bottom:2rem}.page,.post{margin-bottom:3em}.page li+li,.post li+li{margin-top:.25rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#9a9a9a}.related-posts{padding-left:0;list-style:none}.related-posts>li,.related-posts>li+li{margin-top:1rem}.related-posts>li>small,.related-posts>li+li>small{font-size:75%;color:#9a9a9a}.message{margin-bottom:1rem;padding:1rem;color:#787878;background-color:#f9f9f9;margin-left:-1rem;margin-right:-1rem}body,main{position:relative;overflow-x:hidden}@media screen{body::before{content:'';width:.5rem;background:#e5e5e5;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 40em){html{font-size:17px}}@media screen and (min-width: 54em){html{font-size:16px}}@media screen and (min-width: 72em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}.sr-only{display:none}.clearfix,.sidebar-social::after{content:"";display:table;clear:both}a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.img{overflow:hidden;background-color:#f9f9f9}.img>img{margin:0;width:100%;height:100%}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}h1+hr,h2+hr,h3+hr,h4+hr,h5+hr,h6+hr{margin-top:0}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-2rem);opacity:0}50%{transform:translateY(-2rem);opacity:0}to{transform:translateY(0);opacity:1}}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar::before{content:"";position:absolute;z-index:2;top:0;left:0;bottom:0;right:0;background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}#_yDrawer{position:relative;padding:1rem 0}@media screen{#_yDrawer{padding:2rem 1rem;min-height:640px;min-height:100vh}}@media screen and (min-width: 54em){#_yDrawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 97.5em){#_yDrawer{width:calc(50% - 28rem)}}@media screen{#_yDrawer.loaded{min-height:0;padding:0}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-sticky{position:relative;padding-left:1rem;padding-right:1rem;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:1rem;bottom:1rem;left:1rem}}.sidebar-about>h1{color:#fff;font-size:1.5rem}.sidebar-nav>ul{list-style:none;padding-left:0}.sidebar-nav>ul>li:last-child>.sidebar-nav-item{border-bottom:1px solid rgba(255,255,255,0.2)}a.sidebar-nav-item{font-weight:bold;display:block;line-height:1.75;margin:0 -2rem;padding:.25rem 2rem;border-top:1px solid rgba(255,255,255,0.2);border-bottom:none}@media screen{.y-drawer-scrim{z-index:2}.y-drawer-content{width:18rem;left:-17.5rem;z-index:3}}@media screen and (min-width: 97.5em){.y-drawer-content{width:calc(50% - 28rem)}}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0;margin:0 -.25rem}.sidebar-social>ul>li{float:left;margin:0 .25rem}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.6rem;line-height:3rem;width:3.125rem;height:4rem;padding:.5rem 0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:1}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0}.menu{display:inline-block;padding:1.75rem 1.5rem;border-bottom:none;margin-left:-1.5rem;color:#9a9a9a !important}@media screen and (min-width: 54em){.menu{padding:1.25rem 1.5rem;position:absolute;left:-9999px}.menu:focus{position:static}}.shadow-main{pointer-events:none}.loading{display:none}@media print{.menu{display:none}}.shadow-main{opacity:0;will-change:opacity}.loading{position:absolute;top:0;right:0;padding:5.25rem 4.5rem;transform-origin:top right;transform:scale(0.33)}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{max-width:38rem;padding-left:1.5rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem;padding:4rem 1rem 12rem;margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 72em){.content{margin-left:22rem;margin-right:4rem}}@media screen and (min-width: 92em){.content{max-width:48rem}}@media screen and (min-width: 97.5em){.content{margin:auto}}.me{float:right;width:6.5rem;height:6.5rem;margin-left:1rem;margin-bottom:.5rem;border-radius:100%;position:relative}@media screen and (min-width: 40em){.me{width:7rem;height:7rem}}@media screen and (min-width: 54em){.me{width:6.5rem;height:6.5rem}}@media screen and (min-width: 60em){.me{width:7rem;height:7rem}}main>footer{position:absolute;bottom:0;left:0;right:0;padding:0 1rem;color:#9a9a9a;font-size:smaller;text-align:center}main>footer>p{margin-bottom:0}html{font-family:Georgia, serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}
+
+</style>
+
+
+<link rel="preload" href="/assets/css/hydejack.css?v=6.3.0" as="style" onload="this.rel='stylesheet'">
+
+<style id="_pageStyle">
+
+.content a{color:#4f86aa;border-color:rgba(79,134,170,0.2)}.content a:hover{border-color:#4f86aa}:focus{outline-color:#4f86aa}::selection{color:#fff;background:#4f86aa}::-moz-selection{color:#fff;background:#4f86aa}
+
+</style>
+
+
+<noscript>
+  <link rel="stylesheet" href="/assets/css/hydejack.css?v=6.3.0">
+
+  
+  
+  
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Noto+Serif:400,400i,700,700i">
+    <style>
+      html { font-family: 'Noto Serif', Georgia, serif }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
+    </style>
+  
+
+  
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+</noscript>
+<!--<![endif]-->
 
 </head>
 
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
-  <body>
-
-    <header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/">thrownewexception();</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        
-          
-          <a class="page-link" href="/about/">About</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-    </nav>
-
+<body>
+  <!-- =============== -->
+<!-- MENU            -->
+<!-- =============== -->
+<div class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <a id="_menu" class="menu no-hover" href="#_title">
+      <span class="sr-only">Menu</span>
+      <span>☰</span>
+    </a>
   </div>
+</div>
 
-</header>
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="post">
-
-  
-  
-
-  <header class="post-header">
-    <h1 class="post-title">Learning Ruby playing a game</h1>
-    <div>
-    <span class="post-meta">Mar 9, 2017</span>
-    <span class="post-meta">
-      
-        <i class="fa fa-tag"></i>
+<!-- =============== -->
+<!-- CONTENT         -->
+<!-- =============== -->
+<div id="_yPushState">
+  <div class="fade-in">
+    <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/side_image.png">
       
 
-     
+<article id="post-ruby/2017/'3/09/learning-ruby-playing" class="post dingbat" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Learning Ruby playing a game
+      
+    </h1>
 
- </span>
-  </div>
+    
+
+    
+
+    <p class="post-date heading">
+      <time datetime="2017-03-09T00:00:42+00:00">09 Mar 2017</time>, 
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Ruby</span>
+
+    
+      
+      
+
+
+
+
+
+
+
+
+
+on <span>Ruby</span>
+
+    
+    </p>
   </header>
 
-  <article class="post-content">
+  
+  
+  
+<p class="message">A game I found that will help you learning ruby</p>
+
+
+
+
+  <hr/>
+
+  
     <p>So, I was thinking it would be cool if there was a game to learn Ruby.
 Games are good for learning, because the more interesting the material is, the more likely it will be retained.</p>
 
 <p>I found the <em>Ruby Warrior</em>.</p>
 
-<p><img src="http://localhost:4000/images/2017-03-09/ruby_warrior.png" alt="Ruby warrior" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.03.09/ruby_warrior.png" alt="Ruby warrior" /></p>
 
 <p>It’s a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.</p>
 
-  </article>
+  
+
+</article>
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  
+    
+  
+
+  
+
+  <img
+    class="me"
+    alt="Bruno Costa"
+    src="https://cdn-images-1.medium.com/fit/c/200/200/1*cNF7DtHQLybSo2ZynQV43A.jpeg"
+    srcset="https://cdn-images-1.medium.com/fit/c/200/200/1*cNF7DtHQLybSo2ZynQV43A.jpeg 1x,https://cdn-images-1.medium.com/fit/c/200/200/1*cNF7DtHQLybSo2ZynQV43A.jpeg 2x"
+    sizes=""
+  />
+
+
+  
+
+  <h2 class="page-title">
+    About
+  </h2>
+
+  <hr/>
+
+  <p>I’m Bruno Costa, a software engineer from Porto, Portugal and this is my little corner on the internet. Here I share some of my thoughts.</p>
+
+
+  
+    <div class="sidebar-social">
+      <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://twitter.com/BrunoElo">
+    <span class="icon-twitter" title="Twitter"></span>
+    <span class="sr-only">Twitter</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/BrunoMVPCosta">
+    <span class="icon-github" title="GitHub"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/kelebru">
+    <span class="icon-linkedin2" title="LinkedIn"></span>
+    <span class="sr-only">LinkedIn</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:bcosta10@gmail.com">
+    <span class="icon-envelop" title="Email"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+</ul>
+
+    </div>
+  
 </div>
 
+  </aside>
 
+
+
+
+
+<aside class="related" role="complementary">
+  <h2>Related Posts</h2>
+  <hr/>
+
+  <ul class="related-posts">
+    
       
-<b>Share</b>
-<div class="dv-social">
-  <ul class="share">
-    <li><a href="https://twitter.com/intent/tweet?text=Learning Ruby playing a game&url=http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-    <li><a href="https://facebook.com/sharer.php?u=http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-    <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" rel="nofollow" target="_blank" title="Share on Linkedlin"><i class="fa fa-linkedin-square"></i></a></li>
-    <li><a href="https://plus.google.com/share?url=http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square"></i></a></li>
+      
+      
+        
+          
+          
+    
   </ul>
-</div>
+</aside>
+
 
 
       
-<!-- Add Disqus comments. -->
-<div id="disqus_thread">
-</div>
-<script>
-/**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
 
-s.src = '//thrownewexceptioncom.disqus.com/embed.js';
+  <div id="disqus_thread"></div>
 
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  <script>
+    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="Learning Ruby playing a game",this.page.identifier="/ruby/2017/'3/09/learning-ruby-playing",this.page.url="http://localhost:4000/ruby/2017/'3/09/learning-ruby-playing.html"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//thrownewexceptioncom.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
 
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
 
-      </div>
-    </div>
-  <footer class="site-footer">
+      
 
-  <div class="wrapper">
+      <footer>
+  <hr/>
+  
+    <p>© 2017. All rights reserved.</p>
 
-    <h2 class="footer-heading">thrownewexception();</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>thrownewexception();</li>
-          <li><a href="mailto:kele_bru@hotmail.com">kele_bru@hotmail.com</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/BrunoMVPCosta">
-              <span class="icon  icon--github">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
-                </svg>
-              </span>
-
-              <span class="username">BrunoMVPCosta</span>
-            </a>
-          </li>
-          
-
-          
-          <li>
-            <a href="https://twitter.com/BrunoElo">
-              <span class="icon  icon--twitter">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
-                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
-                </svg>
-              </span>
-
-              <span class="username">BrunoElo</span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
-</p>
-      </div>
-    </div>
-
-  </div>
-
+  
+  <p>
+    <code>Powered by <a href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">6.3.0</span></code>
+  </p>
 </footer>
 
-  </body>
+    </main>
+  </div>
+  <div id="_yDrawer">
+  <div id="_sidebar" class="sidebar">
+    <div class="sidebar-bg" style="background-color:#4f86aa;background-image:url(/assets/img/side_image.png)"></div>
+    <header class="sidebar-sticky" role="banner">
+      <div class="sidebar-about">
+        <h1><a id="_title" href="/">thrownewexception();</a></h1>
+        <p><a href="https://twitter.com/brunoelo"><code rel="me" class="highlighter-rouge">@BrunoElo</code></a>’s internet little corner  to write about scalability, architecture, software and more stuff.</p>
+
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+
+  
+
+  
+
+  
+    <li>
+      <a class="sidebar-nav-item" href="/about/">About</a>
+    </li>
+  
+</ul>
+
+      </nav>
+
+      
+      
+        <div class="sidebar-social">
+          <span class="sr-only">Social:</span>
+<ul>
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://twitter.com/BrunoElo">
+    <span class="icon-twitter" title="Twitter"></span>
+    <span class="sr-only">Twitter</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/BrunoMVPCosta">
+    <span class="icon-github" title="GitHub"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/kelebru">
+    <span class="icon-linkedin2" title="LinkedIn"></span>
+    <span class="sr-only">LinkedIn</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:bcosta10@gmail.com">
+    <span class="icon-envelop" title="Email"></span>
+    <span class="sr-only">Email</span>
+  </a>
+</li>
+
+  
+</ul>
+
+        </div>
+      
+    </header>
+  </div>
+</div>
+
+</div>
+
+<!-- =============== -->
+<!-- SCRIPTS         -->
+<!-- =============== -->
+
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-6819542-2', 'auto');
+  ga('send', 'pageview');
+  loadJSDeferred('https://www.google-analytics.com/analytics.js');
+</script>
+
+
+
+
+
+
+<!--[if gt IE 8]><!---->
+<script>
+  WebFontConfig = {
+    
+    google: {
+      families: 'Roboto+Slab:700|Noto+Serif:400,400i,700,700i'.split('|')
+    },
+    
+
+    custom: {
+      families: ['icomoon'],
+      urls: ['/assets/icomoon/style.css']
+    }
+  };
+  loadJSDeferred('https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
+</script>
+<!--<![endif]-->
+
+
+
+<!--[if gt IE 9]><!---->
+
+<script>loadJSDeferred('/assets/js/hydejack.js?v=6.3.0');</script>
+
+
+
+<!--<![endif]-->
+
+
+
+</body>
 
 </html>
