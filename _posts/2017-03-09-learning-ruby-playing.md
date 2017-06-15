@@ -15,6 +15,6 @@ Games are good for learning, because the more interesting the material is, the m
 
 I found the *Ruby Warrior*. 
 
-![Ruby warrior]({{ site.url }}/images/2017-03-09/ruby_warrior.png)
+![Ruby warrior]({{ site.url }}/assets/img/posts/2017.03.09/ruby_warrior.png)
 
 It's a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.

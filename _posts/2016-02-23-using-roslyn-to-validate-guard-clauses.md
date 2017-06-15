@@ -65,13 +65,13 @@ private void Bar(string[] args)
 In Visual Studio, choose File -> New -> Project -> Visual C# -> Extensibility
 There, you will see Analyzer with Code Fix (NuGet + VSIX). Choose it and name your project "IfElseValidationAnalyzer" and click OK.
 
-![New Project Windows]({{ site.url }}/images/2016_02_23/NewProject.png)
+![New Project Windows]({{ site.url }}/assets/img/posts/2016.02.23/new_project.png)
 
 2 - Rename title, message format and description
 
 In Solution Explorer look up for Resources.resx and double-click it to open. You will find three resources there, AnalyzerDescription, AnalyzerMessageFormat and AnalyzerTitle. To keep things simple, we will change the value of all the three to <i>Guard clause don't need the else statement</i>.
 
-![Resources]({{ site.url }}/images/2016_02_23/resources.png)
+![Resources]({{ site.url }}/assets/img/posts/2016.02.23/resources.png)
 
 3 - Change the current Analyzer to do what we want
 
@@ -152,7 +152,7 @@ So, now hit the F5 button to launch a sandbox version of visual studio with the 
 
 You should see something like this:
 
-![Output]({{ site.url }}/images/2016_02_23/result1.png)
+![Output]({{ site.url }}/assets/img/posts/2016.02.23/result.png)
 
 <b>More</b>
 

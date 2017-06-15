@@ -177,4 +177,4 @@ private async Task<Document> RemoveElseInGuardValidation(Document document, IfSt
 
 If you run it to launch a Visual Studio sandbox and you create a sample with code that will fire a warning of this type, you should be able to see something like the following image.
 
-![Result CodeFixProvider]({{ site.url }}/images/2016_03_11/resultCodeFixProvider.png)
+![Result CodeFixProvider]({{ site.url }}/assets/img/posts/2016.03.11/result_code_fix_provider.png)

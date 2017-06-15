@@ -1,27 +1,4 @@
 ---
-layout: default
+layout: blog
+title: Home
 ---
-
-<div class="home">
-
-<div>
-  <a href="http://astore.amazon.com/throwexcept0f-20">Visit the books I suggest for software engineering and management</a>
-  </p>
-</div>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}<a href="{{ post.url | prepend: site.baseurl }}">&hellip;</a></p>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <hr class="post-list__divider ">
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>

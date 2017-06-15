@@ -1,15 +1,120 @@
-# Site settings
-title: thrownewexception();
-email: kele_bru@hotmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Blog about scalable software, personal opinion on software design and remember... throw a new exception once in a while.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://thrownewexception.com" # the base hostname & protocol for your site
-twitter_username: BrunoElo
-github_username:  BrunoMVPCosta
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
 
-# Build settings
-markdown: kramdown
+title:               thrownewexception();
+
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages (and not using custom domains!)
+url:                 https://thrownewexception.com
+
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             
+
+# A very short description  of your page
+tagline:             My personal opinions on software design 
+
+# A longer description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, however don't use more than one paragraph (enforced by `>`)
+description:         >
+  [`@BrunoElo`{:rel="me"}](https://twitter.com/brunoelo)'s internet little corner 
+  to write about scalability, architecture, software and more stuff.
+# This should be the same author as first in `_data/authors.yml`
+author:
+  name:              Bruno Costa
+  email:             bcosta10@gmail.com
+
+# Fallback image and color if not overwritten
+image:               /assets/img/side_image.png
+color:               '#4f86aa'
+
+# Remove to disable Google Fonts
+google_fonts:        Roboto+Slab:700|Noto+Serif:400,400i,700,700i
+font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"
+font:                "'Noto Serif', Georgia, serif"
+
+# Remove to disable Google Anaylics
+google_analytics:    UA-6819542-2
+
+# Setting a disqus shortname will enable the comment section on pages
+# that have `comments: true` in the front matter
+disqus_shortname:    thrownewexceptioncom
+
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           © 2017. All rights reserved.
+
+# Format of the permalinks
+permalink:           pretty
+
+# Pagination configuration (used by the `blog` layout)
+paginate:            5
+paginate_path:       '/page-:num/'
+
+# If you are updating form a previous verison of Hydejack, uncomment the two lines below,
+# so that existing subscribers to your feed continue to receive updates.
+# feed:
+#   path:              atom.xml
+
+# Set to true when building locally with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables, `site.related_posts`
+# use_lsi:             true
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+# no_mark_external:    true
+
+# Uncomment this line if 3rd party plugins fail to work with dynimically loaded pages
+# disable_push_state:  true
+
+# Uncomment this line if want to disable the touch drawer on mobile
+# disable_drawer: true
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+  projects:
+    permalink:       /projects/:path/
+    output:          true
+
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
 
 gems:
-  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+
+kramdown:
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
+  math_engine_opts:
+    preview:         true
+    preview_as_code: true
+
+compress_html:
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
+  ignore:
+    envs:            [development]
+
+sass:
+  style:             compressed
