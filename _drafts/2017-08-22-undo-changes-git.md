@@ -64,7 +64,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Now, if I wanted to revert those changes without manual deleting each change I did on the file, I could use the command `git checkout <path>`. Just type `git checkout add_new_file` and check the status using `git status` and you should see that those changes are now gone.
+Now, if I wanted to revert those changes without manual deleting each change I did on the file, I could use the command `git checkout <path>`. The `git checkout <path>` does not switch branches, instead it is used to restore modified or deleled path from the index. Just type `git checkout add_new_file` and check the status using `git status` and you should see that those changes are now gone.
 
 ```
 → git status
@@ -76,6 +76,16 @@ nothing to commit, working directory clean
 You probably also noticed that you were not asked to confirm the checkout. Please remember, this is a very dangerous command. As far as I know, there is no way to recover those changes using git.
 
 git reset
+
+To understand `git reset` we first need to go to the basics about the three main sections we have on git, those are `Working tree`, `Staging area` and `Git directory`.
+
+Git directory is where all the information regarding metadata and object is stored. 
+The staging area, also known as `index`, is a file with information about what will go into your next commit.
+The working tree consist of files that you are currently working on.
+
+These concepts are important, because reset will change different sections depending on how we use it. Any change on the working tree is considered a dangerous change, because if we delete something from the working tree that was not commited or added to stage yet will be lost. 
+
+`git reset` is used often and it is one of those commands that can destroy work, because it affects the working tree.
 
 git clean
 
