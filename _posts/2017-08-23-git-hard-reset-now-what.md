@@ -103,7 +103,7 @@ Now we will try to do a cherry-pick to see if it does recover the lost change.
  create mode 100644 add_yet_another_file
 → git log
 commit 97e5c7d6388f7e7df1a321e2f6b869246847f664
-Author: Bruno Costa <bcosta10@gmail.com>
+Author: Bruno Costa <yyy@yyy.com>
 Date:   Wed Aug 23 20:48:42 2017 +0100
 
     Add yet another file
