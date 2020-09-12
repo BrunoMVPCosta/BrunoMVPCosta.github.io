@@ -1,5 +1,5 @@
 ---
-title: Opinion on the paper On Designing and DeployingInternet-Scale Services
+title: Opinion on the paper On Designing and Deploying Internet-Scale Services
 layout: post
 date: '2020-09-12 12:00:00 +0000'
 tags:

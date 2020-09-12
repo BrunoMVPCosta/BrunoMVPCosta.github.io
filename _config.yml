@@ -10,15 +10,15 @@ url:                 http://thrownewexception.com
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
-baseurl:             
+baseurl:
 
 # A very short description  of your page
-tagline:             My personal opinions on software design 
+tagline:             My personal opinions on software design
 
 # A longer description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
 description:         >
-  [`@BrunoElo`{:rel="me"}](https://twitter.com/brunoelo)'s internet little corner 
+  [`@brunomvpcosta`{:rel="me"}](https://twitter.com/brunomvpcosta)'s internet little corner
   to write about scalability, architecture, software and more stuff.
 # This should be the same author as first in `_data/authors.yml`
 author:
