@@ -219,11 +219,11 @@ on <span>Clean-code</span>, <span>Mongodb</span>
     <span class="p">{</span>
         <span class="k">public</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">DiagnosticId</span> <span class="p">=</span> <span class="s">"IfElseValidationAnalyzer"</span><span class="p">;</span>
 
-        <span class="c1">// You can change these strings in the Resources.resx file. If you do not want your analyzer to be localize-able, you can use regular strings for Title and MessageFormat.
-</span>        <span class="c1">// See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Localizing%20Analyzers.md for more on localization
-</span>        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">Title</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="nf">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerTitle</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
-        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">MessageFormat</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="nf">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerMessageFormat</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
-        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">Description</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="nf">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerDescription</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
+        <span class="c1">// You can change these strings in the Resources.resx file. If you do not want your analyzer to be localize-able, you can use regular strings for Title and MessageFormat.</span>
+        <span class="c1">// See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Localizing%20Analyzers.md for more on localization</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">Title</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerTitle</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">MessageFormat</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerMessageFormat</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">LocalizableString</span> <span class="n">Description</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">LocalizableResourceString</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">Resources</span><span class="p">.</span><span class="n">AnalyzerDescription</span><span class="p">),</span> <span class="n">Resources</span><span class="p">.</span><span class="n">ResourceManager</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Resources</span><span class="p">));</span>
         <span class="k">private</span> <span class="k">const</span> <span class="kt">string</span> <span class="n">Category</span> <span class="p">=</span> <span class="s">"CSharp.Readability"</span><span class="p">;</span>
 
         <span class="k">private</span> <span class="k">static</span> <span class="n">DiagnosticDescriptor</span> <span class="n">Rule</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DiagnosticDescriptor</span><span class="p">(</span><span class="n">DiagnosticId</span><span class="p">,</span> <span class="n">Title</span><span class="p">,</span> <span class="n">MessageFormat</span><span class="p">,</span> <span class="n">Category</span><span class="p">,</span> <span class="n">DiagnosticSeverity</span><span class="p">.</span><span class="n">Warning</span><span class="p">,</span> <span class="n">isEnabledByDefault</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n">Description</span><span class="p">);</span>
@@ -288,13 +288,13 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 <p>After that, we need to change the token we are looking for. The generated code is looking for a type declaration and we need to get an instance of IfStatementSyntax.</p>
 
-<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Find the if statement identified by the diagnostic.
-</span><span class="kt">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">FindToken</span><span class="p">(</span><span class="n">diagnosticSpan</span><span class="p">.</span><span class="n">Start</span><span class="p">).</span><span class="n">Parent</span><span class="p">.</span><span class="nf">AncestorsAndSelf</span><span class="p">().</span><span class="n">OfType</span><span class="p">&lt;</span><span class="n">IfStatementSyntax</span><span class="p">&gt;().</span><span class="nf">First</span><span class="p">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Find the if statement identified by the diagnostic.</span>
+<span class="kt">var</span> <span class="n">ifStatement</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">FindToken</span><span class="p">(</span><span class="n">diagnosticSpan</span><span class="p">.</span><span class="n">Start</span><span class="p">).</span><span class="n">Parent</span><span class="p">.</span><span class="nf">AncestorsAndSelf</span><span class="p">().</span><span class="n">OfType</span><span class="p">&lt;</span><span class="n">IfStatementSyntax</span><span class="p">&gt;().</span><span class="nf">First</span><span class="p">();</span></code></pre></figure>
 
 <p>Now that we have the token we were looking for, we need to register an action to invoke a fix. We will also create a method named <i>RemoveElseInGuardValidation</i>.</p>
 
-<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Register a code action that will invoke the fix.
-</span><span class="n">context</span><span class="p">.</span><span class="nf">RegisterCodeFix</span><span class="p">(</span>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c1">// Register a code action that will invoke the fix.</span>
+<span class="n">context</span><span class="p">.</span><span class="nf">RegisterCodeFix</span><span class="p">(</span>
     <span class="n">CodeAction</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span>
         <span class="n">title</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
         <span class="n">createChangedDocument</span><span class="p">:</span> <span class="n">c</span> <span class="p">=&gt;</span> <span class="nf">RemoveElseInGuardValidation</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">Document</span><span class="p">,</span> <span class="n">ifStatement</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span>
@@ -322,26 +322,26 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">Document</span><span class="p">&gt;</span> <span class="nf">RemoveElseInGuardValidation</span><span class="p">(</span><span class="n">Document</span> <span class="n">document</span><span class="p">,</span> <span class="n">IfStatementSyntax</span> <span class="n">ifStatement</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="c1">//We need to get the parent because we need to replace the entire block
-</span>    <span class="kt">var</span> <span class="n">blockSyntax</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Parent</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
+    <span class="c1">//We need to get the parent because we need to replace the entire block</span>
+    <span class="kt">var</span> <span class="n">blockSyntax</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Parent</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
     <span class="kt">var</span> <span class="n">blockElseStatement</span> <span class="p">=</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Else</span><span class="p">.</span><span class="n">Statement</span> <span class="k">as</span> <span class="n">BlockSyntax</span><span class="p">;</span>
 
-    <span class="c1">//Build the new if statement without the else condition
-</span>    <span class="kt">var</span> <span class="n">newIfStatement</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">IfStatement</span><span class="p">(</span>
+    <span class="c1">//Build the new if statement without the else condition</span>
+    <span class="kt">var</span> <span class="n">newIfStatement</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">IfStatement</span><span class="p">(</span>
         <span class="n">condition</span><span class="p">:</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Condition</span><span class="p">,</span>
         <span class="n">statement</span><span class="p">:</span> <span class="n">ifStatement</span><span class="p">.</span><span class="n">Statement</span><span class="p">);</span>
 
-    <span class="c1">//Create an aux block
-</span>    <span class="kt">var</span> <span class="n">auxBlock</span> <span class="p">=</span> <span class="n">blockSyntax</span><span class="p">.</span><span class="nf">RemoveNode</span><span class="p">(</span><span class="n">ifStatement</span><span class="p">,</span> <span class="n">SyntaxRemoveOptions</span><span class="p">.</span><span class="n">KeepNoTrivia</span><span class="p">);</span>
+    <span class="c1">//Create an aux block</span>
+    <span class="kt">var</span> <span class="n">auxBlock</span> <span class="p">=</span> <span class="n">blockSyntax</span><span class="p">.</span><span class="nf">RemoveNode</span><span class="p">(</span><span class="n">ifStatement</span><span class="p">,</span> <span class="n">SyntaxRemoveOptions</span><span class="p">.</span><span class="n">KeepNoTrivia</span><span class="p">);</span>
 
-    <span class="c1">//Create the new block with the if and the statements that were inside of the else block
-</span>    <span class="kt">var</span> <span class="n">newBlockSyntax</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">Block</span><span class="p">()</span>
+    <span class="c1">//Create the new block with the if and the statements that were inside of the else block</span>
+    <span class="kt">var</span> <span class="n">newBlockSyntax</span> <span class="p">=</span> <span class="n">SyntaxFactory</span><span class="p">.</span><span class="nf">Block</span><span class="p">()</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">newIfStatement</span><span class="p">)</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">blockElseStatement</span><span class="p">.</span><span class="n">Statements</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">())</span>
         <span class="p">.</span><span class="nf">AddStatements</span><span class="p">(</span><span class="n">auxBlock</span><span class="p">.</span><span class="n">Statements</span><span class="p">.</span><span class="nf">ToArray</span><span class="p">());</span>
 
-    <span class="c1">//Replace it in the document
-</span>    <span class="kt">var</span> <span class="n">root</span> <span class="p">=</span> <span class="k">await</span> <span class="n">document</span><span class="p">.</span><span class="nf">GetSyntaxRootAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">).</span><span class="nf">ConfigureAwait</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+    <span class="c1">//Replace it in the document</span>
+    <span class="kt">var</span> <span class="n">root</span> <span class="p">=</span> <span class="k">await</span> <span class="n">document</span><span class="p">.</span><span class="nf">GetSyntaxRootAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">).</span><span class="nf">ConfigureAwait</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
     <span class="kt">var</span> <span class="n">newRoot</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">ReplaceNode</span><span class="p">(</span><span class="n">blockSyntax</span><span class="p">,</span> <span class="n">newBlockSyntax</span><span class="p">)</span>
         <span class="p">.</span><span class="nf">WithAdditionalAnnotations</span><span class="p">(</span><span class="n">Formatter</span><span class="p">.</span><span class="n">Annotation</span><span class="p">);</span>
@@ -405,7 +405,7 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>
@@ -579,7 +579,7 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
     <header class="sidebar-sticky" role="banner">
       <div class="sidebar-about">
         <h1><a id="_title" href="/">thrownewexception();</a></h1>
-        <p><a href="https://twitter.com/brunoelo"><code rel="me" class="highlighter-rouge">@BrunoElo</code></a>’s internet little corner  to write about scalability, architecture, software and more stuff.</p>
+        <p><a href="https://twitter.com/brunomvpcosta"><code rel="me" class="language-plaintext highlighter-rouge">@brunomvpcosta</code></a>’s internet little corner to write about scalability, architecture, software and more stuff.</p>
 
       </div>
 
@@ -618,7 +618,7 @@ Today, we will work on the IfElseValidationAnalyzerCodeFixProvider. This class i
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>

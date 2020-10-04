@@ -201,7 +201,7 @@ Imagine that you have an ecommerce website with a feature that allows  users to 
 
 <p>It will depend on the data type we are using to store the money. To give you an example, I have prepared a small piece of code.</p>
 
-<div class="language-csharp highlighter-rouge"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">namespace</span> <span class="nn">ConsoleApplication</span>
 <span class="p">{</span>
@@ -216,14 +216,12 @@ Imagine that you have an ecommerce website with a feature that allows  users to 
     <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The output of this code will be:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>0.0100000000000051
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0100000000000051
+</code></pre></div></div>
 
 <p>Surprised? I hope not.</p>
 
@@ -231,13 +229,13 @@ Imagine that you have an ecommerce website with a feature that allows  users to 
 
 <p>So far so good.</p>
 
-<p>I have recently started a personal project and I chose to give <a href="https://www.mongodb.com/">MongoDB</a> a try. In this project I will work with money and naturally I started using <code class="highlighter-rouge">decimal</code> for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support <code class="highlighter-rouge">decimal</code>. MongoDB does support <code class="highlighter-rouge">double</code>, however it will not have the expected behaviour as we saw previous in this post.</p>
+<p>I have recently started a personal project and I chose to give <a href="https://www.mongodb.com/">MongoDB</a> a try. In this project I will work with money and naturally I started using <code class="language-plaintext highlighter-rouge">decimal</code> for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support <code class="language-plaintext highlighter-rouge">decimal</code>. MongoDB does support <code class="language-plaintext highlighter-rouge">double</code>, however it will not have the expected behaviour as we saw previous in this post.</p>
 
-<p>To solve this, first, I changed all my code to use <code class="highlighter-rouge">Int64</code> instead of <code class="highlighter-rouge">decimal</code>. I thought it would work just fine and it did work, but the quality of the code wasn’t the best… and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.</p>
+<p>To solve this, first, I changed all my code to use <code class="language-plaintext highlighter-rouge">Int64</code> instead of <code class="language-plaintext highlighter-rouge">decimal</code>. I thought it would work just fine and it did work, but the quality of the code wasn’t the best… and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.</p>
 
-<p>So, I decided to create a custom serializer for the fields of type <code class="highlighter-rouge">decimal</code>.</p>
+<p>So, I decided to create a custom serializer for the fields of type <code class="language-plaintext highlighter-rouge">decimal</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[BsonSerializer(typeof(MongoDbDecimalFieldSerializer))]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[BsonSerializer(typeof(MongoDbDecimalFieldSerializer))]
 public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
 {
     const decimal DECIMAL_PLACE = 10000m;
@@ -254,14 +252,12 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
         context.Writer.WriteInt64(Convert.ToInt32(realValue * DECIMAL_PLACE));
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>To register it I have just done:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
+</code></pre></div></div>
 
 <p>And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.</p>
 
@@ -317,7 +313,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>
@@ -491,7 +487,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
     <header class="sidebar-sticky" role="banner">
       <div class="sidebar-about">
         <h1><a id="_title" href="/">thrownewexception();</a></h1>
-        <p><a href="https://twitter.com/brunoelo"><code rel="me" class="highlighter-rouge">@BrunoElo</code></a>’s internet little corner  to write about scalability, architecture, software and more stuff.</p>
+        <p><a href="https://twitter.com/brunomvpcosta"><code rel="me" class="language-plaintext highlighter-rouge">@brunomvpcosta</code></a>’s internet little corner to write about scalability, architecture, software and more stuff.</p>
 
       </div>
 
@@ -530,7 +526,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase&lt;decimal&gt;
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>

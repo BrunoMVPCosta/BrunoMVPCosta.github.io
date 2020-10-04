@@ -198,26 +198,23 @@ on <span>Aspnetcore</span>
   
     <p>Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(options =&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(options =&gt;
         options.OutputFormatters.RemoveAll(formatter =&gt;
         formatter.Instance is XmlDataContractSerializerOutputFormatter));
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Fortunately, people behind this project are concerned about making our life better, so they try to change it to have one easier and more friendly way to remove it.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(option =&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(option =&gt;
 {
     option.OutputFormatters.RemoveType&lt;XmlDataContractSerializerOutputFormatter&gt;();
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>To do this, please include the following dependency in your ‘project.json’ to be able to reference  <code class="highlighter-rouge">using Microsoft.AspNet.Mvc.Formatters; </code></p>
+<p>To do this, please include the following dependency in your ‘project.json’ to be able to reference  <code class="language-plaintext highlighter-rouge">using Microsoft.AspNet.Mvc.Formatters; </code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"Microsoft.AspNet.Mvc.Formatters.Xml": "6.0.0-rc1-final"
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Microsoft.AspNet.Mvc.Formatters.Xml": "6.0.0-rc1-final"
+</code></pre></div></div>
 
 <p>You can see the discussion on github about this change in <a href="https://github.com/aspnet/Mvc/issues/2945">here</a>.</p>
 
@@ -273,7 +270,7 @@ on <span>Aspnetcore</span>
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>
@@ -399,7 +396,7 @@ on <span>Aspnetcore</span>
     <header class="sidebar-sticky" role="banner">
       <div class="sidebar-about">
         <h1><a id="_title" href="/">thrownewexception();</a></h1>
-        <p><a href="https://twitter.com/brunoelo"><code rel="me" class="highlighter-rouge">@BrunoElo</code></a>’s internet little corner  to write about scalability, architecture, software and more stuff.</p>
+        <p><a href="https://twitter.com/brunomvpcosta"><code rel="me" class="language-plaintext highlighter-rouge">@brunomvpcosta</code></a>’s internet little corner to write about scalability, architecture, software and more stuff.</p>
 
       </div>
 
@@ -438,7 +435,7 @@ on <span>Aspnetcore</span>
 
 
 <li>
-  <a href="https://twitter.com/BrunoElo">
+  <a href="https://twitter.com/brunomvpcosta">
     <span class="icon-twitter" title="Twitter"></span>
     <span class="sr-only">Twitter</span>
   </a>

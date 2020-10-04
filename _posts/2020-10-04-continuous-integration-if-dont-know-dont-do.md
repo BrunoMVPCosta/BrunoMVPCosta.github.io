@@ -2,14 +2,12 @@
 title: Continuous integration - If you don’t know what you’re doing, don’t do it
 layout: post
 date: '2020-10-04 12:00:00 +0000'
-tags: [CI]
-categories: CI/CD
-permalink: "/cicd/2020/10/04/continuous-integration-if-dont-know-dont-do.html"
-description: By [Ricardo Felgueiras](https://twitter.com/RicFelgueiras)
-
-Continuous integration is a software practice adopted widely across the company, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes though some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration
+categories: Continuous Integrations
+permalink: "/ci/2020/10/04/continuous-integration-if-dont-know-dont-do.html"
+description: Continuous integration is a software practice adopted widely across the company, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes though some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration.
 comments: true
 share: true
+author: ricardofelgueiras
 ---
 
 _Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly._ by Martin Fowler [here](https://martinfowler.com/articles/continuousIntegration.html).
@@ -64,17 +62,4 @@ That said, my advice to you is to follow these steps:
 Before you start implementing continuous integration, it isn’t mandatory to have all the answers to the mentioned challenges. Mainly, because these challenges need a lot of time and effort to implement.
 The most important is to start small. Start with a proof of concept and then try to implement it in a feature of your product and/or in a specific component. And then, continue to iterate over what you build and continuously improve your continuous integration pipeline.
 
-You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.
-
---------
-
-# About the author
-
-[Ricardo Felgueiras](https://twitter.com/RicFelgueiras) is an engineering manager with more than 12 years of experience in developing (mostly) web applications. He has worked in several areas, particularly in education, banking and e-commerce area.
-
-In the last years, he has been focused mainly on managing teams by acting as a mentor and a coach.
-
-The recipe for a great team is composed of 3 different ingredients with equal parts:
-- Motivated people - core ingredient to success;
-- Get things done - push things live as in it’s better live than perfect;
-- Great technical knowledge - pretty much self-explanatory.
+You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.c
