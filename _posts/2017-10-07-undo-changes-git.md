@@ -4,7 +4,7 @@ layout: post
 date: '2017-10-07 23:00:42 +0000'
 tags:
 - git
-categories: git
+categories: tutorials
 permalink: "/git/2017/08/23/undo-changes-git.html"
 description: Undoing changes is a little scary, right? I hope this article helps you
   to keep calm when you need to undo stuff.
@@ -18,11 +18,11 @@ To better explain it, I would like to go to the basics about the three main sect
 
 ![Git Sections]({{ site.url }}/assets/img/posts/2017.09.05/git_sections.jpg)
 
-* Git directory is where all the information regarding metadata and object is stored. 
+* Git directory is where all the information regarding metadata and object is stored.
 * The Index , also known as `staging area`, is a file with information about what will go into your next commit.
 * The working directory consist of files that you are currently working on.
 
-These concepts are important, because the ways I will talk to undo changes might change different sections depending on how we use it. Any change on the working directory is considered a dangerous change, because if we delete something from the working tree that was not commited or added to stage yet, it will be lost. 
+These concepts are important, because the ways I will talk to undo changes might change different sections depending on how we use it. Any change on the working directory is considered a dangerous change, because if we delete something from the working tree that was not commited or added to stage yet, it will be lost.
 
 For this article, I already have a repository with two files, a `README` and a file named `add_new_file` and I try to show how my repository is with the following image.
 
@@ -64,7 +64,7 @@ I will add some text to the file `add_new_file` and I will show you how you can 
 
 Lets start with `git checkout`. If you are using git, my guess is that you use this command often to checkout a branch to work on. This is where we use the `git checkout <branch>` option, where <branch> is the branch we want to work on. `git checkout` has some other options, but we want to focus on the one that allows us to undo changes we may have and not the option that switch branches.
 
-I will now add some text to the file `add_new_file`, something like "Yet another change". 
+I will now add some text to the file `add_new_file`, something like "Yet another change".
 
 ![Git State]({{ site.url }}/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg)
 
@@ -104,7 +104,7 @@ Lets start by the option --hard. I know this is not the best option to start exp
 
 ![Git State]({{ site.url }}/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg)
 
-Using `git reset --hard` in this context, the outcome will be the same as using `git checkout add_new_file`, **but** we need to understand the internals. Instead of picking the change from Index, it will pick up from `HEAD` and it will also replace what we may have on the `Index`. Which means that if we had do `git add add_new_file` it will also reset the content of add_new_file from Index. 
+Using `git reset --hard` in this context, the outcome will be the same as using `git checkout add_new_file`, **but** we need to understand the internals. Instead of picking the change from Index, it will pick up from `HEAD` and it will also replace what we may have on the `Index`. Which means that if we had do `git add add_new_file` it will also reset the content of add_new_file from Index.
 
 ![Git State]({{ site.url }}/assets/img/posts/2017.09.05/git_reset_hard_checkout.jpg)
 
@@ -116,7 +116,7 @@ For this example, lets consider that we add the change we did on the `add_new_fi
 
 ![Git State]({{ site.url }}/assets/img/posts/2017.09.05/git_change_staged_add_new_file.jpg)
 
-If we do `git reset --mixed` or `git reset` it will replace the content we have on `Index`, but it will not replace anything on the working directory. 
+If we do `git reset --mixed` or `git reset` it will replace the content we have on `Index`, but it will not replace anything on the working directory.
 
 ![Git State]({{ site.url }}/assets/img/posts/2017.09.05/git_reset_mixed.jpg)
 
@@ -137,7 +137,7 @@ This command is useful to remove those files that are not tracked, as an example
 
 ### git revert
 
-Last, but not least, `git revert`. All the options we've looked at so far just erase changes we did, without recording the action itself. This command is different, this command allows us to revert changes already committed, without changing the history of repository, but adding a new commit with the revert. 
+Last, but not least, `git revert`. All the options we've looked at so far just erase changes we did, without recording the action itself. This command is different, this command allows us to revert changes already committed, without changing the history of repository, but adding a new commit with the revert.
 
 I can think of one good reason to use this command, imagine that we introduce a change with performance issues. We want to revert that change, but we want to keep that revert in our repository, to explain why we did it and because the history should tell the life story of a repository. However, if we find ourselves using `git revert` too often before a release, we might need to change our workflow.
 

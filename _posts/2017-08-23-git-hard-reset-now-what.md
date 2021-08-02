@@ -2,7 +2,7 @@
 layout: post
 title:  "Git hard reset, now what?"
 date:   2017-08-23 00:00:42
-categories: git
+categories: tutorials
 tags: [git]
 permalink: /git/2017/08/22/git-hard-reset-now-what.html
 description:  I just did a git hard reset and now I need my previous work. This is how.

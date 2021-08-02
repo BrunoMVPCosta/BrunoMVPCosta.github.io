@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Roslyn to validate guard clauses"
 date:   2016-02-23 15:03
-categories: coding
+categories: tutorials
 tags: [clean-code]
 permalink: /code/clean/2016/02/23/using-roslyn-validate-guard-clauses.html
 description: An example using Roslyn to stop doing if return else statements. It's bad for maintainability and it is error prone.

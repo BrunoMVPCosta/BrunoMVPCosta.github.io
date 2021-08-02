@@ -2,9 +2,6 @@
 title: Opinion on the paper On Designing and Deploying Internet-Scale Services
 layout: post
 date: '2020-09-12 12:00:00 +0000'
-tags:
-- paper
-- scale
 categories: scale
 permalink: "/scale/2020/09/12/paper-internet-scale-services.html"
 description: When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.

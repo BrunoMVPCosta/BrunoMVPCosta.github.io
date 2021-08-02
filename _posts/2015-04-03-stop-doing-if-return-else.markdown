@@ -2,7 +2,7 @@
 layout: post
 title:  "Not every if--then-else statement, needs the	 else"
 date:   2015-04-03 00:00:42
-categories: coding
+categories: Opinions
 tags: [clean-code]
 permalink: /code/clean/2015/04/03/stop-doing-if-return-else.html
 description: Stop doing if return else statements. It's bad for maintainability and it is error prone.

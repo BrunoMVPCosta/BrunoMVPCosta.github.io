@@ -2,7 +2,7 @@
 title: Continuous integration - If you don’t know what you’re doing, don’t do it
 layout: post
 date: '2020-10-04 12:00:00 +0000'
-categories: Continuous Integrations
+categories: External Opinions
 permalink: "/ci/2020/10/04/continuous-integration-if-dont-know-dont-do.html"
 description: Continuous integration is a software practice adopted widely across the industry, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes through some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration.
 comments: true

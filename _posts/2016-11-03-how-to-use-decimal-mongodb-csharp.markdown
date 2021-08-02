@@ -3,7 +3,7 @@ layout: post
 title:  How to use decimal with mongodb and .NET C#
 date:   2016-11-03 00:00:00
 tags: [clean-code]
-categories: coding
+categories: tutorials
 permalink: /coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html
 description: MongoDB doesn't support decimal. How can we use it to represent money? This article will explain it to you.
 comments: true
@@ -41,9 +41,9 @@ The output of this code will be:
 
 Surprised? I hope not.
 
-So, to deal with money in [.NET](https://www.microsoft.com/net) we should use decimal or apply the [money pattern](http://martinfowler.com/eaaCatalog/money.html). 
+So, to deal with money in [.NET](https://www.microsoft.com/net) we should use decimal or apply the [money pattern](http://martinfowler.com/eaaCatalog/money.html).
 
-So far so good. 
+So far so good.
 
 I have recently started a personal project and I chose to give [MongoDB](https://www.mongodb.com/) a try. In this project I will work with money and naturally I started using `decimal` for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn't support `decimal`. MongoDB does support `double`, however it will not have the expected behaviour as we saw previous in this post.
 
@@ -69,7 +69,7 @@ public class MongoDbDecimalFieldSerializer : SerializerBase<decimal>
         context.Writer.WriteInt64(Convert.ToInt32(realValue * DECIMAL_PLACE));
     }
 }
-``` 
+```
 
 To register it I have just done:
 

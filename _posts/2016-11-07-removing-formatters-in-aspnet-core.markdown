@@ -3,7 +3,7 @@ layout: post
 title:  "Removing formatters in ASP.NET Core"
 date:   2016-11-07 18:30:00
 tags: [aspnetcore]
-categories: aspnetcore
+categories: tutorials
 permalink: /aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html
 description: Removing formatters in the ASP.NET Core is different than it was on the tradicional ASP.NET MVC. Learn how can you do it.
 comments: true

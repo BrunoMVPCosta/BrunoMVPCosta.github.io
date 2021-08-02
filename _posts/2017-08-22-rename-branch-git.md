@@ -3,7 +3,7 @@ layout: post
 title:  "Rename a branch in git"
 date:   2017-08-22 00:00:42
 tags: [git]
-categories: git
+categories: tutorials
 permalink: /git/2017/08/22/rename-branch-git.html
 description:  How to rename a branch in git
 comments: true
@@ -38,7 +38,7 @@ Your branch is up-to-date with 'origin/old_branch'.
 nothing to commit, working tree clean
  ```
 
-It did rename the local branch, but not the remote one. If we need to do a push it would fail. How can we rename the remote branch? 
+It did rename the local branch, but not the remote one. If we need to do a push it would fail. How can we rename the remote branch?
 
 Unfortunately, it's not possible. We need to remove the old branch and create a new one.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Roslyn to validate guard clauses - CodeFixProvider"
 date:   2016-03-11 00:53
-categories: coding
+categories: tutorials
 tags: [clean-code, mongodb]
 permalink: /code/clean/2016/02/23/using-roslyn-codefixprovider-guard-clauses.html
 description: An example using Roslyn to stop doing if return else statements. It's bad for maintainability and it is error prone.

@@ -3,7 +3,7 @@ layout: post
 title:  "Book recomendation - Programming Phoenix"
 date:   2017-03-09 20:35:42
 tags: [elixir, phoenix]
-categories: elixir, phoenix
+categories: books
 permalink: /elixir/2017/03/09/phoenix-framework-book-recomendation.html
 description:  A great book to start with phoenix
 comments: true
@@ -16,7 +16,7 @@ I have just read the book <a target="_blank" href="https://www.amazon.com/gp/pro
 
 <a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1680501453&linkCode=as2&tag=throwexcept0f-20&linkId=0f4384848b45c1653b3f3c4f3bbc9552"><b>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast</b></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&l=am2&o=1&a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-The book is a joy to read. 
+The book is a joy to read.
 
 It's split in two parts with a good introduction on why Phoenix is different. Basically, *Phoenix is about fast, concurrent, beautiful, interactive, and reliable applications*. Which I agree, but you must know that this is a book written by Phoenix's creator and Elixir's creator, so please understand their "sometimes" excessive self praise.
 
