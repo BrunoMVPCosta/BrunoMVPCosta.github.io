@@ -17,13 +17,13 @@ The challenge is understanding what part of SRE they are doing - or if it is SRE
 
 ## Infrastructure automation
 
-Some companies started “doing” SRE by calling their team responsible for infrastructure automation provision and so on, of SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.
+Some companies started doing SRE by calling their team responsible for infrastructure automation provision and so on, SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.
 
 ## CI/CD and tooling for software engineers
 
 One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (Very important note: rollback is not just putting back the previous binary).
 
-## Team responsible for keeping the service running reliable
+## Team responsible for keeping the service running reliably
 
 That is probably the most accepted definition of SRE. The team might be accountable or it might have a shared responsibility with the product development team. The goal is to make sure a set of principles and practices are in place across the organization that enable reliable and scalable software to run in production. It will handle incident management, identify risks and motivations, leverage SLI/SLO to continuously measure the quality of the service, policies and playbooks to handle urgent issues with a strategy and so much more.
 
