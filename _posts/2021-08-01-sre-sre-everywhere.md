@@ -11,9 +11,9 @@ share: true
 ---
 Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?
 
-Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for site reliability engineering and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and “doing” SRE.
+Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for **Site Reliability Engineering** and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and doing SRE.
 
-The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists.
+The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists. Let’s explore some of the examples of teams that people associate with SRE.
 
 ## Infrastructure automation
 
@@ -21,7 +21,7 @@ Some companies started “doing” SRE by calling their team responsible for inf
 
 ## CI/CD and tooling for software engineers
 
-One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (And remember kids, rollback is not just putting back the previous binary).
+One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (Very important note: rollback is not just putting back the previous binary).
 
 ## Team responsible for keeping the service running reliable
 
