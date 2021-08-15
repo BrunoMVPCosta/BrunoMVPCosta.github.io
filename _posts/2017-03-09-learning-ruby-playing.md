@@ -4,7 +4,7 @@ title:  "Learning Ruby playing a game"
 date:   2017-03-09 00:00:42
 tags: [ruby]
 categories: tutorials
-permalink: /ruby/2017/'3/09/learning-ruby-playing.html
+permalink: /ruby/2017/03/09/learning-ruby-playing.html
 description:  A game I found that will help you learning ruby
 comments: true
 share: true

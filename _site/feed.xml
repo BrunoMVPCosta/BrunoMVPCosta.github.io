@@ -1,19 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://thrownewexception.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thrownewexception.com/" rel="alternate" type="text/html" /><updated>2021-08-02T18:54:34+01:00</updated><id>https://thrownewexception.com/</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)'s internet little corner to write about scalability, architecture, software and more stuff.
-</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">SRE, SRE everywhere</title><link href="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere</id><content type="html" xml:base="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html">&lt;p&gt;Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://thrownewexception.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thrownewexception.com/" rel="alternate" type="text/html" /><updated>2021-08-15T18:02:16+01:00</updated><id>https://thrownewexception.com/</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)'s internet little corner to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained.html" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand... maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained</id><content type="html" xml:base="https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained.html">&lt;p&gt;If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.&lt;/p&gt;
 
-&lt;p&gt;Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for site reliability engineering and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and “doing” SRE.&lt;/p&gt;
+&lt;p&gt;I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.&lt;/p&gt;
 
-&lt;p&gt;The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists.&lt;/p&gt;
+&lt;p&gt;SLI stands for Service Level Indicator. You can think of it as an indicator you probably already have in the business, a KPI. It is just that, an indicator of something that matters.&lt;/p&gt;
+
+&lt;p&gt;SLO stands for Service Level Objective. What is the target of good service you want to provide to your customers? That’s the goal. It is what you define as good service.&lt;/p&gt;
+
+&lt;p&gt;SLA stands for Service Level Agreement. This one is where you agree with someone that your service will not be below that level, or else there will be consequences or penalties. You’ll probably need to provide some kind of restitution for being below that target.&lt;/p&gt;
+
+&lt;p&gt;You don’t want to define an aggressive target for the SLA, you want something that you feel comfortable enough achieving 100% of the time to reduce the number of restitutions you need to give to the customer. The SLA is normally defined by the business, together with legal. SLOs can provide some support to both business and legal to understand how hard, or easy, it will be to achieve the target.&lt;/p&gt;
+
+&lt;h2 id=&quot;football-to-the-rescue&quot;&gt;Football to the rescue&lt;/h2&gt;
+
+&lt;p&gt;I will use the football I’m used to, I don’t know the rules for American football. In European football, there are some stats you can see for each player, one is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt;. This indicator is the number of passes that the player did successfully, meaning it went from him to another colleague. As an example, you can see &lt;a href=&quot;https://www.infogol.net/en/player/cristiano-ronaldo/1892&quot;&gt;Cristiano Ronaldo’s stats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-sli-complete-pass-&quot;&gt;The SLI: Complete pass %&lt;/h3&gt;
+
+&lt;p&gt;This is the indicator. The number of passes that Ronaldo did successfully to a colleague.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-slo&quot;&gt;The SLO&lt;/h3&gt;
+
+&lt;p&gt;Now, imagine you are Ronaldo’s coach and during your one-on-one, with Ronaldo, you both define the objectives for the next season. During the conversation, you went to the SLI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; as a way to define the performance level Ronaldo should give to the team. You both align that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; should be above 85% for 90% of the matches in the last 30 days. Notice that you define a target, 90% of the times above 85%, and a time window, last 30 days.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-sla&quot;&gt;The SLA&lt;/h3&gt;
+
+&lt;p&gt;Let’s imagine that, when Juventus negotiated the contract with Ronaldo, they both agreed that if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; was below 85% for 80% of the matches during the previous month, Ronaldo would have to pay a fine of 100.000€.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I hope with this you find a good analogy to explain SLI, SLO, and SLAs and if you want to provide feedback and suggest a change on the calculations I did, please leave a comment or DM me on Twitter! Thanks!&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html">If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</summary></entry><entry><title type="html">SRE, SRE everywhere</title><link href="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere</id><content type="html" xml:base="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html">&lt;p&gt;Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?&lt;/p&gt;
+
+&lt;p&gt;Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for &lt;strong&gt;Site Reliability Engineering&lt;/strong&gt; and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and doing SRE.&lt;/p&gt;
+
+&lt;p&gt;The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists. Let’s explore some of the examples of teams that people associate with SRE.&lt;/p&gt;
 
 &lt;h2 id=&quot;infrastructure-automation&quot;&gt;Infrastructure automation&lt;/h2&gt;
 
-&lt;p&gt;Some companies started “doing” SRE by calling their team responsible for infrastructure automation provision and so on, of SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.&lt;/p&gt;
+&lt;p&gt;Some companies started doing SRE by calling their team responsible for infrastructure automation provision and so on, SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.&lt;/p&gt;
 
 &lt;h2 id=&quot;cicd-and-tooling-for-software-engineers&quot;&gt;CI/CD and tooling for software engineers&lt;/h2&gt;
 
-&lt;p&gt;One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (And remember kids, rollback is not just putting back the previous binary).&lt;/p&gt;
+&lt;p&gt;One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (Very important note: rollback is not just putting back the previous binary).&lt;/p&gt;
 
-&lt;h2 id=&quot;team-responsible-for-keeping-the-service-running-reliable&quot;&gt;Team responsible for keeping the service running reliable&lt;/h2&gt;
+&lt;h2 id=&quot;team-responsible-for-keeping-the-service-running-reliably&quot;&gt;Team responsible for keeping the service running reliably&lt;/h2&gt;
 
 &lt;p&gt;That is probably the most accepted definition of SRE. The team might be accountable or it might have a shared responsibility with the product development team. The goal is to make sure a set of principles and practices are in place across the organization that enable reliable and scalable software to run in production. It will handle incident management, identify risks and motivations, leverage SLI/SLO to continuously measure the quality of the service, policies and playbooks to handle urgent issues with a strategy and so much more.&lt;/p&gt;
 
@@ -409,7 +439,7 @@ nothing to commit, working tree clean
 
 &lt;p&gt;The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.&lt;/p&gt;
 
-&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html">I have just read the book Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</summary></entry><entry><title type="html">Learning Ruby playing a game</title><link href="https://thrownewexception.com/ruby/2017/'3/09/learning-ruby-playing.html" rel="alternate" type="text/html" title="Learning Ruby playing a game" /><published>2017-03-09T00:00:42+00:00</published><updated>2017-03-09T00:00:42+00:00</updated><id>https://thrownewexception.com/ruby/2017/'3/09/learning-ruby-playing</id><content type="html" xml:base="https://thrownewexception.com/ruby/2017/'3/09/learning-ruby-playing.html">&lt;p&gt;So, I was thinking it would be cool if there was a game to learn Ruby.
+&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html">I have just read the book Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</summary></entry><entry><title type="html">Learning Ruby playing a game</title><link href="https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing.html" rel="alternate" type="text/html" title="Learning Ruby playing a game" /><published>2017-03-09T00:00:42+00:00</published><updated>2017-03-09T00:00:42+00:00</updated><id>https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing</id><content type="html" xml:base="https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing.html">&lt;p&gt;So, I was thinking it would be cool if there was a game to learn Ruby.
 Games are good for learning, because the more interesting the material is, the more likely it will be retained.&lt;/p&gt;
 
 &lt;p&gt;I found the &lt;em&gt;Ruby Warrior&lt;/em&gt;.&lt;/p&gt;
@@ -436,67 +466,4 @@ Games are good for learning, because the more interesting the material is, the m
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;Microsoft.AspNet.Mvc.Formatters.Xml&quot;: &quot;6.0.0-rc1-final&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="aspnetcore" /><summary type="html">Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</summary></entry><entry><title type="html">How to use decimal with mongodb and .NET C#</title><link href="https://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html" rel="alternate" type="text/html" title="How to use decimal with mongodb and .NET C#" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>https://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp</id><content type="html" xml:base="https://thrownewexception.com/coding/2016/11/03/how-to-use-decimal-mongodb-csharp.html">&lt;p&gt;When working with money we need to be concerned with the accuracy of the data as well as the calculations we do.
-Imagine that you have an ecommerce website with a feature that allows  users to have a credit balance on their accounts. One user has 86.25€ and had just spend 86.24€. We expect him to be left with 0.01. But is he?&lt;/p&gt;
-
-&lt;p&gt;It will depend on the data type we are using to store the money. To give you an example, I have prepared a small piece of code.&lt;/p&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ConsoleApplication&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;86.25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;86.24&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The output of this code will be:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.0100000000000051
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Surprised? I hope not.&lt;/p&gt;
-
-&lt;p&gt;So, to deal with money in &lt;a href=&quot;https://www.microsoft.com/net&quot;&gt;.NET&lt;/a&gt; we should use decimal or apply the &lt;a href=&quot;http://martinfowler.com/eaaCatalog/money.html&quot;&gt;money pattern&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So far so good.&lt;/p&gt;
-
-&lt;p&gt;I have recently started a personal project and I chose to give &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt; a try. In this project I will work with money and naturally I started using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;decimal&lt;/code&gt; for it. Unfortunally, when I started implementing the data access layer I realized MongoDB didn’t support &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;decimal&lt;/code&gt;. MongoDB does support &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt;, however it will not have the expected behaviour as we saw previous in this post.&lt;/p&gt;
-
-&lt;p&gt;To solve this, first, I changed all my code to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Int64&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;decimal&lt;/code&gt;. I thought it would work just fine and it did work, but the quality of the code wasn’t the best… and I was doing a modification on my domain based on my data layer. Definitely, not a good thing to do.&lt;/p&gt;
-
-&lt;p&gt;So, I decided to create a custom serializer for the fields of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;decimal&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[BsonSerializer(typeof(MongoDbDecimalFieldSerializer))]
-public class MongoDbDecimalFieldSerializer : SerializerBase&amp;lt;decimal&amp;gt;
-{
-    const decimal DECIMAL_PLACE = 10000m;
-
-    public override decimal Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
-    {
-        var dbData = context.Reader.ReadInt64();
-        return Math.Round((decimal)dbData / DECIMAL_PLACE, 4);
-    }
-
-    public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, decimal value)
-    {
-        var realValue = (decimal)value;
-        context.Writer.WriteInt64(Convert.ToInt32(realValue * DECIMAL_PLACE));
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To register it I have just done:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BsonSerializer.RegisterSerializer(typeof(decimal), new MongoDbDecimalFieldSerializer());
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And with this, I have a good code, easy to maintain and the accuracy I need using MongoDB.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="clean-code" /><summary type="html">When working with money we need to be concerned with the accuracy of the data as well as the calculations we do. Imagine that you have an ecommerce website with a feature that allows users to have a credit balance on their accounts. One user has 86.25€ and had just spend 86.24€. We expect him to be left with 0.01. But is he?</summary></entry></feed>
+&lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="aspnetcore" /><summary type="html">Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</summary></entry></feed>
