@@ -39,7 +39,7 @@
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<link rel="canonical" href="{{ page.url | prepend: site.url }}" />
 
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ site.feed.path | default:'feed.xml' | absolute_url }}">
 

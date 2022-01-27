@@ -1,469 +1,469 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://thrownewexception.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thrownewexception.com/" rel="alternate" type="text/html" /><updated>2021-08-15T18:02:16+01:00</updated><id>https://thrownewexception.com/</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)'s internet little corner to write about scalability, architecture, software and more stuff.
-</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained.html" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand... maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained</id><content type="html" xml:base="https://thrownewexception.com/sre/2021/08/01/sli-slo-sla-explained.html">&lt;p&gt;If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-27T21:35:28+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
 
-&lt;p&gt;I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.&lt;/p&gt;
+<p>I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.</p>
 
-&lt;p&gt;SLI stands for Service Level Indicator. You can think of it as an indicator you probably already have in the business, a KPI. It is just that, an indicator of something that matters.&lt;/p&gt;
+<p>SLI stands for Service Level Indicator. You can think of it as an indicator you probably already have in the business, a KPI. It is just that, an indicator of something that matters.</p>
 
-&lt;p&gt;SLO stands for Service Level Objective. What is the target of good service you want to provide to your customers? That’s the goal. It is what you define as good service.&lt;/p&gt;
+<p>SLO stands for Service Level Objective. What is the target of good service you want to provide to your customers? That’s the goal. It is what you define as good service.</p>
 
-&lt;p&gt;SLA stands for Service Level Agreement. This one is where you agree with someone that your service will not be below that level, or else there will be consequences or penalties. You’ll probably need to provide some kind of restitution for being below that target.&lt;/p&gt;
+<p>SLA stands for Service Level Agreement. This one is where you agree with someone that your service will not be below that level, or else there will be consequences or penalties. You’ll probably need to provide some kind of restitution for being below that target.</p>
 
-&lt;p&gt;You don’t want to define an aggressive target for the SLA, you want something that you feel comfortable enough achieving 100% of the time to reduce the number of restitutions you need to give to the customer. The SLA is normally defined by the business, together with legal. SLOs can provide some support to both business and legal to understand how hard, or easy, it will be to achieve the target.&lt;/p&gt;
+<p>You don’t want to define an aggressive target for the SLA, you want something that you feel comfortable enough achieving 100% of the time to reduce the number of restitutions you need to give to the customer. The SLA is normally defined by the business, together with legal. SLOs can provide some support to both business and legal to understand how hard, or easy, it will be to achieve the target.</p>
 
-&lt;h2 id=&quot;football-to-the-rescue&quot;&gt;Football to the rescue&lt;/h2&gt;
+<h2 id="football-to-the-rescue">Football to the rescue</h2>
 
-&lt;p&gt;I will use the football I’m used to, I don’t know the rules for American football. In European football, there are some stats you can see for each player, one is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt;. This indicator is the number of passes that the player did successfully, meaning it went from him to another colleague. As an example, you can see &lt;a href=&quot;https://www.infogol.net/en/player/cristiano-ronaldo/1892&quot;&gt;Cristiano Ronaldo’s stats&lt;/a&gt;.&lt;/p&gt;
+<p>I will use the football I’m used to, I don’t know the rules for American football. In European football, there are some stats you can see for each player, one is the <code class="language-plaintext highlighter-rouge">complete pass %</code>. This indicator is the number of passes that the player did successfully, meaning it went from him to another colleague. As an example, you can see <a href="https://www.infogol.net/en/player/cristiano-ronaldo/1892">Cristiano Ronaldo’s stats</a>.</p>
 
-&lt;h3 id=&quot;the-sli-complete-pass-&quot;&gt;The SLI: Complete pass %&lt;/h3&gt;
+<h3 id="the-sli-complete-pass-">The SLI: Complete pass %</h3>
 
-&lt;p&gt;This is the indicator. The number of passes that Ronaldo did successfully to a colleague.&lt;/p&gt;
+<p>This is the indicator. The number of passes that Ronaldo did successfully to a colleague.</p>
 
-&lt;h3 id=&quot;the-slo&quot;&gt;The SLO&lt;/h3&gt;
+<h3 id="the-slo">The SLO</h3>
 
-&lt;p&gt;Now, imagine you are Ronaldo’s coach and during your one-on-one, with Ronaldo, you both define the objectives for the next season. During the conversation, you went to the SLI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; as a way to define the performance level Ronaldo should give to the team. You both align that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; should be above 85% for 90% of the matches in the last 30 days. Notice that you define a target, 90% of the times above 85%, and a time window, last 30 days.&lt;/p&gt;
+<p>Now, imagine you are Ronaldo’s coach and during your one-on-one, with Ronaldo, you both define the objectives for the next season. During the conversation, you went to the SLI <code class="language-plaintext highlighter-rouge">complete pass %</code> as a way to define the performance level Ronaldo should give to the team. You both align that the <code class="language-plaintext highlighter-rouge">complete pass %</code> should be above 85% for 90% of the matches in the last 30 days. Notice that you define a target, 90% of the times above 85%, and a time window, last 30 days.</p>
 
-&lt;h3 id=&quot;the-sla&quot;&gt;The SLA&lt;/h3&gt;
+<h3 id="the-sla">The SLA</h3>
 
-&lt;p&gt;Let’s imagine that, when Juventus negotiated the contract with Ronaldo, they both agreed that if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;complete pass %&lt;/code&gt; was below 85% for 80% of the matches during the previous month, Ronaldo would have to pay a fine of 100.000€.&lt;/p&gt;
+<p>Let’s imagine that, when Juventus negotiated the contract with Ronaldo, they both agreed that if <code class="language-plaintext highlighter-rouge">complete pass %</code> was below 85% for 80% of the matches during the previous month, Ronaldo would have to pay a fine of 100.000€.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;I hope with this you find a good analogy to explain SLI, SLO, and SLAs and if you want to provide feedback and suggest a change on the calculations I did, please leave a comment or DM me on Twitter! Thanks!&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html">If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</summary></entry><entry><title type="html">SRE, SRE everywhere</title><link href="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere</id><content type="html" xml:base="https://thrownewexception.com/sre/2021/08/01/sre-sre-everywhere.html">&lt;p&gt;Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?&lt;/p&gt;
+<p>I hope with this you find a good analogy to explain SLI, SLO, and SLAs and if you want to provide feedback and suggest a change on the calculations I did, please leave a comment or DM me on Twitter! Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Imagine you are in a remote meeting using terms like SLI, SLO, or SLA, and your kid asks you what it means? How would you explain it to them? Or maybe you need to explain it to your boss or a colleague. In this article, I will try to put SLI, SLO, and SLA in a way even your kids would understand... maybe.]]></summary></entry><entry><title type="html">SRE, SRE everywhere</title><link href="http://localhost:4000/sre-sre-everywhere" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>http://localhost:4000/sre-sre-everywhere</id><content type="html" xml:base="http://localhost:4000/sre-sre-everywhere"><![CDATA[<p>Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?</p>
 
-&lt;p&gt;Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for &lt;strong&gt;Site Reliability Engineering&lt;/strong&gt; and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and doing SRE.&lt;/p&gt;
+<p>Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for <strong>Site Reliability Engineering</strong> and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and doing SRE.</p>
 
-&lt;p&gt;The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists. Let’s explore some of the examples of teams that people associate with SRE.&lt;/p&gt;
+<p>The challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists. Let’s explore some of the examples of teams that people associate with SRE.</p>
 
-&lt;h2 id=&quot;infrastructure-automation&quot;&gt;Infrastructure automation&lt;/h2&gt;
+<h2 id="infrastructure-automation">Infrastructure automation</h2>
 
-&lt;p&gt;Some companies started doing SRE by calling their team responsible for infrastructure automation provision and so on, SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.&lt;/p&gt;
+<p>Some companies started doing SRE by calling their team responsible for infrastructure automation provision and so on, SRE. Some might argue it is not SRE, but the reality is that predictable and deterministic infrastructure is essential for the reliability of any system. And it might be considered toil, because the alternative would probably be tickets to fix stuff manually.</p>
 
-&lt;h2 id=&quot;cicd-and-tooling-for-software-engineers&quot;&gt;CI/CD and tooling for software engineers&lt;/h2&gt;
+<h2 id="cicd-and-tooling-for-software-engineers">CI/CD and tooling for software engineers</h2>
 
-&lt;p&gt;One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (Very important note: rollback is not just putting back the previous binary).&lt;/p&gt;
+<p>One thing that I noticed as well is that some companies are using the term SRE in the teams that are working on CI/CD pipelines, frameworks or other tooling for the software engineering teams. Again, some might argue that it is not SRE, but I can easily accept that a reliable and good CI/CD and tooling for the engineering teams increases reliability of the software. There are so many use cases we can add to the deployment pipeline to increase reliability and reduce the MTTR that I can easily accept it as a form of SRE (Very important note: rollback is not just putting back the previous binary).</p>
 
-&lt;h2 id=&quot;team-responsible-for-keeping-the-service-running-reliably&quot;&gt;Team responsible for keeping the service running reliably&lt;/h2&gt;
+<h2 id="team-responsible-for-keeping-the-service-running-reliably">Team responsible for keeping the service running reliably</h2>
 
-&lt;p&gt;That is probably the most accepted definition of SRE. The team might be accountable or it might have a shared responsibility with the product development team. The goal is to make sure a set of principles and practices are in place across the organization that enable reliable and scalable software to run in production. It will handle incident management, identify risks and motivations, leverage SLI/SLO to continuously measure the quality of the service, policies and playbooks to handle urgent issues with a strategy and so much more.&lt;/p&gt;
+<p>That is probably the most accepted definition of SRE. The team might be accountable or it might have a shared responsibility with the product development team. The goal is to make sure a set of principles and practices are in place across the organization that enable reliable and scalable software to run in production. It will handle incident management, identify risks and motivations, leverage SLI/SLO to continuously measure the quality of the service, policies and playbooks to handle urgent issues with a strategy and so much more.</p>
 
-&lt;h2 id=&quot;support-team&quot;&gt;Support team&lt;/h2&gt;
+<h2 id="support-team">Support team</h2>
 
-&lt;p&gt;It would be just a matter of time to see traditional approaches to software development saying they “do” SRE. This is the case where we take a traditional approach, like having a central team responsible and accountable for the service availability, and trying to apply some of the SRE practices (note that I didn’t say principles). This team will define SLI/SLO for the services they are managing, install a process for incident management and problem management and take advantage of automation to reduce toil. The set of practices are there, but the principles are not always there, so it will be very hard to argue whether or not this “is” SRE.&lt;/p&gt;
+<p>It would be just a matter of time to see traditional approaches to software development saying they “do” SRE. This is the case where we take a traditional approach, like having a central team responsible and accountable for the service availability, and trying to apply some of the SRE practices (note that I didn’t say principles). This team will define SLI/SLO for the services they are managing, install a process for incident management and problem management and take advantage of automation to reduce toil. The set of practices are there, but the principles are not always there, so it will be very hard to argue whether or not this “is” SRE.</p>
 
-&lt;h2 id=&quot;monitoring-team&quot;&gt;Monitoring team&lt;/h2&gt;
+<h2 id="monitoring-team">Monitoring team</h2>
 
-&lt;p&gt;Without the right tooling in place to understand and measure the production system, it will be impossible to have a reliable system. The need is so great that it is easy to assume it as part of SRE. That is why some companies end up doing SRE this way.&lt;/p&gt;
+<p>Without the right tooling in place to understand and measure the production system, it will be impossible to have a reliable system. The need is so great that it is easy to assume it as part of SRE. That is why some companies end up doing SRE this way.</p>
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+<h2 id="conclusion">Conclusion</h2>
 
-&lt;p&gt;As any new concept, some boundaries might be blurred and it is hard to define a pure form of implementing it. The culture, skills and management still will greatly define what type of SRE will be running in a given company. It is very important to know that SRE has many meanings and flourishes differently in each company, only by accepting it can we ask the questions to understand what type of SRE a company is selling you. It can even be a mix of different types.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html">Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?</summary></entry><entry><title type="html">Continuous integration - If you don’t know what you’re doing, don’t do it</title><link href="https://thrownewexception.com/ci/2020/10/04/continuous-integration-if-dont-know-dont-do.html" rel="alternate" type="text/html" title="Continuous integration - If you don’t know what you’re doing, don’t do it" /><published>2020-10-04T13:00:00+01:00</published><updated>2020-10-04T13:00:00+01:00</updated><id>https://thrownewexception.com/ci/2020/10/04/continuous-integration-if-dont-know-dont-do</id><content type="html" xml:base="https://thrownewexception.com/ci/2020/10/04/continuous-integration-if-dont-know-dont-do.html">&lt;p&gt;&lt;em&gt;Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.&lt;/em&gt; by Martin Fowler &lt;a href=&quot;https://martinfowler.com/articles/continuousIntegration.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<p>As any new concept, some boundaries might be blurred and it is hard to define a pure form of implementing it. The culture, skills and management still will greatly define what type of SRE will be running in a given company. It is very important to know that SRE has many meanings and flourishes differently in each company, only by accepting it can we ask the questions to understand what type of SRE a company is selling you. It can even be a mix of different types.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Companies are adopting SRE, the challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists]]></summary></entry><entry><title type="html">Continuous integration - If you don’t know what you’re doing, don’t do it</title><link href="http://localhost:4000/continuous-integration-dont-know-dont-do" rel="alternate" type="text/html" title="Continuous integration - If you don’t know what you’re doing, don’t do it" /><published>2020-10-04T13:00:00+01:00</published><updated>2020-10-04T13:00:00+01:00</updated><id>http://localhost:4000/continuous-integration-if-dont-know-dont-do</id><content type="html" xml:base="http://localhost:4000/continuous-integration-dont-know-dont-do"><![CDATA[<p><em>Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.</em> by Martin Fowler <a href="https://martinfowler.com/articles/continuousIntegration.html">here</a>.</p>
 
-&lt;p&gt;We all agree with the definition of Continuous Integration from the well-known Martin Fowler. Also, we all agree with the main advantages: 1) reduce time to integrate code; 2) increase software development speed.&lt;/p&gt;
+<p>We all agree with the definition of Continuous Integration from the well-known Martin Fowler. Also, we all agree with the main advantages: 1) reduce time to integrate code; 2) increase software development speed.</p>
 
-&lt;p&gt;So, if we are all able to identify the advantages of this specific practice, why shouldn’t we implement it if we don’t know what we’re doing?&lt;/p&gt;
+<p>So, if we are all able to identify the advantages of this specific practice, why shouldn’t we implement it if we don’t know what we’re doing?</p>
 
-&lt;p&gt;Next, I will explain why you should resist the urge to implement continuous integration before you understand what you’re doing. The key takeaway is that you should first understand how this works, understand the problems you’ll find, and then invest your time implementing it. Below you can find some of the major challenges of implementing continuous integration and a few typical problems faced by all the teams who try to implement it.&lt;/p&gt;
+<p>Next, I will explain why you should resist the urge to implement continuous integration before you understand what you’re doing. The key takeaway is that you should first understand how this works, understand the problems you’ll find, and then invest your time implementing it. Below you can find some of the major challenges of implementing continuous integration and a few typical problems faced by all the teams who try to implement it.</p>
 
-&lt;h2 id=&quot;pipelines-take-too-long-on-each-source-code-integration&quot;&gt;Pipelines take too long on each source code integration&lt;/h2&gt;
+<h2 id="pipelines-take-too-long-on-each-source-code-integration">Pipelines take too long on each source code integration</h2>
 
-&lt;p&gt;The main goal of a continuous integration pipeline is to have constant (and fast) feedback about the code you add to the source code mainline. Therefore, there is nothing more frustrating than a pipeline taking too long to run the validations.
+<p>The main goal of a continuous integration pipeline is to have constant (and fast) feedback about the code you add to the source code mainline. Therefore, there is nothing more frustrating than a pipeline taking too long to run the validations.
 Once you set up a CI pipeline, it’s important to constantly monitor the time to run. A rule of thumb you can adopt is to set an objective of 10 minutes to run.
 This way, we avoid 1) frustrated engineers; 2) features development speed slow down and 3) a decrease in the number of merges to your source code mainline.
-This last problem is particularly important to have in mind because if there are fewer merges to the mainline, there will be more problems during the merges with bigger and bigger batch sizes. This specifically could lead to outages and live problems.&lt;/p&gt;
+This last problem is particularly important to have in mind because if there are fewer merges to the mainline, there will be more problems during the merges with bigger and bigger batch sizes. This specifically could lead to outages and live problems.</p>
 
-&lt;h2 id=&quot;lack-of-testing-strategy&quot;&gt;Lack of testing strategy&lt;/h2&gt;
+<h2 id="lack-of-testing-strategy">Lack of testing strategy</h2>
 
-&lt;p&gt;Let me share with you one of the greatest articles about testing strategies in a microservice architecture (by Martin Fowler).
-Once you start defining your testing strategy, you should answer the following questions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Which tests will be implemented (unit tests, component tests, integration tests, etc)?&lt;/li&gt;
-  &lt;li&gt;In your continuous integration pipeline, when will each type of test be running?&lt;/li&gt;
-  &lt;li&gt;Which tests are running over real data (and other dependent services)?&lt;/li&gt;
-  &lt;li&gt;Which tests are running over stubbed data and mocked calls to dependent services?&lt;/li&gt;
-&lt;/ul&gt;
+<p>Let me share with you one of the greatest articles about testing strategies in a microservice architecture (by Martin Fowler).
+Once you start defining your testing strategy, you should answer the following questions:</p>
+<ul>
+  <li>Which tests will be implemented (unit tests, component tests, integration tests, etc)?</li>
+  <li>In your continuous integration pipeline, when will each type of test be running?</li>
+  <li>Which tests are running over real data (and other dependent services)?</li>
+  <li>Which tests are running over stubbed data and mocked calls to dependent services?</li>
+</ul>
 
-&lt;p&gt;While answering the questions above, you should have in mind that every single decision will affect the time your pipeline will take to run and therefore impact the development team’s process and speed.&lt;/p&gt;
+<p>While answering the questions above, you should have in mind that every single decision will affect the time your pipeline will take to run and therefore impact the development team’s process and speed.</p>
 
-&lt;h2 id=&quot;incorrect-test-implementation-related-to-the-previous-topic&quot;&gt;Incorrect test implementation (related to the previous topic)&lt;/h2&gt;
+<h2 id="incorrect-test-implementation-related-to-the-previous-topic">Incorrect test implementation (related to the previous topic)</h2>
 
-&lt;p&gt;What I mean by “incorrect implementation” is to have tests implemented not considering the testing strategy in place.
+<p>What I mean by “incorrect implementation” is to have tests implemented not considering the testing strategy in place.
 Let’s say that one of your guidelines in your testing strategy is after the source code compilation and run unit tests, the next test to be run should (only) use database stubs. Once there is a test that’s violating this rule, you could observe an increase in this rule violation, and this way, you’ll end up with an increase of the time to run the continuous integration pipeline.
-Code review is one of the most powerful tools you could use to assure the testing strategy and the corresponding guidelines are being used. By reviewing the code between the team members and more senior elements, you could take part in numerous advantages: knowledge sharing and strengthening guidelines.&lt;/p&gt;
+Code review is one of the most powerful tools you could use to assure the testing strategy and the corresponding guidelines are being used. By reviewing the code between the team members and more senior elements, you could take part in numerous advantages: knowledge sharing and strengthening guidelines.</p>
 
-&lt;h2 id=&quot;integration-environments-unstable-and-lack-of-automation&quot;&gt;Integration environments unstable and lack of automation&lt;/h2&gt;
+<h2 id="integration-environments-unstable-and-lack-of-automation">Integration environments unstable and lack of automation</h2>
 
-&lt;p&gt;The main goal of testing is to find problems in your code before they hit the production environment. Therefore, you can’t afford to be constantly distracted with false positives in your pipeline. These false positives can be caused by your integration environments instability (software and/or hardware problems).
-This way, you should treat this environment as a production environment. Availability, stability, and assuring that just the most recent versions of each component are installed in this environment is a set of guidelines I advise you to follow since the beginning.&lt;/p&gt;
+<p>The main goal of testing is to find problems in your code before they hit the production environment. Therefore, you can’t afford to be constantly distracted with false positives in your pipeline. These false positives can be caused by your integration environments instability (software and/or hardware problems).
+This way, you should treat this environment as a production environment. Availability, stability, and assuring that just the most recent versions of each component are installed in this environment is a set of guidelines I advise you to follow since the beginning.</p>
 
-&lt;p&gt;To conclude, one important aspect is to keep these environments equal to production. Meaning, these environments should be a clone of the production environment. You must be able to mimic each use case as you were in production. Only this way you can effectively test every single scenario and this way have confidence in the new code added to the source code mainline.&lt;/p&gt;
+<p>To conclude, one important aspect is to keep these environments equal to production. Meaning, these environments should be a clone of the production environment. You must be able to mimic each use case as you were in production. Only this way you can effectively test every single scenario and this way have confidence in the new code added to the source code mainline.</p>
 
-&lt;p&gt;Technical debt, team members’ frustration and demotivation are problems that could emerge when facing the problems described above.&lt;/p&gt;
+<p>Technical debt, team members’ frustration and demotivation are problems that could emerge when facing the problems described above.</p>
 
-&lt;p&gt;That said, my advice to you is to follow these steps:&lt;/p&gt;
+<p>That said, my advice to you is to follow these steps:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Focus on the testing strategy. Which tests and when each type of tests should be implemented. Here you’ll find a great presentation to guide you;&lt;/li&gt;
-  &lt;li&gt;Analyze all the existing tools in the market and choose the ones that better adapt to your current needs - mainly costs ($$);&lt;/li&gt;
-  &lt;li&gt;Focus on automating the creation of your Integration environment, assuring that there isn’t any manual work in this specific step;&lt;/li&gt;
-  &lt;li&gt;(Team) communication;&lt;/li&gt;
-  &lt;li&gt;Guidelines and code reviews are one of the best communication tools you could use in a software development team.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Focus on the testing strategy. Which tests and when each type of tests should be implemented. Here you’ll find a great presentation to guide you;</li>
+  <li>Analyze all the existing tools in the market and choose the ones that better adapt to your current needs - mainly costs ($$);</li>
+  <li>Focus on automating the creation of your Integration environment, assuring that there isn’t any manual work in this specific step;</li>
+  <li>(Team) communication;</li>
+  <li>Guidelines and code reviews are one of the best communication tools you could use in a software development team.</li>
+</ul>
 
-&lt;p&gt;Before you start implementing continuous integration, it isn’t mandatory to have all the answers to the mentioned challenges. Mainly, because these challenges need a lot of time and effort to implement.
-The most important is to start small. Start with a proof of concept and then try to implement it in a feature of your product and/or in a specific component. And then, continue to iterate over what you build and continuously improve your continuous integration pipeline.&lt;/p&gt;
+<p>Before you start implementing continuous integration, it isn’t mandatory to have all the answers to the mentioned challenges. Mainly, because these challenges need a lot of time and effort to implement.
+The most important is to start small. Start with a proof of concept and then try to implement it in a feature of your product and/or in a specific component. And then, continue to iterate over what you build and continuously improve your continuous integration pipeline.</p>
 
-&lt;p&gt;You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.c&lt;/p&gt;</content><author><name>Ricardo Felgueiras</name></author><summary type="html">Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. by Martin Fowler here.</summary></entry><entry><title type="html">Opinion on the paper On Designing and Deploying Internet-Scale Services</title><link href="https://thrownewexception.com/scale/2020/09/12/paper-internet-scale-services.html" rel="alternate" type="text/html" title="Opinion on the paper On Designing and Deploying Internet-Scale Services" /><published>2020-09-12T13:00:00+01:00</published><updated>2020-09-12T13:00:00+01:00</updated><id>https://thrownewexception.com/scale/2020/09/12/paper-internet-scale-services</id><content type="html" xml:base="https://thrownewexception.com/scale/2020/09/12/paper-internet-scale-services.html">&lt;p&gt;When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.  This &lt;a href=&quot;https://www.usenix.org/legacy/events/lisa07/tech/full_papers/hamilton/hamilton.pdf&quot;&gt;paper&lt;/a&gt; from 2007 (!!!) from James Hamilton is a tremendous source of information on how to run internet scale services.&lt;/p&gt;
+<p>You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.c</p>]]></content><author><name>Ricardo Felgueiras</name></author><category term="CICD" /><summary type="html"><![CDATA[Continuous integration is a software practice adopted widely across the industry, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes through some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration.]]></summary></entry><entry><title type="html">Opinion on the paper On Designing and Deploying Internet-Scale Services</title><link href="http://localhost:4000/paper-internet-scale-services" rel="alternate" type="text/html" title="Opinion on the paper On Designing and Deploying Internet-Scale Services" /><published>2020-09-12T13:00:00+01:00</published><updated>2020-09-12T13:00:00+01:00</updated><id>http://localhost:4000/paper-internet-scale-services</id><content type="html" xml:base="http://localhost:4000/paper-internet-scale-services"><![CDATA[<p>When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.  This <a href="https://www.usenix.org/legacy/events/lisa07/tech/full_papers/hamilton/hamilton.pdf">paper</a> from 2007 (!!!) from James Hamilton is a tremendous source of information on how to run internet scale services.</p>
 
-&lt;p&gt;This is 13 years old and content like “Expect failures”, “Keep things simple” and “automate everything”. It also points out that application design and development are normally the origin of issues in production or are best solved there, so separating development, testing and operation isn’t the most effective approach in the services world.&lt;/p&gt;
+<p>This is 13 years old and content like “Expect failures”, “Keep things simple” and “automate everything”. It also points out that application design and development are normally the origin of issues in production or are best solved there, so separating development, testing and operation isn’t the most effective approach in the services world.</p>
 
-&lt;p&gt;It talks about testing and release cycles. The challenge of having a fully trusted production like environment, that quality assurance in a large-scale system is a data-mining and visualisation problem and not a testing problem and so on. Talks about the investment on engineering that needs to be made to avoid problems in the future.&lt;/p&gt;
+<p>It talks about testing and release cycles. The challenge of having a fully trusted production like environment, that quality assurance in a large-scale system is a data-mining and visualisation problem and not a testing problem and so on. Talks about the investment on engineering that needs to be made to avoid problems in the future.</p>
 
-&lt;p&gt;One of the topics I have some mixed feelings about is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Single-server deployment&lt;/code&gt;, mainly because I don’t totally understand what the author is suggesting here. I’m confused if he is recommending having all the components (500+ programs) in a single machine, or if he is recommending to have the “feature route” (customer functionality) on a single machine, or just a single program and emulated dependencies. Translating to microservices approach, having multiple services and frontend or just the service and datasources and emulate all the other dependencies. I would love to hear from the author, not sure if the https://twitter.com/jrhatmvdirona is actually the author or not.&lt;/p&gt;
+<p>One of the topics I have some mixed feelings about is the <code class="language-plaintext highlighter-rouge">Single-server deployment</code>, mainly because I don’t totally understand what the author is suggesting here. I’m confused if he is recommending having all the components (500+ programs) in a single machine, or if he is recommending to have the “feature route” (customer functionality) on a single machine, or just a single program and emulated dependencies. Translating to microservices approach, having multiple services and frontend or just the service and datasources and emulate all the other dependencies. I would love to hear from the author, not sure if the https://twitter.com/jrhatmvdirona is actually the author or not.</p>
 
-&lt;p&gt;Trying not to extend this too much, but the paper is really worth reading. Go and read it, you won’t regret it.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><summary type="html">When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft. This paper from 2007 (!!!) from James Hamilton is a tremendous source of information on how to run internet scale services.</summary></entry><entry><title type="html">Undo changes in git</title><link href="https://thrownewexception.com/git/2017/08/23/undo-changes-git.html" rel="alternate" type="text/html" title="Undo changes in git" /><published>2017-10-08T00:00:42+01:00</published><updated>2017-10-08T00:00:42+01:00</updated><id>https://thrownewexception.com/git/2017/08/23/undo-changes-git</id><content type="html" xml:base="https://thrownewexception.com/git/2017/08/23/undo-changes-git.html">&lt;p&gt;In this article I will talk about the ways we have available to undo things when using git. I will tackle &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clean&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git revert&lt;/code&gt;.&lt;/p&gt;
+<p>Trying not to extend this too much, but the paper is really worth reading. Go and read it, you won’t regret it.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="scale" /><summary type="html"><![CDATA[When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.]]></summary></entry><entry><title type="html">Undo changes in git</title><link href="http://localhost:4000/undo-changes-git" rel="alternate" type="text/html" title="Undo changes in git" /><published>2017-10-08T00:00:42+01:00</published><updated>2017-10-08T00:00:42+01:00</updated><id>http://localhost:4000/undo-changes-git</id><content type="html" xml:base="http://localhost:4000/undo-changes-git"><![CDATA[<p>In this article I will talk about the ways we have available to undo things when using git. I will tackle <code class="language-plaintext highlighter-rouge">git checkout</code>, <code class="language-plaintext highlighter-rouge">git reset</code>, <code class="language-plaintext highlighter-rouge">git clean</code> and <code class="language-plaintext highlighter-rouge">git revert</code>.</p>
 
-&lt;p&gt;To better explain it, I would like to go to the basics about the three main sections we have on git, which are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Working directory&lt;/code&gt;,  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Index&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;.&lt;/p&gt;
+<p>To better explain it, I would like to go to the basics about the three main sections we have on git, which are <code class="language-plaintext highlighter-rouge">Working directory</code>,  <code class="language-plaintext highlighter-rouge">Index</code> and <code class="language-plaintext highlighter-rouge">HEAD</code>.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_sections.jpg&quot; alt=&quot;Git Sections&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_sections.jpg" alt="Git Sections" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;Git directory is where all the information regarding metadata and object is stored.&lt;/li&gt;
-  &lt;li&gt;The Index , also known as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;staging area&lt;/code&gt;, is a file with information about what will go into your next commit.&lt;/li&gt;
-  &lt;li&gt;The working directory consist of files that you are currently working on.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Git directory is where all the information regarding metadata and object is stored.</li>
+  <li>The Index , also known as <code class="language-plaintext highlighter-rouge">staging area</code>, is a file with information about what will go into your next commit.</li>
+  <li>The working directory consist of files that you are currently working on.</li>
+</ul>
 
-&lt;p&gt;These concepts are important, because the ways I will talk to undo changes might change different sections depending on how we use it. Any change on the working directory is considered a dangerous change, because if we delete something from the working tree that was not commited or added to stage yet, it will be lost.&lt;/p&gt;
+<p>These concepts are important, because the ways I will talk to undo changes might change different sections depending on how we use it. Any change on the working directory is considered a dangerous change, because if we delete something from the working tree that was not commited or added to stage yet, it will be lost.</p>
 
-&lt;p&gt;For this article, I already have a repository with two files, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README&lt;/code&gt; and a file named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_file&lt;/code&gt; and I try to show how my repository is with the following image.&lt;/p&gt;
+<p>For this article, I already have a repository with two files, a <code class="language-plaintext highlighter-rouge">README</code> and a file named <code class="language-plaintext highlighter-rouge">add_new_file</code> and I try to show how my repository is with the following image.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_image.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_image.jpg" alt="Git State" /></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ ls
 README		add_new_file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;The current context of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_file&lt;/code&gt; is the following:&lt;/p&gt;
+<p>The current context of <code class="language-plaintext highlighter-rouge">add_new_file</code> is the following:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is the new file I want to add.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is the new file I want to add.
 This is a new change
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;And the changes we  can see using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log add_new_file&lt;/code&gt;, which are:&lt;/p&gt;
+<p>And the changes we  can see using <code class="language-plaintext highlighter-rouge">git log add_new_file</code>, which are:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git log add_new_file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git log add_new_file
 commit e03d1e99a9210a1fb6d26ceb1fce93f0e795f4a6
-Author: Bruno Costa &amp;lt;yyy@yyy.com&amp;gt;
+Author: Bruno Costa &lt;yyy@yyy.com&gt;
 Date:   Sun Oct 1 11:42:10 2017 +0100
 
     New change to the add_new_file
 
 commit c5c7ae474a94480530059017066ac6197d0a043b
-Author: Bruno Costa &amp;lt;yyy@yyy.com&amp;gt;
+Author: Bruno Costa &lt;yyy@yyy.com&gt;
 Date:   Tue Aug 22 23:35:39 2017 +0100
 
     Add new file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;I will add some text to the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_file&lt;/code&gt; and I will show you how you can undo that change without having to delete the change yourself.&lt;/p&gt;
+<p>I will add some text to the file <code class="language-plaintext highlighter-rouge">add_new_file</code> and I will show you how you can undo that change without having to delete the change yourself.</p>
 
-&lt;h3 id=&quot;git-checkout&quot;&gt;git checkout&lt;/h3&gt;
+<h3 id="git-checkout">git checkout</h3>
 
-&lt;p&gt;Lets start with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout&lt;/code&gt;. If you are using git, my guess is that you use this command often to checkout a branch to work on. This is where we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout &amp;lt;branch&amp;gt;&lt;/code&gt; option, where &lt;branch&gt; is the branch we want to work on. `git checkout` has some other options, but we want to focus on the one that allows us to undo changes we may have and not the option that switch branches.&lt;/branch&gt;&lt;/p&gt;
+<p>Lets start with <code class="language-plaintext highlighter-rouge">git checkout</code>. If you are using git, my guess is that you use this command often to checkout a branch to work on. This is where we use the <code class="language-plaintext highlighter-rouge">git checkout &lt;branch&gt;</code> option, where <branch> is the branch we want to work on. `git checkout` has some other options, but we want to focus on the one that allows us to undo changes we may have and not the option that switch branches.</branch></p>
 
-&lt;p&gt;I will now add some text to the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_file&lt;/code&gt;, something like “Yet another change”.&lt;/p&gt;
+<p>I will now add some text to the file <code class="language-plaintext highlighter-rouge">add_new_file</code>, something like “Yet another change”.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
 Your branch is up-to-date with 'origin/new_branch'.
 Changes not staged for commit:
-  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to update what will be committed)
-  (use &quot;git checkout -- &amp;lt;file&amp;gt;...&quot; to discard changes in working directory)
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
 
     modified:   add_new_file
 
-no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre></div></div>
 
-&lt;p&gt;Now, if I wanted to revert those changes without manually deleting each change I did on the file, I could use the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout &amp;lt;path&amp;gt;&lt;/code&gt;. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout &amp;lt;path&amp;gt;&lt;/code&gt; does not switch branches, instead it is used to restore modified or deleled path from the index. Just type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout add_new_file&lt;/code&gt; and check the status using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt; and you should see that those changes are now gone.&lt;/p&gt;
+<p>Now, if I wanted to revert those changes without manually deleting each change I did on the file, I could use the command <code class="language-plaintext highlighter-rouge">git checkout &lt;path&gt;</code>. The <code class="language-plaintext highlighter-rouge">git checkout &lt;path&gt;</code> does not switch branches, instead it is used to restore modified or deleled path from the index. Just type <code class="language-plaintext highlighter-rouge">git checkout add_new_file</code> and check the status using <code class="language-plaintext highlighter-rouge">git status</code> and you should see that those changes are now gone.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_checkout.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_checkout.jpg" alt="Git State" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
 Your branch is up-to-date with 'origin/new_branch'.
 nothing to commit, working directory clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;You probably also noticed that you were not asked to confirm the checkout. Please remember, this is a very dangerous command. As far as I know, there is no way to recover those changes using git.&lt;/p&gt;
+<p>You probably also noticed that you were not asked to confirm the checkout. Please remember, this is a very dangerous command. As far as I know, there is no way to recover those changes using git.</p>
 
-&lt;h3 id=&quot;git-reset&quot;&gt;git reset&lt;/h3&gt;
+<h3 id="git-reset">git reset</h3>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset&lt;/code&gt; is used often and it’s one of those commands that can destroy work, because it affects the working tree. That said, please be careful with doing git reset with –hard option.&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git reset</code> is used often and it’s one of those commands that can destroy work, because it affects the working tree. That said, please be careful with doing git reset with –hard option.</p>
 
-&lt;h4 id=&quot;git-reset-hard&quot;&gt;git reset –hard&lt;/h4&gt;
+<h4 id="git-reset-hard">git reset –hard</h4>
 
-&lt;p&gt;Lets start by the option –hard. I know this is not the best option to start explaining &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset &lt;/code&gt;, but since I just talked about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout&lt;/code&gt; I think it would be good to start with –hard because given the same context we had on the git checkout example, the outcome will be the same.&lt;/p&gt;
+<p>Lets start by the option –hard. I know this is not the best option to start explaining <code class="language-plaintext highlighter-rouge">git reset </code>, but since I just talked about <code class="language-plaintext highlighter-rouge">git checkout</code> I think it would be good to start with –hard because given the same context we had on the git checkout example, the outcome will be the same.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
 
-&lt;p&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --hard&lt;/code&gt; in this context, the outcome will be the same as using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout add_new_file&lt;/code&gt;, &lt;strong&gt;but&lt;/strong&gt; we need to understand the internals. Instead of picking the change from Index, it will pick up from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; and it will also replace what we may have on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Index&lt;/code&gt;. Which means that if we had do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add add_new_file&lt;/code&gt; it will also reset the content of add_new_file from Index.&lt;/p&gt;
+<p>Using <code class="language-plaintext highlighter-rouge">git reset --hard</code> in this context, the outcome will be the same as using <code class="language-plaintext highlighter-rouge">git checkout add_new_file</code>, <strong>but</strong> we need to understand the internals. Instead of picking the change from Index, it will pick up from <code class="language-plaintext highlighter-rouge">HEAD</code> and it will also replace what we may have on the <code class="language-plaintext highlighter-rouge">Index</code>. Which means that if we had do <code class="language-plaintext highlighter-rouge">git add add_new_file</code> it will also reset the content of add_new_file from Index.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_hard_checkout.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_hard_checkout.jpg" alt="Git State" /></p>
 
-&lt;h4 id=&quot;git-reset-mixed&quot;&gt;git reset –mixed&lt;/h4&gt;
+<h4 id="git-reset-mixed">git reset –mixed</h4>
 
-&lt;p&gt;This command is the default, which means, if we don’t add anything to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset &lt;/code&gt; it will behave as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --mixed&lt;/code&gt;.&lt;/p&gt;
+<p>This command is the default, which means, if we don’t add anything to the <code class="language-plaintext highlighter-rouge">git reset </code> it will behave as <code class="language-plaintext highlighter-rouge">git reset --mixed</code>.</p>
 
-&lt;p&gt;For this example, lets consider that we add the change we did on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_file&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Index&lt;/code&gt;.&lt;/p&gt;
+<p>For this example, lets consider that we add the change we did on the <code class="language-plaintext highlighter-rouge">add_new_file</code> to <code class="language-plaintext highlighter-rouge">Index</code>.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_staged_add_new_file.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_staged_add_new_file.jpg" alt="Git State" /></p>
 
-&lt;p&gt;If we do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --mixed&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset&lt;/code&gt; it will replace the content we have on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Index&lt;/code&gt;, but it will not replace anything on the working directory.&lt;/p&gt;
+<p>If we do <code class="language-plaintext highlighter-rouge">git reset --mixed</code> or <code class="language-plaintext highlighter-rouge">git reset</code> it will replace the content we have on <code class="language-plaintext highlighter-rouge">Index</code>, but it will not replace anything on the working directory.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_mixed.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_mixed.jpg" alt="Git State" /></p>
 
-&lt;h4 id=&quot;git-reset-soft&quot;&gt;git reset –soft&lt;/h4&gt;
+<h4 id="git-reset-soft">git reset –soft</h4>
 
-&lt;p&gt;One thing I didn’t tell you is that you can indicate a commit to do the reset. That will first update the HEAD to the given commit and if we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--soft&lt;/code&gt; it will be all that it would do.&lt;/p&gt;
+<p>One thing I didn’t tell you is that you can indicate a commit to do the reset. That will first update the HEAD to the given commit and if we use <code class="language-plaintext highlighter-rouge">--soft</code> it will be all that it would do.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_soft.jpg&quot; alt=&quot;Git State&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_soft.jpg" alt="Git State" /></p>
 
-&lt;p&gt;Summing up, it will first update the HEAD to the given commit, if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--mixed&lt;/code&gt; it will also update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Index&lt;/code&gt; or it will also update the working directory if we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--hard&lt;/code&gt;.&lt;/p&gt;
+<p>Summing up, it will first update the HEAD to the given commit, if <code class="language-plaintext highlighter-rouge">--mixed</code> it will also update the <code class="language-plaintext highlighter-rouge">Index</code> or it will also update the working directory if we use <code class="language-plaintext highlighter-rouge">--hard</code>.</p>
 
-&lt;h3 id=&quot;git-clean&quot;&gt;git clean&lt;/h3&gt;
+<h3 id="git-clean">git clean</h3>
 
-&lt;p&gt;This command is useful to remove those files that are not tracked, as an example, we can imagine adding a wrong file and we want to clean up the working directory. We can also use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt; option to remove those files that are ignored (.gitignore), which is useful to remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bin&lt;/code&gt; folders for example.&lt;/p&gt;
+<p>This command is useful to remove those files that are not tracked, as an example, we can imagine adding a wrong file and we want to clean up the working directory. We can also use <code class="language-plaintext highlighter-rouge">-x</code> option to remove those files that are ignored (.gitignore), which is useful to remove <code class="language-plaintext highlighter-rouge">bin</code> folders for example.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_clean.jpg&quot; alt=&quot;Git Clean&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_clean.jpg" alt="Git Clean" /></p>
 
-&lt;h3 id=&quot;git-revert&quot;&gt;git revert&lt;/h3&gt;
+<h3 id="git-revert">git revert</h3>
 
-&lt;p&gt;Last, but not least, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git revert&lt;/code&gt;. All the options we’ve looked at so far just erase changes we did, without recording the action itself. This command is different, this command allows us to revert changes already committed, without changing the history of repository, but adding a new commit with the revert.&lt;/p&gt;
+<p>Last, but not least, <code class="language-plaintext highlighter-rouge">git revert</code>. All the options we’ve looked at so far just erase changes we did, without recording the action itself. This command is different, this command allows us to revert changes already committed, without changing the history of repository, but adding a new commit with the revert.</p>
 
-&lt;p&gt;I can think of one good reason to use this command, imagine that we introduce a change with performance issues. We want to revert that change, but we want to keep that revert in our repository, to explain why we did it and because the history should tell the life story of a repository. However, if we find ourselves using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git revert&lt;/code&gt; too often before a release, we might need to change our workflow.&lt;/p&gt;
+<p>I can think of one good reason to use this command, imagine that we introduce a change with performance issues. We want to revert that change, but we want to keep that revert in our repository, to explain why we did it and because the history should tell the life story of a repository. However, if we find ourselves using <code class="language-plaintext highlighter-rouge">git revert</code> too often before a release, we might need to change our workflow.</p>
 
-&lt;p&gt;I will use the revert to remove the changes I did on commit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;e03d1e9&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git revert e03d1e9&lt;/code&gt; and it will ask me for a commit message and I will use something like&lt;/p&gt;
+<p>I will use the revert to remove the changes I did on commit <code class="language-plaintext highlighter-rouge">e03d1e9</code>. <code class="language-plaintext highlighter-rouge">git revert e03d1e9</code> and it will ask me for a commit message and I will use something like</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Revert &quot;New change to the add_new_file&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Revert "New change to the add_new_file"
 
     After starting the canary release, we started noticing some performance issues with
     this change.
 
     This reverts commit e03d1e99a9210a1fb6d26ceb1fce93f0e795f4a6.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;After I save it, if I go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log&lt;/code&gt; I will see my new commit there.&lt;/p&gt;
+<p>After I save it, if I go to <code class="language-plaintext highlighter-rouge">git log</code> I will see my new commit there.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git log --pretty=format:&quot;%h %an: %s&quot;
-0dbcaef Bruno Costa: Revert &quot;New change to the add_new_file&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git log --pretty=format:"%h %an: %s"
+0dbcaef Bruno Costa: Revert "New change to the add_new_file"
 e03d1e9 Bruno Costa: New change to the add_new_file
 c5c7ae4 Bruno Costa: Add new file
 de4fc88 Bruno Costa: Add README
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Trying to translate it into an image, it would be something like this:&lt;/p&gt;
+<p>Trying to translate it into an image, it would be something like this:</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.09.05/git_revert.jpg&quot; alt=&quot;Git Revert&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_revert.jpg" alt="Git Revert" /></p>
 
-&lt;p&gt;I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html">In this article I will talk about the ways we have available to undo things when using git. I will tackle git checkout, git reset, git clean and git revert.</summary></entry><entry><title type="html">Git hard reset, now what?</title><link href="https://thrownewexception.com/git/2017/08/22/git-hard-reset-now-what.html" rel="alternate" type="text/html" title="Git hard reset, now what?" /><published>2017-08-23T01:00:42+01:00</published><updated>2017-08-23T01:00:42+01:00</updated><id>https://thrownewexception.com/git/2017/08/22/git-hard-reset-now-what</id><content type="html" xml:base="https://thrownewexception.com/git/2017/08/22/git-hard-reset-now-what.html">&lt;p&gt;Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git reset --hard HEAD~&lt;/code&gt;.&lt;/p&gt;
+<p>I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="tutorials" /><category term="git" /><summary type="html"><![CDATA[Undoing changes is a little scary, right? I hope this article helps you to keep calm when you need to undo stuff.]]></summary></entry><entry><title type="html">Git hard reset, now what?</title><link href="http://localhost:4000/git-hard-reset-now-what" rel="alternate" type="text/html" title="Git hard reset, now what?" /><published>2017-08-23T01:00:42+01:00</published><updated>2017-08-23T01:00:42+01:00</updated><id>http://localhost:4000/git-hard-reset-now-what</id><content type="html" xml:base="http://localhost:4000/git-hard-reset-now-what"><![CDATA[<p>Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a <code class="language-plaintext highlighter-rouge">git reset --hard HEAD~</code>.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;Oh My God. What did I do?&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>Oh My God. What did I do?</p>
+</blockquote>
 
-&lt;p&gt;You just deleted all your work. Gone. Vanished. And probably that’s the reason why you are reading this. If so, I will try to help you.&lt;/p&gt;
+<p>You just deleted all your work. Gone. Vanished. And probably that’s the reason why you are reading this. If so, I will try to help you.</p>
 
-&lt;p&gt;The good news is that git doesn’t actually delete anything, even when you do a hard reset. However, git just takes responsability if you did a commit. If you did, you are probably able to restore it.&lt;/p&gt;
+<p>The good news is that git doesn’t actually delete anything, even when you do a hard reset. However, git just takes responsability if you did a commit. If you did, you are probably able to restore it.</p>
 
-&lt;p&gt;Git has the option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fsck&lt;/code&gt; which validates the objects in the database and its connectivity.&lt;/p&gt;
+<p>Git has the option <code class="language-plaintext highlighter-rouge">fsck</code> which validates the objects in the database and its connectivity.</p>
 
-&lt;p&gt;Let’s use this to try and find our missing objects.
-First, I will try to simulate a hard reset. My branch is ahead by 1 commit as we can see using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt;.&lt;/p&gt;
+<p>Let’s use this to try and find our missing objects.
+First, I will try to simulate a hard reset. My branch is ahead by 1 commit as we can see using <code class="language-plaintext highlighter-rouge">git status</code>.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
 Your branch is ahead of 'origin/new_branch' by 1 commit.
-  (use &quot;git push&quot; to publish your local commits)
+  (use "git push" to publish your local commits)
 nothing to commit, working directory clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;So, now I will do a hard reset and check the status again.&lt;/p&gt;
+<p>So, now I will do a hard reset and check the status again.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git reset --hard HEAD~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git reset --hard HEAD~
 HEAD is now at c5c7ae4 Add new file
 → git status
 On branch new_branch
 Your branch is up-to-date with 'origin/new_branch'.
 nothing to commit, working directory clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;And with this, I believe I’m in the same position as you are. I just deleted all my unpushed work.&lt;/p&gt;
+<p>And with this, I believe I’m in the same position as you are. I just deleted all my unpushed work.</p>
 
-&lt;p&gt;I will call git-fsck with –lost-found option to understand if there is something I can hang on to try to recover from my mistake.&lt;/p&gt;
+<p>I will call git-fsck with –lost-found option to understand if there is something I can hang on to try to recover from my mistake.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git fsck --lost-found
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git fsck --lost-found
 Checking object directories: 100% (256/256), done.
 Checking objects: 100% (6/6), done.
 dangling commit 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;And there it is. The lonely commit waiting for us.&lt;/p&gt;
+<p>And there it is. The lonely commit waiting for us.</p>
 
-&lt;p&gt;I will try to do a rebase to see if I can get this commit back.&lt;/p&gt;
+<p>I will try to do a rebase to see if I can get this commit back.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git rebase 8dc8f51b0c14ff5dbf7234f07976466277f1474e
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git rebase 8dc8f51b0c14ff5dbf7234f07976466277f1474e
 First, rewinding head to replay your work on top of it...
 Fast-forwarded new_branch to 8dc8f51b0c14ff5dbf7234f07976466277f1474e.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Oh wait, did it work?&lt;/p&gt;
+<p>Oh wait, did it work?</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
 Your branch is ahead of 'origin/new_branch' by 1 commit.
-  (use &quot;git push&quot; to publish your local commits)
+  (use "git push" to publish your local commits)
 nothing to commit, working directory clean
 → git log
 commit 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-Author: Bruno Costa &amp;lt;yyy@yyy.com&amp;gt;
+Author: Bruno Costa &lt;yyy@yyy.com&gt;
 Date:   Wed Aug 23 20:48:42 2017 +0100
 
     Add yet another file
     (...)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;It did work!&lt;/p&gt;
+<p>It did work!</p>
 
-&lt;p&gt;Do you have other options? I think we might have, lets go back and do it again.&lt;/p&gt;
+<p>Do you have other options? I think we might have, lets go back and do it again.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git reset --hard HEAD~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git reset --hard HEAD~
 HEAD is now at c5c7ae4 Add new file
 → git status
 On branch new_branch
 Your branch is up-to-date with 'origin/new_branch'.
 nothing to commit, working directory clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Now we will try to do a cherry-pick to see if it does recover the lost change.&lt;/p&gt;
+<p>Now we will try to do a cherry-pick to see if it does recover the lost change.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git cherry-pick 8dc8f51b0c14ff5dbf7234f07976466277f1474e
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git cherry-pick 8dc8f51b0c14ff5dbf7234f07976466277f1474e
 [new_branch 97e5c7d] Add yet another file
  Date: Wed Aug 23 20:48:42 2017 +0100
  1 file changed, 1 insertion(+)
  create mode 100644 add_yet_another_file
 → git log
 commit 97e5c7d6388f7e7df1a321e2f6b869246847f664
-Author: Bruno Costa &amp;lt;yyy@yyy.com&amp;gt;
+Author: Bruno Costa &lt;yyy@yyy.com&gt;
 Date:   Wed Aug 23 20:48:42 2017 +0100
 
     Add yet another file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;It did!&lt;/p&gt;
+<p>It did!</p>
 
-&lt;p&gt;Now, let’s try again using merge.&lt;/p&gt;
+<p>Now, let’s try again using merge.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git merge 97e5c7d6388f7e7df1a321e2f6b869246847f664
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git merge 97e5c7d6388f7e7df1a321e2f6b869246847f664
 Updating c5c7ae4..97e5c7d
 Fast-forward
  add_yet_another_file | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 add_yet_another_file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html">Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a git reset --hard HEAD~.</summary></entry><entry><title type="html">Rename a branch in git</title><link href="https://thrownewexception.com/git/2017/08/22/rename-branch-git.html" rel="alternate" type="text/html" title="Rename a branch in git" /><published>2017-08-22T01:00:42+01:00</published><updated>2017-08-22T01:00:42+01:00</updated><id>https://thrownewexception.com/git/2017/08/22/rename-branch-git</id><content type="html" xml:base="https://thrownewexception.com/git/2017/08/22/rename-branch-git.html">&lt;p&gt;Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.&lt;/p&gt;
+<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry><entry><title type="html">Rename a branch in git</title><link href="http://localhost:4000/rename-branch-git" rel="alternate" type="text/html" title="Rename a branch in git" /><published>2017-08-22T01:00:42+01:00</published><updated>2017-08-22T01:00:42+01:00</updated><id>http://localhost:4000/rename-branch-git</id><content type="html" xml:base="http://localhost:4000/rename-branch-git"><![CDATA[<p>Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.</p>
 
-&lt;p&gt;After looking for help on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man git branch&lt;/code&gt; we are able to find the option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-m&lt;/code&gt;.&lt;/p&gt;
+<p>After looking for help on <code class="language-plaintext highlighter-rouge">man git branch</code> we are able to find the option <code class="language-plaintext highlighter-rouge">-m</code>.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-m, --move
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-m, --move
     Move/rename a branch and the corresponding reflog.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch [&amp;lt;options&amp;gt;] (-m | -M) [&amp;lt;old-branch&amp;gt;] &amp;lt;new-branch&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch [&lt;options&gt;] (-m | -M) [&lt;old-branch&gt;] &lt;new-branch&gt;
+</code></pre></div></div>
 
-&lt;p&gt;So, let’s run this option.&lt;/p&gt;
+<p>So, let’s run this option.</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch -m new-branch&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git branch -m new-branch</code></p>
 
-&lt;p&gt;(If the current branch is not the one you want to rename, you need to specify which branch is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;old-branch&amp;gt;&lt;/code&gt;)&lt;/p&gt;
+<p>(If the current branch is not the one you want to rename, you need to specify which branch is the <code class="language-plaintext highlighter-rouge">&lt;old-branch&gt;</code>)</p>
 
-&lt;p&gt;In our case it would be:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch -m old_branch new-branch&lt;/code&gt;&lt;/p&gt;
+<p>In our case it would be:
+<code class="language-plaintext highlighter-rouge">git branch -m old_branch new-branch</code></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new-branch
 Your branch is up-to-date with 'origin/old_branch'.
 nothing to commit, working tree clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;It did rename the local branch, but not the remote one. If we need to do a push it would fail. How can we rename the remote branch?&lt;/p&gt;
+<p>It did rename the local branch, but not the remote one. If we need to do a push it would fail. How can we rename the remote branch?</p>
 
-&lt;p&gt;Unfortunately, it’s not possible. We need to remove the old branch and create a new one.&lt;/p&gt;
+<p>Unfortunately, it’s not possible. We need to remove the old branch and create a new one.</p>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin :old_branch&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git push origin :old_branch</code></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new-branch
 Your branch is based on 'origin/old_branch', but the upstream is gone.
-  (use &quot;git branch --unset-upstream&quot; to fixup)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+  (use "git branch --unset-upstream" to fixup)
+</code></pre></div></div>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch --unset-upstream new-branch&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git branch --unset-upstream new-branch</code></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new-branch
 nothing to commit, working tree clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push --set-upstream origin new-branch&lt;/code&gt;&lt;/p&gt;
+<p><code class="language-plaintext highlighter-rouge">git push --set-upstream origin new-branch</code></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;→ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new-branch
 Your branch is up-to-date with 'origin/new-branch'.
 nothing to commit, working tree clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;And we are done!&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html">Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.</summary></entry><entry><title type="html">Book recomendation - Programming Phoenix</title><link href="https://thrownewexception.com/elixir/2017/03/09/phoenix-framework-book-recomendation.html" rel="alternate" type="text/html" title="Book recomendation - Programming Phoenix" /><published>2017-03-09T20:35:42+00:00</published><updated>2017-03-09T20:35:42+00:00</updated><id>https://thrownewexception.com/elixir/2017/03/09/book-recomendation-phoenix-framework</id><content type="html" xml:base="https://thrownewexception.com/elixir/2017/03/09/phoenix-framework-book-recomendation.html">&lt;p&gt;I have just read the book &lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).&lt;/p&gt;
+<p>And we are done!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[How to rename a branch in git]]></summary></entry><entry><title type="html">Book recomendation - Programming Phoenix</title><link href="http://localhost:4000/phoenix-framework-book-recomendation" rel="alternate" type="text/html" title="Book recomendation - Programming Phoenix" /><published>2017-03-09T20:35:42+00:00</published><updated>2017-03-09T20:35:42+00:00</updated><id>http://localhost:4000/book-recomendation-phoenix-framework</id><content type="html" xml:base="http://localhost:4000/phoenix-framework-book-recomendation"><![CDATA[<p>I have just read the book <a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552">Programming Phoenix: Productive |&gt; Reliable |&gt; Fast</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</p>
 
-&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=31e7504416c3ad44bfa92cd966a1ea4b&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;amp;MarketPlace=US&amp;amp;ASIN=1680501453&amp;amp;ServiceVersion=20070822&amp;amp;ID=AsinImage&amp;amp;WS=1&amp;amp;Format=_SL250_&amp;amp;tag=throwexcept0f-20&quot; /&gt;&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+<p><a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=31e7504416c3ad44bfa92cd966a1ea4b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=US&amp;ASIN=1680501453&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=throwexcept0f-20" /></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
-&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=9325&amp;amp;creativeASIN=1680501453&amp;amp;linkCode=as2&amp;amp;tag=throwexcept0f-20&amp;amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552&quot;&gt;&lt;b&gt;Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast&lt;/b&gt;&lt;/a&gt;&lt;img src=&quot;//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;amp;l=am2&amp;amp;o=1&amp;amp;a=1680501453&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;&lt;/p&gt;
+<p><a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552"><b>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast</b></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
-&lt;p&gt;The book is a joy to read.&lt;/p&gt;
+<p>The book is a joy to read.</p>
 
-&lt;p&gt;It’s split in two parts with a good introduction on why Phoenix is different. Basically, &lt;em&gt;Phoenix is about fast, concurrent, beautiful, interactive, and reliable applications&lt;/em&gt;. Which I agree, but you must know that this is a book written by Phoenix’s creator and Elixir’s creator, so please understand their “sometimes” excessive self praise.&lt;/p&gt;
+<p>It’s split in two parts with a good introduction on why Phoenix is different. Basically, <em>Phoenix is about fast, concurrent, beautiful, interactive, and reliable applications</em>. Which I agree, but you must know that this is a book written by Phoenix’s creator and Elixir’s creator, so please understand their “sometimes” excessive self praise.</p>
 
-&lt;p&gt;The first part of the book will explain the basic layers of phoenix framework, but also Ecto and testing MVC. For those of you who don’t know, Ecto is the database wrapper and LINQ for Elixir. One of the phrases I most enjoy about &lt;strong&gt;Testing&lt;/strong&gt; is on this book: &lt;em&gt;If your code is worth writing, it’s worth testing.&lt;/em&gt;&lt;/p&gt;
+<p>The first part of the book will explain the basic layers of phoenix framework, but also Ecto and testing MVC. For those of you who don’t know, Ecto is the database wrapper and LINQ for Elixir. One of the phrases I most enjoy about <strong>Testing</strong> is on this book: <em>If your code is worth writing, it’s worth testing.</em></p>
 
-&lt;p&gt;The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.&lt;/p&gt;
+<p>The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.</p>
 
-&lt;p&gt;I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html">I have just read the book Programming Phoenix: Productive |&amp;gt; Reliable |&amp;gt; Fast. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</summary></entry><entry><title type="html">Learning Ruby playing a game</title><link href="https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing.html" rel="alternate" type="text/html" title="Learning Ruby playing a game" /><published>2017-03-09T00:00:42+00:00</published><updated>2017-03-09T00:00:42+00:00</updated><id>https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing</id><content type="html" xml:base="https://thrownewexception.com/ruby/2017/03/09/learning-ruby-playing.html">&lt;p&gt;So, I was thinking it would be cool if there was a game to learn Ruby.
-Games are good for learning, because the more interesting the material is, the more likely it will be retained.&lt;/p&gt;
+<p>I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html"><![CDATA[A great book to start with phoenix]]></summary></entry><entry><title type="html">Learning Ruby playing a game</title><link href="http://localhost:4000/learning-ruby-playing" rel="alternate" type="text/html" title="Learning Ruby playing a game" /><published>2017-03-09T00:00:42+00:00</published><updated>2017-03-09T00:00:42+00:00</updated><id>http://localhost:4000/learning-ruby-playing</id><content type="html" xml:base="http://localhost:4000/learning-ruby-playing"><![CDATA[<p>So, I was thinking it would be cool if there was a game to learn Ruby.
+Games are good for learning, because the more interesting the material is, the more likely it will be retained.</p>
 
-&lt;p&gt;I found the &lt;em&gt;Ruby Warrior&lt;/em&gt;.&lt;/p&gt;
+<p>I found the <em>Ruby Warrior</em>.</p>
 
-&lt;p&gt;&lt;img src=&quot;https://thrownewexception.com/assets/img/posts/2017.03.09/ruby_warrior.png&quot; alt=&quot;Ruby warrior&quot; /&gt;&lt;/p&gt;
+<p><img src="http://localhost:4000/assets/img/posts/2017.03.09/ruby_warrior.png" alt="Ruby warrior" /></p>
 
-&lt;p&gt;It’s a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="ruby" /><summary type="html">So, I was thinking it would be cool if there was a game to learn Ruby. Games are good for learning, because the more interesting the material is, the more likely it will be retained.</summary></entry><entry><title type="html">Removing formatters in ASP.NET Core</title><link href="https://thrownewexception.com/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html" rel="alternate" type="text/html" title="Removing formatters in ASP.NET Core" /><published>2016-11-07T18:30:00+00:00</published><updated>2016-11-07T18:30:00+00:00</updated><id>https://thrownewexception.com/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core</id><content type="html" xml:base="https://thrownewexception.com/aspnetcore/2016/11/03/removing-formatters-in-aspnet-core.html">&lt;p&gt;Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:&lt;/p&gt;
+<p>It’s a fun game. Although, to be totally honest, the music is kind of annoying, but the good news is that you can turn it off.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="ruby" /><summary type="html"><![CDATA[A game I found that will help you learning ruby]]></summary></entry><entry><title type="html">Removing formatters in ASP.NET Core</title><link href="http://localhost:4000/removing-formatters-aspnet-core" rel="alternate" type="text/html" title="Removing formatters in ASP.NET Core" /><published>2016-11-07T18:30:00+00:00</published><updated>2016-11-07T18:30:00+00:00</updated><id>http://localhost:4000/removing-formatters-in-aspnet-core</id><content type="html" xml:base="http://localhost:4000/removing-formatters-aspnet-core"><![CDATA[<p>Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;services.Configure&amp;lt;MvcOptions&amp;gt;(options =&amp;gt;
-        options.OutputFormatters.RemoveAll(formatter =&amp;gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(options =&gt;
+        options.OutputFormatters.RemoveAll(formatter =&gt;
         formatter.Instance is XmlDataContractSerializerOutputFormatter));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Fortunately, people behind this project are concerned about making our life better, so they try to change it to have one easier and more friendly way to remove it.&lt;/p&gt;
+<p>Fortunately, people behind this project are concerned about making our life better, so they try to change it to have one easier and more friendly way to remove it.</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;services.Configure&amp;lt;MvcOptions&amp;gt;(option =&amp;gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services.Configure&lt;MvcOptions&gt;(option =&gt;
 {
-    option.OutputFormatters.RemoveType&amp;lt;XmlDataContractSerializerOutputFormatter&amp;gt;();
+    option.OutputFormatters.RemoveType&lt;XmlDataContractSerializerOutputFormatter&gt;();
 });
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;To do this, please include the following dependency in your ‘project.json’ to be able to reference  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;using Microsoft.AspNet.Mvc.Formatters; &lt;/code&gt;&lt;/p&gt;
+<p>To do this, please include the following dependency in your ‘project.json’ to be able to reference  <code class="language-plaintext highlighter-rouge">using Microsoft.AspNet.Mvc.Formatters; </code></p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;Microsoft.AspNet.Mvc.Formatters.Xml&quot;: &quot;6.0.0-rc1-final&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Microsoft.AspNet.Mvc.Formatters.Xml": "6.0.0-rc1-final"
+</code></pre></div></div>
 
-&lt;p&gt;You can see the discussion on github about this change in &lt;a href=&quot;https://github.com/aspnet/Mvc/issues/2945&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="aspnetcore" /><summary type="html">Before ASP.NET Core release, if you needed to remove a formatter, we would have to use all of this code:</summary></entry></feed>
+<p>You can see the discussion on github about this change in <a href="https://github.com/aspnet/Mvc/issues/2945">here</a>.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="aspnetcore" /><summary type="html"><![CDATA[Removing formatters in the ASP.NET Core is different than it was on the tradicional ASP.NET MVC. Learn how can you do it.]]></summary></entry></feed>
