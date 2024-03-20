@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Gatekeepers to Enablers"
-date: "2022-01-29 11:00:00"
+date: "2022-01-29 00:00:00"
 tags: [company-tale]
 permalink: gatekeepers-enablers
 description: From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!

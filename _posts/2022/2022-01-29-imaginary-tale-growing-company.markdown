@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An imaginary tale of a growing company"
-date: "2022-01-29 00:00:01"
+date: "2022-01-29 00:00:00"
 tags: [company-tale]
 permalink: imaginary-tale-growing-company
 description: This is the tale of my imaginary company. Stay tuned!
@@ -19,5 +19,5 @@ The name of the company is thrownewexception.com. It is a technology company, be
 
 There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.
 
-  - [From Gatekeepers to Enablers]({% post_url 2022-01-29-gatekeepers-enablers %})
+  - [From Gatekeepers to Enablers]({% post_url 2022/2022-01-29-gatekeepers-enablers %})
 
