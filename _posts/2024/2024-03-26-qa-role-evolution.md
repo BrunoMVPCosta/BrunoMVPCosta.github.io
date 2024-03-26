@@ -7,6 +7,7 @@ permalink: qa-role-evolution
 description: "Evolution of QA in thrownewexception.com company tale: from manual testing to better approach"
 comments: true
 share: true
+image: ../../assets/img/side_image.png
 
 ---
 Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. 
