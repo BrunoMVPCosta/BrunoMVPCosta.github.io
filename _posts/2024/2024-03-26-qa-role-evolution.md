@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "QA role evolution"
-date: "2022-01-29 00:00:00"
+date: "2024-03-26 00:00:00"
 tags: [company-tale]
 permalink: qa-role-evolution 
 description: "Evolution of QA in thrownewexception.com company tale: from manual testing to better approach"
