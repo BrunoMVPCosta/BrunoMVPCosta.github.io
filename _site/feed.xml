@@ -1,17 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://thrownewexception.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thrownewexception.com/" rel="alternate" type="text/html" /><updated>2024-03-20T16:19:52+00:00</updated><id>https://thrownewexception.com/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
-</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">An imaginary tale of a growing company</title><link href="https://thrownewexception.com/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>https://thrownewexception.com/imaginary-tale-growing-company</id><content type="html" xml:base="https://thrownewexception.com/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-26T19:32:56+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">QA role evolution</title><link href="http://localhost:4000/qa-role-evolution" rel="alternate" type="text/html" title="QA role evolution" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/qa-role-evolution</id><content type="html" xml:base="http://localhost:4000/qa-role-evolution"><![CDATA[<p>Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. </p>
 
-<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
+<p>While waiting for the green light, his thoughts went to when he started working. He started in a small company that did software business. They didn’t have a QA process. When he suggested a dedicated person to do QA, his boss mocked him: “One person to just do tests? Are you serious? I think you can do it because the effort is not that much, just a few clicks.” This statement stayed with him for the rest of his career until this day. While he was thinking about it, he was considering his previous boss’s perspective. It wasn’t entirely wrong, but not right either. </p>
 
-<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
+<h2 id="the-first-company">The first company</h2>
 
-<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
+<p>His thoughts were still at that company. What had gone so wrong with the quality? Good engineers were working for them, management wasn’t completely bad, and had some good previous experience in successful companies, why didn’t they succeed at quality? </p>
 
-<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
+<p>They were creating a new version of the product from scratch, which was common practice for companies at the time. They worked for months on the requirements and planning. Everything was perfect - it wasn’t but project management is not the focus here. When they started to have customers using the beta version of the software, the number of issues was so high that they spent more time trying to fix things than finishing the project. They didn’t have any quality process in place, the process was changing the code and pushing it to production, sometimes even during a call with the customer. </p>
 
-<ul>
-  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
-</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="https://thrownewexception.com/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>https://thrownewexception.com/gatekeepers-enablers</id><content type="html" xml:base="https://thrownewexception.com/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
+<p>Living this reality makes people more sensible about the quality topic. He didn’t want to spend more time trying to fix issues in production than adding value to the customer. </p>
+
+<h2 id="back-to-thrownewexceptioncom--how-it-started">Back to thrownewexception.com — how it started</h2>
+
+<p>From the very beginning he joined the company, he insisted on having quality assurance. They started an area that was dedicated to making sure the software had the right quality for the customer. They hired a first QA, and it was amazing the amount of bugs found. Even in production. </p>
+
+<p>Samuel was entering the building and greeting people while thinking about it and noticing how much everything had changed. Without noticing he was smiling near the coffee machine, remembering the dynamic change that happened with the first QA engineer at the company finding bugs and the reaction of the other engineers. Engineers were not used to that interaction, but luckily they had found a QA with good soft skills that could relate well to them and soften the situation. The other engineers used to make jokes using Schrödinger’s cat analogy, saying that the QA created the bug by opening the box.</p>
+
+<p>The quality process at the time was done at the end of the project. The team(s) built the feature(s) and then QA would understand the requirements, create some user acceptance testing, and validate if the software was ready for release. It was slightly agile because the engineers were ready to help the QA team document the user acceptance testing and fix the issues they found. The collaboration was good.</p>
+
+<h2 id="thrownewexceptioncomadopting-scrum">thrownewexception.com—Adopting SCRUM</h2>
+
+<p>The teams started adopting SCRUM to manage their work and one of the first challenges was how to coordinate the QA work with the Devs’ work. It was decided to add a stage on the scrum board, called “Test”. The developer would write the code, and after it was ready the card was moved to the “Test” column and the QA would validate if the feature was correctly implemented.</p>
+
+<p><img src="../../assets/img/posts/2024.03.26/figure-1-process.png" alt="&quot;The scrum process&quot;" /></p>
+
+<p style="text-align: center;"><em>Figure 1 - The process</em></p>
+
+<p>After a while—not long, actually—we started noticing that the QA was without much work to do at the start of the sprint and then, when the end of the sprint approached, they had a lot of tasks to validate and more often than not, the team would miss the sprint goals because it was unable to validate all the tasks. </p>
+
+<h2 id="thrownewexceptioncom--quality-week-">thrownewexception.com — Quality week 💡</h2>
+
+<p>After some consideration, the leadership decided to have the QA perform the validation of the items from the previous sprint in the first week of the sprint. </p>
+
+<p><img src="../../assets/img/posts/2024.03.26/different-stream-qa.png" alt="&quot;Two streams, one for the team and another for the QA&quot;" /></p>
+
+<p style="text-align: center;"><em>Figure 2 - The QA with a different stream
+  than the devs</em></p>
+
+<p>It means the QA has a different stream from the devs during one week. When some items were in Test at the end of the sprint, the QA would replicate that to the QA Stream and ensure it got validated in the right order. After all the items from the sprint were validated, the team would release the product to the client.</p>
+
+<p>This solved the issue of putting too much pressure on the QA at the end of the sprint, but the overall speed and throughput of the team didn’t improve. In fact, Hannah, the scrum master, showed that the speed was declining. “The reason for this trend may be explained by the need to go back and fix bugs. The team has too much context switch, and it may be impacting the speed.” —said Hannah. She continued, “I’d suggest trying to have a releasable product by the end of the sprint instead. Maybe we can keep the two weeks sprint, but have one week to work and another week to stabilize the product to release it”. We adopted Hannah’s suggestion.</p>
+
+<p>The amount of work the team committed to at the beginning of the sprint was reduced, and it helped complete everything during the sprint. But the feeling was that we had a “small waterfall”, where the developers spend a week writing code and the QA spends the next week testing it. The team got more consistent in the amount of stories delivered, but the process wasn’t the best. </p>
+
+<h2 id="thrownewexceptioncom--mindset">thrownewexception.com — Mindset</h2>
+
+<p>The QA was considered to be the person that would approve the change. A quality gate. The expectation of having one QA validating the work of four or more developers was too optimistic. If the goal was to achieve the sprint goal, wouldn’t it be better to leverage the entire team?</p>
+
+<p>After a long and, sometimes stressful session of retrospective and brainstorming, the team decided it would make sense to change the mindset. The QA can’t be the “sole responsible for the quality” said an engineer “We must all take responsibility for it”. <strong>Shared responsibility</strong> was the concept of the day and, after that session, any member of the team would be ready to pick up the task in the test column and validate if it was working correctly.</p>
+
+<p>But Julia, the QA, was confused. “How will the team know what to test?”. Excellent question. </p>
+
+<p><img src="../../assets/img/posts/2024.03.26/figure-3-ask-for-help.png" alt="&quot;The engineer asking for help&quot;" /></p>
+
+<p style="text-align: center;"><em>Figure 3 - QA trying to get help from Devs focused on their sprint</em></p>
+
+<h2 id="thrownewexceptioncom--today">thrownewexception.com — Today</h2>
+
+<p>Weeks went by and Julia approached Enzo in the coffee machine. “I’m loving this new way of working. I have much more time to do other things that have much more impact than validating each story individually. I feel like a partner for the developers instead of validating their work and I can work closely with the product team to understand the clients, help them anticipate risks, and explore our product in production”. </p>
+
+<p>Enzo was tremendously happy to hear that, but then he asked her: “Are you aware of the incident we had in our last release? What could we have done to avoid it?”</p>
+
+<p>Julia told him it was a mistake following the regression testing procedure, a validation was missed, and it led to an issue going to production that affected our clients.</p>
+
+<p>“What can we do to prevent it?” — asked Enzo.</p>
+
+<p>“Well, I have an idea. Have you heard about testing automation?”</p>
+
+<h2 id="thrownewexceptioncom--automation-">thrownewexception.com — Automation 🤖</h2>
+
+<p>“With automation, we can release our product to our clients immediately with confidence”—said Julia to the team, — “And we can even validate some parts in production.”.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>“Asking Julia to validate quality at the end of the sprint is like asking to validate we had good quality construction materials after building the house. Wouldn’t it be better aiming to prevent defects before they happen?”</p>
+
+<p>As our industry evolved, our approach to quality also evolved. In the past, it was expected after an engineer finished their work to deploy the changes in an environment, update the card in JIRA, and wait for the QA to validate its changes or return the ticket with bugs. More often than not, the QA would have some doubts and ask the engineer about it before opening a bug to be fixed—or return the ticket with these issues. If the process doesn’t feel very different from what you are used to, don’t worry, a lot of companies still do software development like this. But for the most innovative tech companies, a process like this is long gone. </p>
+
+<h4 id="why">Why?</h4>
+
+<p>This process’s biggest challenge is preventing a bottleneck without hiring more QA to do the job.</p>
+
+<blockquote>
+  <p>The first thing we did was make QA part of engineering. In the “old world”, an engineer would finish their work, check into their branch, update a ticket, and let the QA know it was ready for review. The QA would take this ticket a day or two later, review it, and reopen the ticket if they found issues. This was a long delay.</p>
+</blockquote>
+
+<blockquote>
+  <p>We made a quiet, unofficial, change where all SDETs built production software as well, and all software engineers became responsible for testing their own code. Now we no longer had to wait days for feedback before shipping the code to production. However, the bi-weekly sprints and the numerous Scrum rituals became the next problem.</p>
+</blockquote>
+
+<p>These quotes are from <a href="https://blog.pragmaticengineer.com/project-management-at-big-tech/">this amazing</a> article authored by <strong>Gergely Orosz</strong>. This story is already long enough, but if you want to get insights from within those companies, read the article from Gergely Orosz.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Evolution of QA in thrownewexception.com company tale: from manual testing to better approach]]></summary></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="http://localhost:4000/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/gatekeepers-enablers</id><content type="html" xml:base="http://localhost:4000/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
 
 <blockquote>
   <p>As we grow past the first generation of firefighters, we achieve a basic level of operational integrity. The active operational fires are put out, and we have an increasing amount of time available for forward-looking tasks. So where do we go from here? The natural instinct is a protective one. We just spent years digging ourselves out of a major operational hole and the last thing we want to do is immediately fall back into it. Usually, this translates into a set of behaviors that amount to building a wall around “our” production with a few locked doors and keeping the keys with SRE. <strong>That way, “those” pesky developers will have to go through “us” before “their” change can impact “our” prod.</strong></p>
@@ -59,7 +138,19 @@
 
 <p>Enzo decided then to challenge the ops team on how to move away from gatekeeping to an enabling mentality. Instead of thinking about “how can I control this?”, they should start thinking about “how can I enable the teams to do their job safely?”.</p>
 
-<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="https://thrownewexception.com/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>https://thrownewexception.com/sli-slo-sla-explained</id><content type="html" xml:base="https://thrownewexception.com/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
+<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">An imaginary tale of a growing company</title><link href="http://localhost:4000/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/imaginary-tale-growing-company</id><content type="html" xml:base="http://localhost:4000/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
+
+<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
+
+<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
+
+<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
+
+<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
+
+<ul>
+  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
+</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
 
 <p>I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.</p>
 
@@ -89,7 +180,7 @@
 
 <hr />
 
-<p>I hope with this you find a good analogy to explain SLI, SLO, and SLAs and if you want to provide feedback and suggest a change on the calculations I did, please leave a comment or DM me on Twitter! Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Imagine you are in a remote meeting using terms like SLI, SLO, or SLA, and your kid asks you what it means? How would you explain it to them? Or maybe you need to explain it to your boss or a colleague. In this article, I will try to put SLI, SLO, and SLA in a way even your kids would understand... maybe.]]></summary></entry><entry><title type="html">SRE, SRE everywhere</title><link href="https://thrownewexception.com/sre-sre-everywhere" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>https://thrownewexception.com/sre-sre-everywhere</id><content type="html" xml:base="https://thrownewexception.com/sre-sre-everywhere"><![CDATA[<p>Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?</p>
+<p>I hope with this you find a good analogy to explain SLI, SLO, and SLAs and if you want to provide feedback and suggest a change on the calculations I did, please leave a comment or DM me on Twitter! Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Imagine you are in a remote meeting using terms like SLI, SLO, or SLA, and your kid asks you what it means? How would you explain it to them? Or maybe you need to explain it to your boss or a colleague. In this article, I will try to put SLI, SLO, and SLA in a way even your kids would understand... maybe.]]></summary></entry><entry><title type="html">SRE, SRE everywhere</title><link href="http://localhost:4000/sre-sre-everywhere" rel="alternate" type="text/html" title="SRE, SRE everywhere" /><published>2021-08-01T13:00:00+01:00</published><updated>2021-08-01T13:00:00+01:00</updated><id>http://localhost:4000/sre-sre-everywhere</id><content type="html" xml:base="http://localhost:4000/sre-sre-everywhere"><![CDATA[<p>Every once in a while, a new concept appears in the software industry. People start talking about it, making presentations, writing books and even consulting. Everyone seems to be doing the new fancy thing. But even if everyone is talking about it and doing it, are they talking about the same and doing the same?</p>
 
 <p>Today, I will be writing about SRE. It is not a new topic, but it is one that is starting to be adopted more and more across our industry. SRE stands for <strong>Site Reliability Engineering</strong> and aims to improve reliability of software and it was originally created at Google. Ever since Google started to share it externally, other companies started to adopt the concept and doing SRE.</p>
 
@@ -117,7 +208,7 @@
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>As any new concept, some boundaries might be blurred and it is hard to define a pure form of implementing it. The culture, skills and management still will greatly define what type of SRE will be running in a given company. It is very important to know that SRE has many meanings and flourishes differently in each company, only by accepting it can we ask the questions to understand what type of SRE a company is selling you. It can even be a mix of different types.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Companies are adopting SRE, the challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists]]></summary></entry><entry><title type="html">Continuous integration - If you don’t know what you’re doing, don’t do it</title><link href="https://thrownewexception.com/continuous-integration-dont-know-dont-do" rel="alternate" type="text/html" title="Continuous integration - If you don’t know what you’re doing, don’t do it" /><published>2020-10-04T13:00:00+01:00</published><updated>2020-10-04T13:00:00+01:00</updated><id>https://thrownewexception.com/continuous-integration-if-dont-know-dont-do</id><content type="html" xml:base="https://thrownewexception.com/continuous-integration-dont-know-dont-do"><![CDATA[<p><em>Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.</em> by Martin Fowler <a href="https://martinfowler.com/articles/continuousIntegration.html">here</a>.</p>
+<p>As any new concept, some boundaries might be blurred and it is hard to define a pure form of implementing it. The culture, skills and management still will greatly define what type of SRE will be running in a given company. It is very important to know that SRE has many meanings and flourishes differently in each company, only by accepting it can we ask the questions to understand what type of SRE a company is selling you. It can even be a mix of different types.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="SRE" /><summary type="html"><![CDATA[Companies are adopting SRE, the challenge is understanding what part of SRE they are doing - or if it is SRE at all for the purists]]></summary></entry><entry><title type="html">Continuous integration - If you don’t know what you’re doing, don’t do it</title><link href="http://localhost:4000/continuous-integration-dont-know-dont-do" rel="alternate" type="text/html" title="Continuous integration - If you don’t know what you’re doing, don’t do it" /><published>2020-10-04T13:00:00+01:00</published><updated>2020-10-04T13:00:00+01:00</updated><id>http://localhost:4000/continuous-integration-if-dont-know-dont-do</id><content type="html" xml:base="http://localhost:4000/continuous-integration-dont-know-dont-do"><![CDATA[<p><em>Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.</em> by Martin Fowler <a href="https://martinfowler.com/articles/continuousIntegration.html">here</a>.</p>
 
 <p>We all agree with the definition of Continuous Integration from the well-known Martin Fowler. Also, we all agree with the main advantages: 1) reduce time to integrate code; 2) increase software development speed.</p>
 
@@ -173,7 +264,7 @@ This way, you should treat this environment as a production environment. Availab
 <p>Before you start implementing continuous integration, it isn’t mandatory to have all the answers to the mentioned challenges. Mainly, because these challenges need a lot of time and effort to implement.
 The most important is to start small. Start with a proof of concept and then try to implement it in a feature of your product and/or in a specific component. And then, continue to iterate over what you build and continuously improve your continuous integration pipeline.</p>
 
-<p>You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.c</p>]]></content><author><name>Ricardo Felgueiras</name></author><category term="CICD" /><summary type="html"><![CDATA[Continuous integration is a software practice adopted widely across the industry, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes through some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration.]]></summary></entry><entry><title type="html">Opinion on the paper On Designing and Deploying Internet-Scale Services</title><link href="https://thrownewexception.com/paper-internet-scale-services" rel="alternate" type="text/html" title="Opinion on the paper On Designing and Deploying Internet-Scale Services" /><published>2020-09-12T13:00:00+01:00</published><updated>2020-09-12T13:00:00+01:00</updated><id>https://thrownewexception.com/paper-internet-scale-services</id><content type="html" xml:base="https://thrownewexception.com/paper-internet-scale-services"><![CDATA[<p>When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.  This <a href="https://www.usenix.org/legacy/events/lisa07/tech/full_papers/hamilton/hamilton.pdf">paper</a> from 2007 (!!!) from James Hamilton is a tremendous source of information on how to run internet scale services.</p>
+<p>You should have in mind that every single decision will affect the development process speed, team members and their motivation. And in fact, this should be your main focus.c</p>]]></content><author><name>Ricardo Felgueiras</name></author><category term="CICD" /><summary type="html"><![CDATA[Continuous integration is a software practice adopted widely across the industry, but sometimes it is adopted and implemented without truly understand the advantanges of it and how to prevent common pitfalls. This article goes through some of those pitfalls so we can prevent doing it next time you adopt Continuous Integration.]]></summary></entry><entry><title type="html">Opinion on the paper On Designing and Deploying Internet-Scale Services</title><link href="http://localhost:4000/paper-internet-scale-services" rel="alternate" type="text/html" title="Opinion on the paper On Designing and Deploying Internet-Scale Services" /><published>2020-09-12T13:00:00+01:00</published><updated>2020-09-12T13:00:00+01:00</updated><id>http://localhost:4000/paper-internet-scale-services</id><content type="html" xml:base="http://localhost:4000/paper-internet-scale-services"><![CDATA[<p>When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.  This <a href="https://www.usenix.org/legacy/events/lisa07/tech/full_papers/hamilton/hamilton.pdf">paper</a> from 2007 (!!!) from James Hamilton is a tremendous source of information on how to run internet scale services.</p>
 
 <p>This is 13 years old and content like “Expect failures”, “Keep things simple” and “automate everything”. It also points out that application design and development are normally the origin of issues in production or are best solved there, so separating development, testing and operation isn’t the most effective approach in the services world.</p>
 
@@ -181,11 +272,11 @@ The most important is to start small. Start with a proof of concept and then try
 
 <p>One of the topics I have some mixed feelings about is the <code class="language-plaintext highlighter-rouge">Single-server deployment</code>, mainly because I don’t totally understand what the author is suggesting here. I’m confused if he is recommending having all the components (500+ programs) in a single machine, or if he is recommending to have the “feature route” (customer functionality) on a single machine, or just a single program and emulated dependencies. Translating to microservices approach, having multiple services and frontend or just the service and datasources and emulate all the other dependencies. I would love to hear from the author, not sure if the https://twitter.com/jrhatmvdirona is actually the author or not.</p>
 
-<p>Trying not to extend this too much, but the paper is really worth reading. Go and read it, you won’t regret it.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="scale" /><summary type="html"><![CDATA[When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.]]></summary></entry><entry><title type="html">Undo changes in git</title><link href="https://thrownewexception.com/undo-changes-git" rel="alternate" type="text/html" title="Undo changes in git" /><published>2017-10-08T00:00:42+01:00</published><updated>2017-10-08T00:00:42+01:00</updated><id>https://thrownewexception.com/undo-changes-git</id><content type="html" xml:base="https://thrownewexception.com/undo-changes-git"><![CDATA[<p>In this article I will talk about the ways we have available to undo things when using git. I will tackle <code class="language-plaintext highlighter-rouge">git checkout</code>, <code class="language-plaintext highlighter-rouge">git reset</code>, <code class="language-plaintext highlighter-rouge">git clean</code> and <code class="language-plaintext highlighter-rouge">git revert</code>.</p>
+<p>Trying not to extend this too much, but the paper is really worth reading. Go and read it, you won’t regret it.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="scale" /><summary type="html"><![CDATA[When thinking of internet scale services we normally think of Google, Facebook and some other companies, but rarely about Microsoft.]]></summary></entry><entry><title type="html">Undo changes in git</title><link href="http://localhost:4000/undo-changes-git" rel="alternate" type="text/html" title="Undo changes in git" /><published>2017-10-08T00:00:42+01:00</published><updated>2017-10-08T00:00:42+01:00</updated><id>http://localhost:4000/undo-changes-git</id><content type="html" xml:base="http://localhost:4000/undo-changes-git"><![CDATA[<p>In this article I will talk about the ways we have available to undo things when using git. I will tackle <code class="language-plaintext highlighter-rouge">git checkout</code>, <code class="language-plaintext highlighter-rouge">git reset</code>, <code class="language-plaintext highlighter-rouge">git clean</code> and <code class="language-plaintext highlighter-rouge">git revert</code>.</p>
 
 <p>To better explain it, I would like to go to the basics about the three main sections we have on git, which are <code class="language-plaintext highlighter-rouge">Working directory</code>,  <code class="language-plaintext highlighter-rouge">Index</code> and <code class="language-plaintext highlighter-rouge">HEAD</code>.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_sections.jpg" alt="Git Sections" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_sections.jpg" alt="Git Sections" /></p>
 
 <ul>
   <li>Git directory is where all the information regarding metadata and object is stored.</li>
@@ -197,7 +288,7 @@ The most important is to start small. Start with a proof of concept and then try
 
 <p>For this article, I already have a repository with two files, a <code class="language-plaintext highlighter-rouge">README</code> and a file named <code class="language-plaintext highlighter-rouge">add_new_file</code> and I try to show how my repository is with the following image.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_image.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_image.jpg" alt="Git State" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ ls
 README		add_new_file
@@ -233,7 +324,7 @@ Date:   Tue Aug 22 23:35:39 2017 +0100
 
 <p>I will now add some text to the file <code class="language-plaintext highlighter-rouge">add_new_file</code>, something like “Yet another change”.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
@@ -249,7 +340,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 <p>Now, if I wanted to revert those changes without manually deleting each change I did on the file, I could use the command <code class="language-plaintext highlighter-rouge">git checkout &lt;path&gt;</code>. The <code class="language-plaintext highlighter-rouge">git checkout &lt;path&gt;</code> does not switch branches, instead it is used to restore modified or deleled path from the index. Just type <code class="language-plaintext highlighter-rouge">git checkout add_new_file</code> and check the status using <code class="language-plaintext highlighter-rouge">git status</code> and you should see that those changes are now gone.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_checkout.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_checkout.jpg" alt="Git State" /></p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
 On branch new_branch
 Your branch is up-to-date with 'origin/new_branch'.
@@ -266,11 +357,11 @@ nothing to commit, working directory clean
 
 <p>Lets start by the option –hard. I know this is not the best option to start explaining <code class="language-plaintext highlighter-rouge">git reset </code>, but since I just talked about <code class="language-plaintext highlighter-rouge">git checkout</code> I think it would be good to start with –hard because given the same context we had on the git checkout example, the outcome will be the same.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_add_new_file_wd.jpg" alt="Git State" /></p>
 
 <p>Using <code class="language-plaintext highlighter-rouge">git reset --hard</code> in this context, the outcome will be the same as using <code class="language-plaintext highlighter-rouge">git checkout add_new_file</code>, <strong>but</strong> we need to understand the internals. Instead of picking the change from Index, it will pick up from <code class="language-plaintext highlighter-rouge">HEAD</code> and it will also replace what we may have on the <code class="language-plaintext highlighter-rouge">Index</code>. Which means that if we had do <code class="language-plaintext highlighter-rouge">git add add_new_file</code> it will also reset the content of add_new_file from Index.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_hard_checkout.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_hard_checkout.jpg" alt="Git State" /></p>
 
 <h4 id="git-reset-mixed">git reset –mixed</h4>
 
@@ -278,17 +369,17 @@ nothing to commit, working directory clean
 
 <p>For this example, lets consider that we add the change we did on the <code class="language-plaintext highlighter-rouge">add_new_file</code> to <code class="language-plaintext highlighter-rouge">Index</code>.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_change_staged_add_new_file.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_change_staged_add_new_file.jpg" alt="Git State" /></p>
 
 <p>If we do <code class="language-plaintext highlighter-rouge">git reset --mixed</code> or <code class="language-plaintext highlighter-rouge">git reset</code> it will replace the content we have on <code class="language-plaintext highlighter-rouge">Index</code>, but it will not replace anything on the working directory.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_mixed.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_mixed.jpg" alt="Git State" /></p>
 
 <h4 id="git-reset-soft">git reset –soft</h4>
 
 <p>One thing I didn’t tell you is that you can indicate a commit to do the reset. That will first update the HEAD to the given commit and if we use <code class="language-plaintext highlighter-rouge">--soft</code> it will be all that it would do.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_reset_soft.jpg" alt="Git State" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_reset_soft.jpg" alt="Git State" /></p>
 
 <p>Summing up, it will first update the HEAD to the given commit, if <code class="language-plaintext highlighter-rouge">--mixed</code> it will also update the <code class="language-plaintext highlighter-rouge">Index</code> or it will also update the working directory if we use <code class="language-plaintext highlighter-rouge">--hard</code>.</p>
 
@@ -296,7 +387,7 @@ nothing to commit, working directory clean
 
 <p>This command is useful to remove those files that are not tracked, as an example, we can imagine adding a wrong file and we want to clean up the working directory. We can also use <code class="language-plaintext highlighter-rouge">-x</code> option to remove those files that are ignored (.gitignore), which is useful to remove <code class="language-plaintext highlighter-rouge">bin</code> folders for example.</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_clean.jpg" alt="Git Clean" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_clean.jpg" alt="Git Clean" /></p>
 
 <h3 id="git-revert">git revert</h3>
 
@@ -325,9 +416,9 @@ de4fc88 Bruno Costa: Add README
 
 <p>Trying to translate it into an image, it would be something like this:</p>
 
-<p><img src="https://thrownewexception.com/assets/img/posts/2017.09.05/git_revert.jpg" alt="Git Revert" /></p>
+<p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_revert.jpg" alt="Git Revert" /></p>
 
-<p>I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="tutorials" /><category term="git" /><summary type="html"><![CDATA[Undoing changes is a little scary, right? I hope this article helps you to keep calm when you need to undo stuff.]]></summary></entry><entry><title type="html">Git hard reset, now what?</title><link href="https://thrownewexception.com/git-hard-reset-now-what" rel="alternate" type="text/html" title="Git hard reset, now what?" /><published>2017-08-23T01:00:42+01:00</published><updated>2017-08-23T01:00:42+01:00</updated><id>https://thrownewexception.com/git-hard-reset-now-what</id><content type="html" xml:base="https://thrownewexception.com/git-hard-reset-now-what"><![CDATA[<p>Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a <code class="language-plaintext highlighter-rouge">git reset --hard HEAD~</code>.</p>
+<p>I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="tutorials" /><category term="git" /><summary type="html"><![CDATA[Undoing changes is a little scary, right? I hope this article helps you to keep calm when you need to undo stuff.]]></summary></entry><entry><title type="html">Git hard reset, now what?</title><link href="http://localhost:4000/git-hard-reset-now-what" rel="alternate" type="text/html" title="Git hard reset, now what?" /><published>2017-08-23T01:00:42+01:00</published><updated>2017-08-23T01:00:42+01:00</updated><id>http://localhost:4000/git-hard-reset-now-what</id><content type="html" xml:base="http://localhost:4000/git-hard-reset-now-what"><![CDATA[<p>Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a <code class="language-plaintext highlighter-rouge">git reset --hard HEAD~</code>.</p>
 
 <blockquote>
   <p>Oh My God. What did I do?</p>
@@ -433,7 +524,7 @@ Fast-forward
  create mode 100644 add_yet_another_file
 </code></pre></div></div>
 
-<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry><entry><title type="html">Rename a branch in git</title><link href="https://thrownewexception.com/rename-branch-git" rel="alternate" type="text/html" title="Rename a branch in git" /><published>2017-08-22T01:00:42+01:00</published><updated>2017-08-22T01:00:42+01:00</updated><id>https://thrownewexception.com/rename-branch-git</id><content type="html" xml:base="https://thrownewexception.com/rename-branch-git"><![CDATA[<p>Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.</p>
+<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry><entry><title type="html">Rename a branch in git</title><link href="http://localhost:4000/rename-branch-git" rel="alternate" type="text/html" title="Rename a branch in git" /><published>2017-08-22T01:00:42+01:00</published><updated>2017-08-22T01:00:42+01:00</updated><id>http://localhost:4000/rename-branch-git</id><content type="html" xml:base="http://localhost:4000/rename-branch-git"><![CDATA[<p>Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.</p>
 
 <p>After looking for help on <code class="language-plaintext highlighter-rouge">man git branch</code> we are able to find the option <code class="language-plaintext highlighter-rouge">-m</code>.</p>
 
@@ -485,18 +576,4 @@ Your branch is up-to-date with 'origin/new-branch'.
 nothing to commit, working tree clean
 </code></pre></div></div>
 
-<p>And we are done!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[How to rename a branch in git]]></summary></entry><entry><title type="html">Book recomendation - Programming Phoenix</title><link href="https://thrownewexception.com/phoenix-framework-book-recomendation" rel="alternate" type="text/html" title="Book recomendation - Programming Phoenix" /><published>2017-03-09T20:35:42+00:00</published><updated>2017-03-09T20:35:42+00:00</updated><id>https://thrownewexception.com/book-recomendation-phoenix-framework</id><content type="html" xml:base="https://thrownewexception.com/phoenix-framework-book-recomendation"><![CDATA[<p>I have just read the book <a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552">Programming Phoenix: Productive |&gt; Reliable |&gt; Fast</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. Wow, first because of the framework, I think it’s a very good framework. But I dare you to find out for yourselves, we are talking about the book here :).</p>
-
-<p><a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=31e7504416c3ad44bfa92cd966a1ea4b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=US&amp;ASIN=1680501453&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=throwexcept0f-20" /></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-
-<p><a target="_blank" href="https://www.amazon.com/gp/product/1680501453/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1680501453&amp;linkCode=as2&amp;tag=throwexcept0f-20&amp;linkId=0f4384848b45c1653b3f3c4f3bbc9552"><b>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast</b></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=throwexcept0f-20&amp;l=am2&amp;o=1&amp;a=1680501453" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-
-<p>The book is a joy to read.</p>
-
-<p>It’s split in two parts with a good introduction on why Phoenix is different. Basically, <em>Phoenix is about fast, concurrent, beautiful, interactive, and reliable applications</em>. Which I agree, but you must know that this is a book written by Phoenix’s creator and Elixir’s creator, so please understand their “sometimes” excessive self praise.</p>
-
-<p>The first part of the book will explain the basic layers of phoenix framework, but also Ecto and testing MVC. For those of you who don’t know, Ecto is the database wrapper and LINQ for Elixir. One of the phrases I most enjoy about <strong>Testing</strong> is on this book: <em>If your code is worth writing, it’s worth testing.</em></p>
-
-<p>The second part of the book, I think it may not be  easy to follow for beginners. It highlights the advantages of Elixir, as GenServer and how it communicates seamlessly with OTP APIs. It also explains another core feature of phoenix, channels. Channels allow you to keep your clients connected and communicate with them in realtime. Together with Elixir/OTP is a very stable and reliable process.</p>
-
-<p>I think the app we are building along the way is very interesting, which helps you to keep the engagement with the book. Try and see for yourself. You may create something cool.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="elixir" /><category term="phoenix" /><summary type="html"><![CDATA[A great book to start with phoenix]]></summary></entry></feed>
+<p>And we are done!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[How to rename a branch in git]]></summary></entry></feed>
