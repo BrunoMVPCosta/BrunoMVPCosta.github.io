@@ -7,9 +7,9 @@ permalink: qa-role-evolution
 description: "Evolution of QA in thrownewexception.com company tale: from manual testing to better approach"
 comments: true
 share: true
-image: ../../assets/img/side_image.png
 
 ---
+
 Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. 
 
 While waiting for the green light, his thoughts went to when he started working. He started in a small company that did software business. They didn’t have a QA process. When he suggested a dedicated person to do QA, his boss mocked him: “One person to just do tests? Are you serious? I think you can do it because the effort is not that much, just a few clicks.” This statement stayed with him for the rest of his career until this day. While he was thinking about it, he was considering his previous boss's perspective. It wasn’t entirely wrong, but not right either. 
