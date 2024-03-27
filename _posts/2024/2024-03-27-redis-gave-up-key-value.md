@@ -62,5 +62,4 @@ Back then, their revenue was $115M, and fast-forward to 2023, their [revenue](ht
 The business model is very similar to Elasticsearch, they have a cloud offer where they offer MongoDB-as-a-service. Cloud providers like AWS have their “API-compatible” MongoDB alternative, but MongoDB revenue is still growing YoY.
 
 ## Conclusion
-
-The move seems to be good for the companies without really impacting the customers. Maybe we are witnessing the transformation of open-source businesses to adapt to the AWS business model of leveraging their goodwill.
+The change appears to be good for companies, without really impacting customers. Perhaps we are witnessing the transformation of open-source businesses adapting to the AWS business model of taking advantage of their goodwill.
