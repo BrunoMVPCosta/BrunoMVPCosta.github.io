@@ -2,7 +2,7 @@
 layout: post
 title: "Redis gave up on their key value"
 date: "2024-03-27 00:00:00"
-tags: [company-tale]
+tags: []
 permalink: redis-gave-up-on-their-key-value 
 description: "Redis adopts dual source-available licensing, but what does it mean?"
 comments: true
