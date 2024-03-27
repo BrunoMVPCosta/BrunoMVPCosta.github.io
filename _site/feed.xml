@@ -1,5 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-26T20:05:44+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
-</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">QA role evolution</title><link href="http://localhost:4000/qa-role-evolution" rel="alternate" type="text/html" title="QA role evolution" /><published>2024-03-26T00:00:00+00:00</published><updated>2024-03-26T00:00:00+00:00</updated><id>http://localhost:4000/qa-role-evolution</id><content type="html" xml:base="http://localhost:4000/qa-role-evolution"><![CDATA[<p>Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. </p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-27T17:57:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">Redis gave up on their key value</title><link href="http://localhost:4000/redis-gave-up-on-their-key-value" rel="alternate" type="text/html" title="Redis gave up on their key value" /><published>2024-03-27T00:00:00+00:00</published><updated>2024-03-27T00:00:00+00:00</updated><id>http://localhost:4000/redis-gave-up-key-value</id><content type="html" xml:base="http://localhost:4000/redis-gave-up-on-their-key-value"><![CDATA[<p>First things first, the title is from the amazing joke Erik Bjäreholt did on X (ex-twitter). </p>
+
+<center>
+  <blockquote class="twitter-tweet" data-dnt="true">
+    <p lang="en" dir="ltr">Redis is no longer open source?<br />I guess they gave up on their key values 🥁</p>
+    &mdash; Erik Bjäreholt (@ErikBjare) 
+    <a href="https://twitter.com/ErikBjare/status/1771474971564318842?ref_src=twsrc%5Etfw">March 23, 2024</a>
+  </blockquote>
+  <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</center>
+<p>So, Redis adopts dual source-available licensing. But what does it mean?</p>
+
+<p>We all know that we can use Redis on AWS, Azure, and Google Cloud. Probably in different clouds as well, but I’m talking about “real” clouds – just kidding Oracle, please don’t sue me. </p>
+
+<p>This is convenient for us, the users, but not so much for the company, or at least, the company doesn’t think it’s good for them. As a result, companies with open-source products, look for alternatives to protect their IP from being monetized by big cloud providers. </p>
+
+<p>A typical move is to move their license to a dual source-available license. <a href="https://www.elastic.co/pricing/faq/licensing">Elasticsearch</a> did it in the past, and now it’s Redis’ turn to do the same. But what is dual source-available licensing? Dual source-available licensing typically means that it is released under two different licenses, one of which is an open-source license and the other is a proprietary or more restrictive license. </p>
+
+<p>One question I asked on X was how did it affect the revenue and customers. </p>
+
+<center>
+  <blockquote class="twitter-tweet" data-dnt="true">
+  <p lang="en" dir="ltr">Redis adopts dual source-available licensing. 
+      <br /><br />Is there any public available research to understand the impact in the revenue of the company that made these decisions in the past? Did it increase or decrease?
+      <br /><br />And how about the providers? Did the cost move to the clients?
+    </p>&mdash; Bruno Costa (@brunomvpcosta) 
+    <a href="https://twitter.com/brunomvpcosta/status/1770788756104036617?ref_src=twsrc%5Etfw">March 21, 2024</a>
+  </blockquote>
+</center>
+
+<p>While we can’t say anything about Redis Labs yet, we can look at MongoDB and Elasticsearch to understand the revenue impact.</p>
+
+<h3 id="elasticsearch">Elasticsearch</h3>
+
+<p>January 2021, Elasticsearch <a href="https://www.elastic.co/blog/why-license-change-aws">announced</a> that the license would be moving from the Apache 2.0-licensed source code to be dual licensed under both the Elastic License and SSPL. </p>
+
+<p>Did it impact their revenue? If we look at their <a href="https://www.investing.com/equities/elastic-financial-summary">balance sheet</a> we can see they continued to grow their revenue from 2021 ($608M) until 2023 (1.07B). </p>
+
+<p><img src="../../assets/img/posts/2024.03.27/revenue-es.png" alt="&quot;Elastic Revenue&quot;" /></p>
+
+<p>The revenue doesn’t seem to have been impacted.</p>
+
+<p>Did it affect customers? It is not easy to evaluate it without deeper investigation, but it seems AWS and Elasticsearch had their disagreements regarding the technology, but eventually, they <a href="https://www.elastic.co/blog/elastic-and-amazon-reach-agreement-on-trademark-infringement-lawsuit">reached an agreement</a>. That means that customers using AWS to use Elasticsearch are in fact using Elastic Cloud – customers can choose to use OpenSearch from AWS which is a fork from the Elasticsearch codebase. From what I could gather from the Elasticsearch <a href="https://discuss.elastic.co/t/difference-between-using-elastic-cloud-aws-and-using-elastic-from-aws-marketplace/320898/2">forum</a> there is no difference between using the Elastic Cloud directly or using it through the AWS marketplace.</p>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<p>In 2018, <a href="https://www.mongodb.com/legal/licensing/server-side-public-license">MongoDB changed its license to Server Side Public License</a> to prevent the same issue as Elasticsearch. They had multiple providers in Asia leveraging their technology to provide MongoDB as a service, but without contributing back to the community.</p>
+
+<p>Back then, their revenue was $115M, and fast-forward to 2023, their <a href="https://www.macrotrends.net/stocks/charts/MDB/mongodb/revenue">revenue</a> is now $1,284B.</p>
+
+<p>The business model is very similar to Elasticsearch, they have a cloud offer where they offer MongoDB-as-a-service. Cloud providers like AWS have their “API-compatible” MongoDB alternative, but MongoDB revenue is still growing YoY.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The move seems to be good for the companies without really impacting the customers. Maybe we are witnessing the transformation of open-source businesses to adapt to the AWS business model of leveraging their goodwill.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Redis adopts dual source-available licensing, but what does it mean?]]></summary></entry><entry><title type="html">QA role evolution</title><link href="http://localhost:4000/qa-role-evolution" rel="alternate" type="text/html" title="QA role evolution" /><published>2024-03-26T00:00:00+00:00</published><updated>2024-03-26T00:00:00+00:00</updated><id>http://localhost:4000/qa-role-evolution</id><content type="html" xml:base="http://localhost:4000/qa-role-evolution"><![CDATA[<p>Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. </p>
 
 <p>While waiting for the green light, his thoughts went to when he started working. He started in a small company that did software business. They didn’t have a QA process. When he suggested a dedicated person to do QA, his boss mocked him: “One person to just do tests? Are you serious? I think you can do it because the effort is not that much, just a few clicks.” This statement stayed with him for the rest of his career until this day. While he was thinking about it, he was considering his previous boss’s perspective. It wasn’t entirely wrong, but not right either. </p>
 
@@ -90,7 +144,20 @@
   <p>We made a quiet, unofficial, change where all SDETs built production software as well, and all software engineers became responsible for testing their own code. Now we no longer had to wait days for feedback before shipping the code to production. However, the bi-weekly sprints and the numerous Scrum rituals became the next problem.</p>
 </blockquote>
 
-<p>These quotes are from <a href="https://blog.pragmaticengineer.com/project-management-at-big-tech/">this amazing</a> article authored by <strong>Gergely Orosz</strong>. This story is already long enough, but if you want to get insights from within those companies, read the article from Gergely Orosz.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Evolution of QA in thrownewexception.com company tale: from manual testing to better approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/side_image.png" /><media:content medium="image" url="http://localhost:4000/assets/img/side_image.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="http://localhost:4000/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/gatekeepers-enablers</id><content type="html" xml:base="http://localhost:4000/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
+<p>These quotes are from <a href="https://blog.pragmaticengineer.com/project-management-at-big-tech/">this amazing</a> article authored by <strong>Gergely Orosz</strong>. This story is already long enough, but if you want to get insights from within those companies, read the article from Gergely Orosz.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Evolution of QA in thrownewexception.com company tale: from manual testing to better approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/side_image.png" /><media:content medium="image" url="http://localhost:4000/assets/img/side_image.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">An imaginary tale of a growing company</title><link href="http://localhost:4000/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/imaginary-tale-growing-company</id><content type="html" xml:base="http://localhost:4000/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
+
+<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
+
+<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
+
+<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
+
+<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
+
+<ul>
+  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
+  <li><a href="/qa-role-evolution">QA role evolution</a></li>
+</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="http://localhost:4000/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/gatekeepers-enablers</id><content type="html" xml:base="http://localhost:4000/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
 
 <blockquote>
   <p>As we grow past the first generation of firefighters, we achieve a basic level of operational integrity. The active operational fires are put out, and we have an increasing amount of time available for forward-looking tasks. So where do we go from here? The natural instinct is a protective one. We just spent years digging ourselves out of a major operational hole and the last thing we want to do is immediately fall back into it. Usually, this translates into a set of behaviors that amount to building a wall around “our” production with a few locked doors and keeping the keys with SRE. <strong>That way, “those” pesky developers will have to go through “us” before “their” change can impact “our” prod.</strong></p>
@@ -138,20 +205,7 @@
 
 <p>Enzo decided then to challenge the ops team on how to move away from gatekeeping to an enabling mentality. Instead of thinking about “how can I control this?”, they should start thinking about “how can I enable the teams to do their job safely?”.</p>
 
-<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">An imaginary tale of a growing company</title><link href="http://localhost:4000/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/imaginary-tale-growing-company</id><content type="html" xml:base="http://localhost:4000/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
-
-<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
-
-<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
-
-<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
-
-<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
-
-<ul>
-  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
-  <li><a href="/qa-role-evolution">QA role evolution</a></li>
-</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
+<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
 
 <p>I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.</p>
 
@@ -525,56 +579,4 @@ Fast-forward
  create mode 100644 add_yet_another_file
 </code></pre></div></div>
 
-<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry><entry><title type="html">Rename a branch in git</title><link href="http://localhost:4000/rename-branch-git" rel="alternate" type="text/html" title="Rename a branch in git" /><published>2017-08-22T01:00:42+01:00</published><updated>2017-08-22T01:00:42+01:00</updated><id>http://localhost:4000/rename-branch-git</id><content type="html" xml:base="http://localhost:4000/rename-branch-git"><![CDATA[<p>Sometimes we choose the wrong name for our branch or we add some misspelled word and we need to rename the branch.</p>
-
-<p>After looking for help on <code class="language-plaintext highlighter-rouge">man git branch</code> we are able to find the option <code class="language-plaintext highlighter-rouge">-m</code>.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-m, --move
-    Move/rename a branch and the corresponding reflog.
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch [&lt;options&gt;] (-m | -M) [&lt;old-branch&gt;] &lt;new-branch&gt;
-</code></pre></div></div>
-
-<p>So, let’s run this option.</p>
-
-<p><code class="language-plaintext highlighter-rouge">git branch -m new-branch</code></p>
-
-<p>(If the current branch is not the one you want to rename, you need to specify which branch is the <code class="language-plaintext highlighter-rouge">&lt;old-branch&gt;</code>)</p>
-
-<p>In our case it would be:
-<code class="language-plaintext highlighter-rouge">git branch -m old_branch new-branch</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new-branch
-Your branch is up-to-date with 'origin/old_branch'.
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p>It did rename the local branch, but not the remote one. If we need to do a push it would fail. How can we rename the remote branch?</p>
-
-<p>Unfortunately, it’s not possible. We need to remove the old branch and create a new one.</p>
-
-<p><code class="language-plaintext highlighter-rouge">git push origin :old_branch</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new-branch
-Your branch is based on 'origin/old_branch', but the upstream is gone.
-  (use "git branch --unset-upstream" to fixup)
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git branch --unset-upstream new-branch</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new-branch
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">git push --set-upstream origin new-branch</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new-branch
-Your branch is up-to-date with 'origin/new-branch'.
-nothing to commit, working tree clean
-</code></pre></div></div>
-
-<p>And we are done!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[How to rename a branch in git]]></summary></entry></feed>
+<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry></feed>
