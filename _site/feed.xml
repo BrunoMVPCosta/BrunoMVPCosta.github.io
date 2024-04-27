@@ -1,8 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-27T17:57:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
-</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">Redis gave up on their key value</title><link href="http://localhost:4000/redis-gave-up-on-their-key-value" rel="alternate" type="text/html" title="Redis gave up on their key value" /><published>2024-03-27T00:00:00+00:00</published><updated>2024-03-27T00:00:00+00:00</updated><id>http://localhost:4000/redis-gave-up-key-value</id><content type="html" xml:base="http://localhost:4000/redis-gave-up-on-their-key-value"><![CDATA[<p>First things first, the title is from the amazing joke Erik Bjäreholt did on X (ex-twitter). </p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-27T16:31:23+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">thrownewexception();</title><subtitle>[`@brunomvpcosta`{:rel=&quot;me&quot;}](https://twitter.com/brunomvpcosta)&apos;s internet little corner to write about scalability, architecture, software and more stuff.
+</subtitle><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><entry><title type="html">Bridging the Gap: How to Communicate Complex Tech Ideas to Non-Technical Audiences</title><link href="http://localhost:4000/tech-ideas-to-non-tech-people" rel="alternate" type="text/html" title="Bridging the Gap: How to Communicate Complex Tech Ideas to Non-Technical Audiences" /><published>2024-04-27T00:00:00+01:00</published><updated>2024-04-27T00:00:00+01:00</updated><id>http://localhost:4000/tech-ideas-to-non-tech-people</id><content type="html" xml:base="http://localhost:4000/tech-ideas-to-non-tech-people"><![CDATA[<p>So, you have a killer feature or an amazing idea for your company, but explaining it to your boss or the marketing team is like explaining rocket science to a 4 year old?</p>
+
+<p>The struggle is real. Throughout my career, I have experienced this myself, I have witnessed great engineers struggle to explain an idea to someone non-technical or even to a tech executive and I have also witnessed great people doing it seamlessly. </p>
+
+<p>It’s something that even more experienced engineers can struggle with. I remember having conversations with director-level ICs where they said “It would be much easier to just trust us to do the work”. It would probably be easier to move forward, not necessarily in the direction the company needs, though.</p>
+
+<p>So, today I give some tips to reduce the tech talk gap and ensure everyone’s on the same page.</p>
+
+<p><strong>Ditch the jargon</strong> </p>
+
+<p>We engineers love our acronyms and technical terms, but to the uninitiated, they sound like gibberish. Instead of “API integration,” explain it as “connecting our app to other services.”</p>
+
+<p><strong>Think of analogies</strong></p>
+
+<p>People understand everyday things. Explain a complex topic by comparing it to a recipe or a decision tree. For instance, to explain how a firewall works we can use something like “think of a security at a nightclub. The security guard checks people and allows only guests with invitation to enter the club. Similarly, the firewall checks incoming data (people) and only allows authorized data (guests with invitation) to enter the network (club)”.</p>
+
+<p><strong>Focus on Benefits, Not Mechanics</strong></p>
+
+<p>Your audience doesn’t care how the internals work, they care about where it takes them. Explain the “what” and “why” of your tech concept. Instead of “We’re implementing a new caching system,” say “This will make the app load lightning fast, giving users a smoother experience.”</p>
+
+<p><strong>Keep it Simple (and Short)</strong></p>
+
+<p>Attention spans are limited, especially for executives. Avoid too much information. Break down complex concepts into manageable pieces and concentrate on the most important lessons.</p>
+
+<p><strong>Check for Understanding</strong></p>
+
+<p>Communication is a two-way street. Don’t just <strong>deliver</strong> the message, <strong>have a conversation</strong> with them. Leverage visual support like flowcharts or other diagrams and ask questions to ensure your message is being received. If they look at you like you’re an ET, you may need to adapt your approach.</p>
+
+<p><strong>Bonus tip: Tailor your message to the audience.</strong></p>
+
+<p>If you are explaining adding a caching system to a product manager, you may want to highlight the smother user experience and higher conversation rates. Explaining the same topic to someone moving close to finance, you may want to highlight the cost savings and the revenue growth of this solution.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><summary type="html"><![CDATA[Stuck translating tech jargon? Learn how to communicate clearly and use creative analogies to convey difficult technical ideas to non-technical audiences]]></summary></entry><entry><title type="html">Redis gave up on their key value</title><link href="http://localhost:4000/redis-gave-up-on-their-key-value" rel="alternate" type="text/html" title="Redis gave up on their key value" /><published>2024-03-27T00:00:00+00:00</published><updated>2024-03-27T00:00:00+00:00</updated><id>http://localhost:4000/redis-gave-up-key-value</id><content type="html" xml:base="http://localhost:4000/redis-gave-up-on-their-key-value"><![CDATA[<p>First things first, the title is from the amazing joke Erik Bjäreholt did on X (ex-twitter). </p>
 
 <center>
-  <blockquote class="twitter-tweet" data-dnt="true">
+  <blockquote class="twitter-tweet" data-dnt="false">
     <p lang="en" dir="ltr">Redis is no longer open source?<br />I guess they gave up on their key values 🥁</p>
     &mdash; Erik Bjäreholt (@ErikBjare) 
     <a href="https://twitter.com/ErikBjare/status/1771474971564318842?ref_src=twsrc%5Etfw">March 23, 2024</a>
@@ -20,7 +50,7 @@
 <p>One question I asked on X was how did it affect the revenue and customers. </p>
 
 <center>
-  <blockquote class="twitter-tweet" data-dnt="true">
+  <blockquote class="twitter-tweet" data-dnt="false">
   <p lang="en" dir="ltr">Redis adopts dual source-available licensing. 
       <br /><br />Is there any public available research to understand the impact in the revenue of the company that made these decisions in the past? Did it increase or decrease?
       <br /><br />And how about the providers? Did the cost move to the clients?
@@ -52,8 +82,7 @@
 <p>The business model is very similar to Elasticsearch, they have a cloud offer where they offer MongoDB-as-a-service. Cloud providers like AWS have their “API-compatible” MongoDB alternative, but MongoDB revenue is still growing YoY.</p>
 
 <h2 id="conclusion">Conclusion</h2>
-
-<p>The move seems to be good for the companies without really impacting the customers. Maybe we are witnessing the transformation of open-source businesses to adapt to the AWS business model of leveraging their goodwill.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Redis adopts dual source-available licensing, but what does it mean?]]></summary></entry><entry><title type="html">QA role evolution</title><link href="http://localhost:4000/qa-role-evolution" rel="alternate" type="text/html" title="QA role evolution" /><published>2024-03-26T00:00:00+00:00</published><updated>2024-03-26T00:00:00+00:00</updated><id>http://localhost:4000/qa-role-evolution</id><content type="html" xml:base="http://localhost:4000/qa-role-evolution"><![CDATA[<p>Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. </p>
+<p>The change appears to be good for companies, without really impacting customers. Perhaps we are witnessing the transformation of open-source businesses adapting to the AWS business model of taking advantage of their goodwill.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><summary type="html"><![CDATA[Redis adopts dual source-available licensing, but what does it mean?]]></summary></entry><entry><title type="html">QA role evolution</title><link href="http://localhost:4000/qa-role-evolution" rel="alternate" type="text/html" title="QA role evolution" /><published>2024-03-26T00:00:00+00:00</published><updated>2024-03-26T00:00:00+00:00</updated><id>http://localhost:4000/qa-role-evolution</id><content type="html" xml:base="http://localhost:4000/qa-role-evolution"><![CDATA[<p>Samuel was driving to work, still sleepy and not in a very good mood. It was a sunny morning, a beautiful sky, but not even that could reduce the anxiety he was feeling. The last release went wrong, some issue with the back office features was preventing the partners from publishing ads and affecting not only their sales but also their relationship with partners. He always understood the importance of quality in software and how it impacts customer attrition and brand reputation. </p>
 
 <p>While waiting for the green light, his thoughts went to when he started working. He started in a small company that did software business. They didn’t have a QA process. When he suggested a dedicated person to do QA, his boss mocked him: “One person to just do tests? Are you serious? I think you can do it because the effort is not that much, just a few clicks.” This statement stayed with him for the rest of his career until this day. While he was thinking about it, he was considering his previous boss’s perspective. It wasn’t entirely wrong, but not right either. </p>
 
@@ -144,20 +173,7 @@
   <p>We made a quiet, unofficial, change where all SDETs built production software as well, and all software engineers became responsible for testing their own code. Now we no longer had to wait days for feedback before shipping the code to production. However, the bi-weekly sprints and the numerous Scrum rituals became the next problem.</p>
 </blockquote>
 
-<p>These quotes are from <a href="https://blog.pragmaticengineer.com/project-management-at-big-tech/">this amazing</a> article authored by <strong>Gergely Orosz</strong>. This story is already long enough, but if you want to get insights from within those companies, read the article from Gergely Orosz.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Evolution of QA in thrownewexception.com company tale: from manual testing to better approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/side_image.png" /><media:content medium="image" url="http://localhost:4000/assets/img/side_image.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">An imaginary tale of a growing company</title><link href="http://localhost:4000/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/imaginary-tale-growing-company</id><content type="html" xml:base="http://localhost:4000/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
-
-<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
-
-<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
-
-<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
-
-<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
-
-<ul>
-  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
-  <li><a href="/qa-role-evolution">QA role evolution</a></li>
-</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="http://localhost:4000/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/gatekeepers-enablers</id><content type="html" xml:base="http://localhost:4000/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
+<p>These quotes are from <a href="https://blog.pragmaticengineer.com/project-management-at-big-tech/">this amazing</a> article authored by <strong>Gergely Orosz</strong>. This story is already long enough, but if you want to get insights from within those companies, read the article from Gergely Orosz.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[Evolution of QA in thrownewexception.com company tale: from manual testing to better approach]]></summary></entry><entry><title type="html">From Gatekeepers to Enablers</title><link href="http://localhost:4000/gatekeepers-enablers" rel="alternate" type="text/html" title="From Gatekeepers to Enablers" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/gatekeepers-enablers</id><content type="html" xml:base="http://localhost:4000/gatekeepers-enablers"><![CDATA[<p>Linkedin <a href="https://www.usenix.org/system/files/login/articles/login_winter18_02_purgason.pdf">described five stages of SRE</a> , the second one being the <strong>gatekeeper</strong>.</p>
 
 <blockquote>
   <p>As we grow past the first generation of firefighters, we achieve a basic level of operational integrity. The active operational fires are put out, and we have an increasing amount of time available for forward-looking tasks. So where do we go from here? The natural instinct is a protective one. We just spent years digging ourselves out of a major operational hole and the last thing we want to do is immediately fall back into it. Usually, this translates into a set of behaviors that amount to building a wall around “our” production with a few locked doors and keeping the keys with SRE. <strong>That way, “those” pesky developers will have to go through “us” before “their” change can impact “our” prod.</strong></p>
@@ -205,7 +221,20 @@
 
 <p>Enzo decided then to challenge the ops team on how to move away from gatekeeping to an enabling mentality. Instead of thinking about “how can I control this?”, they should start thinking about “how can I enable the teams to do their job safely?”.</p>
 
-<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
+<p>This brings us to today’s reality of this fictional company. A place where the delivery team - now called engineering - has access to the tools they need in a self-service manner, provided by domain experts. A place where the team owns the entire component’s lifecycle and has the autonomy to improve their day-to-day and their product. A place where autonomy meets productivity by removing cognitive load by providing a great engineering experience for those teams that don’t need to go deep in the stack. A place where engineers work to have quality and reliability from the start. A place where technology fully enables business agility and compliance needs.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[From Gatekeepers to Enablers. The story of a fictional company’s SRE journey towards engineering autonomy, more productivity, better compliance and, happiness!]]></summary></entry><entry><title type="html">An imaginary tale of a growing company</title><link href="http://localhost:4000/imaginary-tale-growing-company" rel="alternate" type="text/html" title="An imaginary tale of a growing company" /><published>2022-01-29T00:00:00+00:00</published><updated>2022-01-29T00:00:00+00:00</updated><id>http://localhost:4000/imaginary-tale-growing-company</id><content type="html" xml:base="http://localhost:4000/imaginary-tale-growing-company"><![CDATA[<p>While I was creating a blog post about how to speed up engineering teams to deliver more value to the end-user, a friend of mine shared an idea: linking that story to a different one I was planning to write and taking the opportunity to use the same fictional characters.</p>
+
+<p>I really loved the idea, so I’ve decided to link not only those two stories but also try to create a set of stories for a growing company.</p>
+
+<p>Technology companies tend to grow in different directions, and the stories I will be sharing are related to my personal view on what approach should be taken. I will speak about processes, people, and technology.</p>
+
+<p>The name of the company is thrownewexception.com. It is a technology company, because, well, what company isn’t nowadays, right? The product is about content, creating content, and selling ads without taking advantage of the users’ data because we respect privacy. The CTO is Enzo, an experienced executive that helped other companies succeed. He hired Samuel as VP of technology, who is helping him set up the company to be recognized as one of the best tech companies to work on.</p>
+
+<p>There will probably be more people joining the story as I write it, but for now, I would like to introduce you to the very first article of the company.</p>
+
+<ul>
+  <li><a href="/gatekeepers-enablers">From Gatekeepers to Enablers</a></li>
+  <li><a href="/qa-role-evolution">QA role evolution</a></li>
+</ul>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="company-tale" /><summary type="html"><![CDATA[This is the tale of my imaginary company. Stay tuned!]]></summary></entry><entry><title type="html">SLI, SLO, SLA explained in a way your kids will understand… maybe</title><link href="http://localhost:4000/sli-slo-sla-explained" rel="alternate" type="text/html" title="SLI, SLO, SLA explained in a way your kids will understand… maybe" /><published>2021-08-15T13:00:00+01:00</published><updated>2021-08-15T13:00:00+01:00</updated><id>http://localhost:4000/sli-slo-sla-explained</id><content type="html" xml:base="http://localhost:4000/sli-slo-sla-explained"><![CDATA[<p>If you are reading this, you probably have been in a situation where you had to explain these terms to people that are not familiar with them. But if you haven’t, I can guarantee that you will. These terms are really simple but at the same time very easy to misunderstand.</p>
 
 <p>I will try to explain the terms first and then use an analogy with football - the real one - that you can use or even help you to find a better analogy to use with the people you interact with.</p>
 
@@ -473,110 +502,4 @@ de4fc88 Bruno Costa: Add README
 
 <p><img src="http://localhost:4000/assets/img/posts/2017.09.05/git_revert.jpg" alt="Git Revert" /></p>
 
-<p>I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="tutorials" /><category term="git" /><summary type="html"><![CDATA[Undoing changes is a little scary, right? I hope this article helps you to keep calm when you need to undo stuff.]]></summary></entry><entry><title type="html">Git hard reset, now what?</title><link href="http://localhost:4000/git-hard-reset-now-what" rel="alternate" type="text/html" title="Git hard reset, now what?" /><published>2017-08-23T01:00:42+01:00</published><updated>2017-08-23T01:00:42+01:00</updated><id>http://localhost:4000/git-hard-reset-now-what</id><content type="html" xml:base="http://localhost:4000/git-hard-reset-now-what"><![CDATA[<p>Imagine it’s Friday, you are in a hurry and someone asks you to check on something really quickly. You open the terminal, prepare to checkout a new branch, but before that you just perform a <code class="language-plaintext highlighter-rouge">git reset --hard HEAD~</code>.</p>
-
-<blockquote>
-  <p>Oh My God. What did I do?</p>
-</blockquote>
-
-<p>You just deleted all your work. Gone. Vanished. And probably that’s the reason why you are reading this. If so, I will try to help you.</p>
-
-<p>The good news is that git doesn’t actually delete anything, even when you do a hard reset. However, git just takes responsability if you did a commit. If you did, you are probably able to restore it.</p>
-
-<p>Git has the option <code class="language-plaintext highlighter-rouge">fsck</code> which validates the objects in the database and its connectivity.</p>
-
-<p>Let’s use this to try and find our missing objects.
-First, I will try to simulate a hard reset. My branch is ahead by 1 commit as we can see using <code class="language-plaintext highlighter-rouge">git status</code>.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new_branch
-Your branch is ahead of 'origin/new_branch' by 1 commit.
-  (use "git push" to publish your local commits)
-nothing to commit, working directory clean
-</code></pre></div></div>
-
-<p>So, now I will do a hard reset and check the status again.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git reset --hard HEAD~
-HEAD is now at c5c7ae4 Add new file
-→ git status
-On branch new_branch
-Your branch is up-to-date with 'origin/new_branch'.
-nothing to commit, working directory clean
-</code></pre></div></div>
-
-<p>And with this, I believe I’m in the same position as you are. I just deleted all my unpushed work.</p>
-
-<p>I will call git-fsck with –lost-found option to understand if there is something I can hang on to try to recover from my mistake.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git fsck --lost-found
-Checking object directories: 100% (256/256), done.
-Checking objects: 100% (6/6), done.
-dangling commit 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-</code></pre></div></div>
-
-<p>And there it is. The lonely commit waiting for us.</p>
-
-<p>I will try to do a rebase to see if I can get this commit back.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git rebase 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-First, rewinding head to replay your work on top of it...
-Fast-forwarded new_branch to 8dc8f51b0c14ff5dbf7234f07976466277f1474e.
-</code></pre></div></div>
-
-<p>Oh wait, did it work?</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git status
-On branch new_branch
-Your branch is ahead of 'origin/new_branch' by 1 commit.
-  (use "git push" to publish your local commits)
-nothing to commit, working directory clean
-→ git log
-commit 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-Author: Bruno Costa &lt;yyy@yyy.com&gt;
-Date:   Wed Aug 23 20:48:42 2017 +0100
-
-    Add yet another file
-    (...)
-</code></pre></div></div>
-
-<p>It did work!</p>
-
-<p>Do you have other options? I think we might have, lets go back and do it again.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git reset --hard HEAD~
-HEAD is now at c5c7ae4 Add new file
-→ git status
-On branch new_branch
-Your branch is up-to-date with 'origin/new_branch'.
-nothing to commit, working directory clean
-</code></pre></div></div>
-
-<p>Now we will try to do a cherry-pick to see if it does recover the lost change.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git cherry-pick 8dc8f51b0c14ff5dbf7234f07976466277f1474e
-[new_branch 97e5c7d] Add yet another file
- Date: Wed Aug 23 20:48:42 2017 +0100
- 1 file changed, 1 insertion(+)
- create mode 100644 add_yet_another_file
-→ git log
-commit 97e5c7d6388f7e7df1a321e2f6b869246847f664
-Author: Bruno Costa &lt;yyy@yyy.com&gt;
-Date:   Wed Aug 23 20:48:42 2017 +0100
-
-    Add yet another file
-</code></pre></div></div>
-
-<p>It did!</p>
-
-<p>Now, let’s try again using merge.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>→ git merge 97e5c7d6388f7e7df1a321e2f6b869246847f664
-Updating c5c7ae4..97e5c7d
-Fast-forward
- add_yet_another_file | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 add_yet_another_file
-</code></pre></div></div>
-
-<p>And finally, if things are really nasty and none of this works, you can checkout the change, create a new branch and do a diff. I won’t be showing that in here now, I may update it later with an example, but you get the idea.</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="git" /><summary type="html"><![CDATA[I just did a git hard reset and now I need my previous work. This is how.]]></summary></entry></feed>
+<p>I hope you enjoyed the article, if you have any questions or suggestions, feel free to comment. Thanks!</p>]]></content><author><name>Bruno Costa</name><email>bcosta10@gmail.com</email></author><category term="tutorials" /><category term="git" /><summary type="html"><![CDATA[Undoing changes is a little scary, right? I hope this article helps you to keep calm when you need to undo stuff.]]></summary></entry></feed>

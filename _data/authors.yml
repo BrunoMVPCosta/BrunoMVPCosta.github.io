@@ -8,7 +8,7 @@ brunomvpcosta:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I’m Bruno Costa, a software engineer from Porto, Portugal and this is my little corner on the internet. Here I share some of my thoughts.
+    I’m Bruno Costa, a technology leader from Porto, Portugal and this is my little corner on the internet. Here I share some of my thoughts.
 
   # This photo will be used in the about section
   picture:

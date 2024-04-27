@@ -12,7 +12,7 @@ share: true
 First things first, the title is from the amazing joke Erik Bjäreholt did on X (ex-twitter). 
 
 <center>
-  <blockquote class="twitter-tweet" data-dnt="true">
+  <blockquote class="twitter-tweet" data-dnt="false">
     <p lang="en" dir="ltr">Redis is no longer open source?<br>I guess they gave up on their key values 🥁</p>
     &mdash; Erik Bjäreholt (@ErikBjare) 
     <a href="https://twitter.com/ErikBjare/status/1771474971564318842?ref_src=twsrc%5Etfw">March 23, 2024</a>
@@ -30,7 +30,7 @@ A typical move is to move their license to a dual source-available license. [Ela
 One question I asked on X was how did it affect the revenue and customers. 
 
 <center>
-  <blockquote class="twitter-tweet" data-dnt="true">
+  <blockquote class="twitter-tweet" data-dnt="false">
   <p lang="en" dir="ltr">Redis adopts dual source-available licensing. 
       <br><br>Is there any public available research to understand the impact in the revenue of the company that made these decisions in the past? Did it increase or decrease?
       <br><br>And how about the providers? Did the cost move to the clients?
